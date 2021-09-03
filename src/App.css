@@ -40,6 +40,7 @@ border-radius: 18px;
 position: absolute;
 z-index: 3;
 }
+
 .divInfo{
     height: 60%;
     margin-top: 10%; /*aqui se for tela cheia tem de ser 12%*/
