@@ -1,22 +1,26 @@
 body{
     background-image: url('./assets/images/background-body.jpeg');
-}
-h2{
-    color:#763D09;
-padding: 10px;
-
+    font-family: 'Roboto', sans-serif;
 }
 
-.red-btn{
+h1{
+color:#763D09;
+font-weight: 400;
+font-size: 35px;
+font-family: 'Oswald', sans-serif;
+}
+
+.redBtn{
     background-color:#FF3D00;
     border: 3px solid #DF3600;
 }
-.orange-btn{
+.orangeBtn{
     background-color: #FFB800;
     border:3px solid #CC9300;
+    margin-top: 4%;
 }
 
-.orange-btn, .red-btn{
+Button{
 width: 93%;
 margin:auto;
 color:#ffffff;
@@ -27,25 +31,28 @@ padding:6px;
 letter-spacing: -0.7px;
 }
 
-.divInfo{
+.divInfo, .divRegister{
 background-color:#FFE1BE;
-width: 21vw;
 flex-direction: column;
 margin: auto;
-height: 60%;
 text-align: center;
 border-radius: 18px;
 position: absolute;
-margin-left: 37%;
 z-index: 3;
-margin-top: 10%; /*aqui se for tela cheia tem de ser 12%*/
 }
-
-.inputInfo{
-    width: 100%;
-    margin-bottom: 4%;
+.divInfo{
+    height: 60%;
+    margin-top: 10%; /*aqui se for tela cheia tem de ser 12%*/
+    width: 21vw;
+    margin-left: 37%;
 }
-input{
+.divRegister{
+    height: 50%;
+    margin-top: 12%; /*aqui se for tela cheia tem de ser 14%*/
+    width: 25vw;
+    margin-left: 35%;
+}
+Input{
     width: 92%;
     margin:auto;
     border:none;
@@ -53,13 +60,19 @@ input{
     outline: none;
 }
 
-main img{
+.imgBurger{
     position: absolute;
     z-index: -3;
     margin-left: 25%;
-    margin-top: 0;
     height: 100vh;
     width:45%;
+}
+.burgerLogo{
+    width: 20%;
+    position:absolute;
+    z-index: -3;
+    margin-top: 5%;
+    margin-left: 6%;
 }
 .isWorker{
     margin-bottom: 2%;

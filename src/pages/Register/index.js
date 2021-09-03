@@ -1,22 +1,24 @@
-
-import testImage2 from '../../assets/images/teste2.png'
+import imgBurger from '../../assets/images/figma-burger.png';
+import burgerLogo from '../../assets/images/burger-logo.png';
+import { Button } from '../../components/Button/index.js';
+import { Input } from '../../components/Input/index.js'
 
 export function Register(){
     return(
 <div>
     <main>
-        <div>
-            <img src={testImage2} alt="teste imagem" />
-
-            <form>
-                <input type="text" placeholder="Nome" />
-                <input type="text" placeholder="Email" />
-                <input type="password" placeholder="Senha" />
-                <button type="submit">Cadastrar salão</button>
-                <button type="submit">Cadastrar cozinha</button>
-            </form>
-           
-        </div>
+    <img src={burgerLogo}  className="burgerLogo" alt="logo" />
+    <img src={imgBurger} className="imgBurger" alt="imgburger" />
+    <div className="divRegister">
+                    <h1> CADASTRO</h1>
+                    <form>
+                        <p class="labelInputs">Email</p>
+                        <Input btnType="text" inputClass="inputEmail" /*inputValue={emailLogin}*/ /> 
+                        <p class="labelInputs">Senha</p>
+                        <Input inputType="password" inputClass="passwordUser" /*inputValue={passwordLogin}*/ />
+                        <Button btnType="submit" btnClass="orangeBtn" btnText="CADASTRAR" />
+                    </form>
+                </div>
     </main>
 </div>
     )
