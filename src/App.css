@@ -1,0 +1,90 @@
+body{
+    background-image: url('./assets/images/background-body.jpeg');
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+color:#763D09;
+font-weight: 400;
+font-size: 35px;
+font-family: 'Oswald', sans-serif;
+}
+
+.redBtn{
+    background-color:#FF3D00;
+    border: 3px solid #DF3600;
+}
+.orangeBtn{
+    background-color: #FFB800;
+    border:3px solid #CC9300;
+    margin-top: 4%;
+}
+
+Button{
+width: 93%;
+margin:auto;
+color:#ffffff;
+font-weight: bold;
+font-size: 105%;
+height: 6vh;
+padding:6px;
+letter-spacing: -0.7px;
+}
+
+.divInfo, .divRegister{
+background-color:#FFE1BE;
+flex-direction: column;
+margin: auto;
+text-align: center;
+border-radius: 18px;
+position: absolute;
+z-index: 3;
+}
+
+.divInfo{
+    height: 60%;
+    margin-top: 10%; /*aqui se for tela cheia tem de ser 12%*/
+    width: 21vw;
+    margin-left: 37%;
+}
+.divRegister{
+    height: 50%;
+    margin-top: 12%; /*aqui se for tela cheia tem de ser 14%*/
+    width: 25vw;
+    margin-left: 35%;
+}
+Input{
+    width: 92%;
+    margin:auto;
+    border:none;
+    height: 30px;
+    outline: none;
+}
+
+.imgBurger{
+    position: absolute;
+    z-index: -3;
+    margin-left: 25%;
+    height: 100vh;
+    width:45%;
+}
+.burgerLogo{
+    width: 20%;
+    position:absolute;
+    z-index: -3;
+    margin-top: 5%;
+    margin-left: 6%;
+}
+.isWorker{
+    margin-bottom: 2%;
+    margin-top: 12%;
+    color: #3B1E04;
+}
+.labelInputs{
+    text-align: left;
+    margin-left: 3%;
+    margin-bottom: 0;
+    margin-top: 3%;
+    color: #3B1E04;
+    letter-spacing: -0.7px;
+}
