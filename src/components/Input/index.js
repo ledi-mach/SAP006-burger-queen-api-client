@@ -13,7 +13,7 @@ export function Input({
 }) {
     return (
         <div className={divForm}>
-            <Input
+            <input
                 value={inputValue}
                 type={inputType}
                 placeholder={inputPlaceholder}
