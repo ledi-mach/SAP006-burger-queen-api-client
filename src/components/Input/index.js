@@ -19,7 +19,7 @@ export function Input({
                 placeholder={inputPlaceholder}
                 required={inputRequired}
                 class={inputClass} />
-                
+
             <label className={labelInfo}>
                 {labelValue}
             </label>
