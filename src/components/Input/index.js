@@ -13,13 +13,13 @@ export function Input({
 }) {
     return (
         <div className={divForm}>
-            <input
+            <Input
                 value={inputValue}
                 type={inputType}
                 placeholder={inputPlaceholder}
                 required={inputRequired}
                 class={inputClass} />
-                
+
             <label className={labelInfo}>
                 {labelValue}
             </label>
