@@ -12,6 +12,7 @@ export function Login() {
     function navigateToRegister() {
         history.push('/register');
     }
+  
     
     const [emailLogin, setEmailLogin] = useState('');
     const [passwordLogin, setPasswordLogin] = useState('');
@@ -19,14 +20,16 @@ export function Login() {
 const logUser = () => {
 
     fetch('https://lab-api-bq.herokuapp.com/auth', {
-            method: 'AUTH', 
+            method: 'POST', 
             headers: {'accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'},
 
             body: `email=${emailLogin}&password=${passwordLogin}`
     })
    //aqui ver como reconhecer o token e encaminhar para o menu
+   .then(res => res.json())
 }
+
 
     return (
         <main>
