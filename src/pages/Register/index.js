@@ -31,23 +31,28 @@ export function Register() {
                     'accept': 'application/json',
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: `email=${email}&password=${password}&role="kitchen"&restaurant=testeBurger`
+                body: `email=${email}&password=${password}&role="salão"&restaurant=testeBurger`
                /* body: JSON.stringify({  //Ver pq o json.stringify não está funcionando aqui
                     email: email,
                     password: password,
                     role:"kitchen",
                     restaurant:"testeBurger"
                 })*/
+               
             })
+            
                 .then(res => res.json())
                 .then((json) => {
                     if (json.id === undefined) {
                         alert('deu ruim')
                     } else {
+                        console.log(json.id)
                         navigateToMenu();
+
                     }
                 })
         }
+        
     }
 
     return (

@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
+import React from 'react';
 import { Button } from '../../components/Button/index.js';
 import { Input } from '../../components/Input/index.js'
 import imgBurger from '../../assets/images/burger-background.png';
@@ -12,13 +13,19 @@ export function Login() {
     function navigateToRegister() {
         history.push('/register');
     }
-  
+  //  function navigateToMenu() {
+    //    history.push('/menu');
+    //}
     
     const [emailLogin, setEmailLogin] = useState('');
     const [passwordLogin, setPasswordLogin] = useState('');
 
-const logUser = () => {
+const logUser = (e) => {
+    e.preventDefault()
 
+    if (emailLogin === "" || passwordLogin === "") {
+        alert('campo vazio')
+    } else {
     fetch('https://lab-api-bq.herokuapp.com/auth', {
             method: 'POST', 
             headers: {'accept': 'application/json',
@@ -28,7 +35,36 @@ const logUser = () => {
     })
    //aqui ver como reconhecer o token e encaminhar para o menu
    .then(res => res.json())
+   .then((json)=>{
+       const token = json.token
+       const id = json.id
+       const role = json.role
+       console.log(token)
+       console.log(id)
+       console.log(role)
+
+    /* const userToken = localStorage.setItem("token", token)  // conferir pq não está rolando o setItem
+     const userId = localStorage.setItem("id", id)
+       console.log(userToken)
+       console.log(userId)
+
+       if(userToken !== "" && userId !== "" && role ==="kitchen"){
+           navigateToMenu()
+       }else{
+           alert("erro!")
+       } */ 
+      
+      //localStorage.setItem("userToken", json.token);
+      //const role= localStorage.setItem("userRole", json.role);
+      //return role
+     // alert(role)
+     // if(role ==="kitchen"){
+       // navigateToMenu();
+//}
+   }) 
 }
+}
+
 
 
     return (
