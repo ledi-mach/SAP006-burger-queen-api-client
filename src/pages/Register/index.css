@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url('./assets/images/background-dark.jpg');
+    background-image: url('/src/assets/images/background-dark.jpg');
 }
 
 .imgBurger {
@@ -29,7 +29,6 @@ body {
     margin-left: 3%;
 }
 
-.divInfo,
 .divRegister {
     display: flex;
     justify-content: center;
@@ -40,7 +39,6 @@ body {
     height: 100vh;
 }
 
-.formFieldsetLogin,
 .formFieldsetRegister {
     border: none;
     background-color: #FFE1BE;
@@ -56,7 +54,6 @@ body {
 
 }
 
-.h1Login,
 .h1Register {
     color: #763D09;
     font-size: 1.5rem;
@@ -84,6 +81,7 @@ body {
     height: 30px;
     outline: none;
     font-family: Roboto;
+    padding: 0rem 0.5rem;
 }
 
 .inputPassword {
@@ -100,23 +98,6 @@ Button {
     margin: 0rem 0rem 2rem;
 }
 
-.yellowBtn {
-    background-color: #FFB800;
-    border-top: 4px solid #CC9300;
-    border-bottom: 4px solid #CC9300;
-    border-left: 4px solid #CC9300;
-    border-right: 6.5px solid #CC9300;
-}
-
-.redBtn {
-    background-color: #FF3D00;
-    border-top: 4px solid #DF3600;
-    border-bottom: 4px solid #DF3600;
-    border-left: 4px solid #DF3600;
-    border-right: 6.5px solid #DF3600;
-    font-size: 1rem;
-}
-
 .orangeBtn {
     background-color: #FF8A00;
     border-top: 3.5px solid #DC7700;
@@ -125,10 +106,13 @@ Button {
     border-right: 6px solid #DC7700;
 }
 
-.isWorker {
-    color: #3B1E04;
-    font-family: Roboto;
-    margin-bottom: 0.3rem;
+.orangeBtn:hover {
+    background-color: #DC7700;
+    border-top: 3.5px solid #FF8A00;
+    border-bottom: 3.5px solid #FF8A00;
+    border-left: 3.5px solid #FF8A00;
+    border-right: 6px solid #FF8A00;
+    transition: 1s;
 }
 
 .backHome {

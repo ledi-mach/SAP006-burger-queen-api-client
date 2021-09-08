@@ -13,8 +13,6 @@ import { Login } from './pages/Login/index.js';
 import { Register } from './pages/Register/index.js';
 import { Attendance } from './pages/Atendimento/index.js';
 import { Menu } from './pages/Menu/index.js';
-import "./App.css";
-import "./AppResponsive.css";
 
 function App() {
   return (
