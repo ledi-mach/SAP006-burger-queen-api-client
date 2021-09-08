@@ -13,9 +13,9 @@ export function Login() {
     function navigateToRegister() {
         history.push('/register');
     }
-  //  function navigateToMenu() {
-    //    history.push('/menu');
-    //}
+    function navigateToMenu() {
+       history.push('/menu');
+   }
     
     const [emailLogin, setEmailLogin] = useState('');
     const [passwordLogin, setPasswordLogin] = useState('');
@@ -43,29 +43,20 @@ const logUser = (e) => {
        console.log(id)
        console.log(role)
 
-    /* const userToken = localStorage.setItem("token", token)  // conferir pq não está rolando o setItem
-     const userId = localStorage.setItem("id", id)
-       console.log(userToken)
-       console.log(userId)
+     //localStorage.setItem('token', token)  // conferir pq não está rolando o setItem
+     //localStorage.setItem('id', id)
+     //  console.log(userToken)
+       //console.log(userId)
 
-       if(userToken !== "" && userId !== "" && role ==="kitchen"){
-           navigateToMenu()
+       if(token !== null && id!== null && role==='kitchen'){ //&& role =="salão"
+        navigateToMenu()
+        console.log(role)
        }else{
-           alert("erro!")
-       } */ 
-      
-      //localStorage.setItem("userToken", json.token);
-      //const role= localStorage.setItem("userRole", json.role);
-      //return role
-     // alert(role)
-     // if(role ==="kitchen"){
-       // navigateToMenu();
-//}
+    alert('erro!!!')
+       } 
    }) 
 }
 }
-
-
 
     return (
         <main>
@@ -129,3 +120,13 @@ export function Login() {
         </main>
     )
 } */
+
+
+ 
+      //localStorage.setItem("userToken", json.token);
+      //const role= localStorage.setItem("userRole", json.role);
+      //return role
+     // alert(role)
+     // if(role ==="kitchen"){
+       // navigateToMenu();
+//}

@@ -25,13 +25,13 @@ export function Register() {
         if (email === "" || password === "") {
             alert('campo vazio')
         } else {
-            fetch('https://lab-api-bq.herokuapp.com/users/', {
+            fetch('https://lab-api-bq.herokuapp.com/users', {
                 method: 'POST',
                 headers: {
                     'accept': 'application/json',
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: `email=${email}&password=${password}&role="salão"&restaurant=testeBurger`
+                body: `email=${email}&password=${password}&role="kitchen"&restaurant=testeBurger`
                /* body: JSON.stringify({  //Ver pq o json.stringify não está funcionando aqui
                     email: email,
                     password: password,
@@ -40,6 +40,7 @@ export function Register() {
                 })*/
                
             })
+            
             
                 .then(res => res.json())
                 .then((json) => {
@@ -51,6 +52,7 @@ export function Register() {
 
                     }
                 })
+                
         }
         
     }
@@ -66,7 +68,8 @@ export function Register() {
                     <form className="formRegister">
                         <p className="labelInputs">Email</p>
                         <Input btnType="email" inputClass="inputEmail" inputValue={email}
-                            inputOnChange={(event) => setEmail(event.target.value)} />
+                            inputOnChange={(event) => setEmail(event.target.value)} 
+                            />
                         <p className="labelInputs">Senha</p>
                         <Input inputType="password" inputClass="inputPassword" inputValue={password}
                             inputOnChange={(event) => setPassword(event.target.value)} />
