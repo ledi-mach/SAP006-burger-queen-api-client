@@ -8,6 +8,11 @@ export function Button({
 
 }) {
     return (
-        <button type={btnType} class={btnClass} onClick={btnOnClick}>{btnText}</button>
+        <button
+            type={btnType}
+            className={btnClass}
+            onClick={btnOnClick}>
+            {btnText}
+        </button>
     )
 }
