@@ -10,11 +10,6 @@ export function Input({
     labelValue,
     divForm,
     inputOnChange,
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 32af6e2a886dcac4b5ba9a9e2f84c41145532f48
 
 }) {
     return (
