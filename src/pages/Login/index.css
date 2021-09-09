@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Oswald;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/src/assets/images/background-dark.jpg');
+}
+
+.imgBurger {
+    position: absolute;
+    z-index: -3;
+    margin-left: 26%;
+    margin-top: 6%;
+    height: 80vh;
+    width: 48%;
+}
+
+.burgerLogo {
+    width: 15%;
+    position: absolute;
+    z-index: -3;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.divInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.formFieldsetLogin {
+    border: none;
+    background-color: #FFE1BE;
+    margin: 3rem 0rem 0rem 0rem;
+    border-radius: 18px;
+    position: absolute;
+    z-index: 3;
+    width: 22vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.h1Login {
+    color: #763D09;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 0rem 0rem 0rem;
+}
+
+.labelInputs {
+    font-family: Roboto;
+    font-size: 0.8rem;
+    padding: 0rem 0rem 0rem 0.2rem;
+    text-align: left;
+    margin-left: 3%;
+    margin-bottom: 0;
+    margin-top: 3%;
+    color: #3B1E04;
+    letter-spacing: -0.7px;
+}
+
+.inputEmail,
+.inputPassword {
+    width: 92%;
+    margin: auto;
+    border: none;
+    height: 30px;
+    outline: none;
+    font-family: Roboto;
+    padding: 0rem 0.5rem;
+}
+
+.inputPassword {
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+Button {
+    cursor: pointer;
+    width: 93%;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    padding: 0.2rem;
+    margin: 0rem 0rem 2rem;
+}
+
+.yellowBtn {
+    background-color: #FFB800;
+    border-top: 4px solid #CC9300;
+    border-bottom: 4px solid #CC9300;
+    border-left: 4px solid #CC9300;
+    border-right: 6.5px solid #CC9300;
+}
+
+.yellowBtn:hover {
+    background-color: #CC9300;
+    border-top: 4px solid #FFB800;
+    border-bottom: 4px solid #FFB800;
+    border-left: 4px solid #FFB800;
+    border-right: 6.5px solid #FFB800;
+    transition: 1s;
+}
+
+.redBtn {
+    background-color: #FF3D00;
+    border-top: 4px solid #DF3600;
+    border-bottom: 4px solid #DF3600;
+    border-left: 4px solid #DF3600;
+    border-right: 6.5px solid #DF3600;
+    font-size: 1rem;
+}
+
+.redBtn:hover {
+    background-color: #DF3600;
+    border-top: 4px solid #FF3D00;
+    border-bottom: 4px solid #FF3D00;
+    border-left: 4px solid #FF3D00;
+    border-right: 6.5px solid #FF3D00;
+    transition: 1s;
+}
+
+
+
+.isWorker {
+    color: #3B1E04;
+    font-family: Roboto;
+    margin-bottom: 0.3rem;
+}
