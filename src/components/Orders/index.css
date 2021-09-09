@@ -1,0 +1,16 @@
+.orders {
+    background-color: #FF9900;
+    width: 20vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.ordersH1 {
+    padding: 1.5rem 1rem;
+    color: black;
+    font-size: 1.9rem;
+    font-weight: 400;
+}

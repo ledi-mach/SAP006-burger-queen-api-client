@@ -88,7 +88,12 @@ body {
     margin: 0rem 0rem 1rem 0rem;
 }
 
-Button {
+.orangeBtn {
+    background-color: #FF8A00;
+    border-top: 4px solid #DC7700;
+    border-bottom: 4px solid #DC7700;
+    border-left: 2.5px solid #DC7700;
+    border-right: 6px solid #DC7700;
     cursor: pointer;
     width: 93%;
     color: #ffffff;
@@ -98,19 +103,11 @@ Button {
     margin: 0rem 0rem 2rem;
 }
 
-.orangeBtn {
-    background-color: #FF8A00;
-    border-top: 3.5px solid #DC7700;
-    border-bottom: 3.5px solid #DC7700;
-    border-left: 3.5px solid #DC7700;
-    border-right: 6px solid #DC7700;
-}
-
 .orangeBtn:hover {
     background-color: #DC7700;
-    border-top: 3.5px solid #FF8A00;
-    border-bottom: 3.5px solid #FF8A00;
-    border-left: 3.5px solid #FF8A00;
+    border-top: 4px solid #FF8A00;
+    border-bottom: 4px solid #FF8A00;
+    border-left: 2.5px solid #FF8A00;
     border-right: 6px solid #FF8A00;
     transition: 1s;
 }
@@ -124,6 +121,7 @@ Button {
     z-index: -3;
     width: 15%;
     font-size: 1.2rem;
+    color: white;
 }
 
 .backHome:hover {

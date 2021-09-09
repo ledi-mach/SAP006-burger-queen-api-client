@@ -88,7 +88,13 @@ body {
     margin: 0rem 0rem 1rem 0rem;
 }
 
-Button {
+
+.yellowBtn {
+    background-color: #FFB800;
+    border-top: 4px solid #CC9300;
+    border-bottom: 4px solid #CC9300;
+    border-left: 2.5px solid #CC9300;
+    border-right: 6.5px solid #CC9300;
     cursor: pointer;
     width: 93%;
     color: #ffffff;
@@ -98,19 +104,11 @@ Button {
     margin: 0rem 0rem 2rem;
 }
 
-.yellowBtn {
-    background-color: #FFB800;
-    border-top: 4px solid #CC9300;
-    border-bottom: 4px solid #CC9300;
-    border-left: 4px solid #CC9300;
-    border-right: 6.5px solid #CC9300;
-}
-
 .yellowBtn:hover {
     background-color: #CC9300;
     border-top: 4px solid #FFB800;
     border-bottom: 4px solid #FFB800;
-    border-left: 4px solid #FFB800;
+    border-left: 2.5px solid #FFB800;
     border-right: 6.5px solid #FFB800;
     transition: 1s;
 }
@@ -119,16 +117,22 @@ Button {
     background-color: #FF3D00;
     border-top: 4px solid #DF3600;
     border-bottom: 4px solid #DF3600;
-    border-left: 4px solid #DF3600;
+    border-left: 2.5px solid #DF3600;
     border-right: 6.5px solid #DF3600;
     font-size: 1rem;
+    cursor: pointer;
+    width: 93%;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 0.2rem;
+    margin: 0rem 0rem 2rem;
 }
 
 .redBtn:hover {
     background-color: #DF3600;
     border-top: 4px solid #FF3D00;
     border-bottom: 4px solid #FF3D00;
-    border-left: 4px solid #FF3D00;
+    border-left: 2.5px solid #FF3D00;
     border-right: 6.5px solid #FF3D00;
     transition: 1s;
 }

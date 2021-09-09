@@ -74,7 +74,7 @@ export function Register() {
                         <p className="labelInputs">Senha</p>
                         <Input inputType="password" inputClass="inputPassword" inputValue={password}
                             inputOnChange={(event) => setPassword(event.target.value)} />
-                        <Button btnType="submit" btnClass="orangeBtn" btnText="CADASTRAR" btnOnClick={newUser} />
+                        <Button btnType="submit" btnClass="orangeBtn" id="registerBtn" btnText="CADASTRAR" btnOnClick={newUser} />
                     </form>
                 </fieldset>
             </div>
