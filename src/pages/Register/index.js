@@ -49,7 +49,6 @@ export function Register() {
                     if (json.id === undefined) {
                         alert('deu ruim')
                     } else {
-                        console.log(json.id)
                         navigateToMenu();
 
                     }
