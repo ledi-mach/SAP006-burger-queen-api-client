@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import React from 'react';
 import { Button } from '../../components/Button/index.js';
-import { Input } from '../../components/Input/index.js'
+import { Input } from '../../components/Input/index.js';
 import imgBurger from '../../assets/images/burger-background.png';
 import logo from '../../assets/images/logo.png';
 import './index.css';
@@ -70,9 +70,9 @@ export function Login() {
                         <Input inputType="password" inputClass="inputPassword" inputValue={passwordLogin}
                             inputOnChange={e => setPasswordLogin(e.target.value)}
                         />
-                        <Button btnType="submit" btnClass="yellowBtn" btnText="ENTRAR" btnOnClick={logUser} />
+                        <Button btnType="submit" btnClass="yellowBtn" btnId="signInBtn" btnText="ENTRAR" btnOnClick={logUser} />
                         <p className="isWorker">É funcionário?</p>
-                        <Button btnType="button" btnClass="redBtn" btnText="CADASTRE-SE" btnOnClick={navigateToRegister} />
+                        <Button btnType="button" btnClass="redBtn" btnId="signUpBtn" btnText="CADASTRE-SE" btnOnClick={navigateToRegister} />
                     </form>
                 </fieldset>
             </div>

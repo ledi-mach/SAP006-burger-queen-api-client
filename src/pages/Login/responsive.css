@@ -31,7 +31,8 @@
         padding: 0rem 1rem;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 1.4rem;
     }
 
@@ -80,7 +81,8 @@
         padding: 0rem 1rem;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 1.5rem;
     }
 
@@ -129,7 +131,8 @@
         padding: 0rem 1rem;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 1.4rem;
     }
 
@@ -189,7 +192,8 @@
         height: 30px;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 1rem;
         margin: 0rem 0rem 1rem;
     }
@@ -237,7 +241,8 @@
         padding: 0rem 1rem;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 1.5rem;
     }
 
@@ -286,7 +291,8 @@
         padding: 0rem 0.5rem;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 0.7rem;
         margin: 0rem 0rem 1rem;
     }
@@ -333,7 +339,8 @@
         padding: 0rem 0.8rem 0rem;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 0.8rem;
     }
 
@@ -382,7 +389,8 @@
         height: 30px;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 1rem;
     }
 
@@ -428,7 +436,8 @@
         height: 25px;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 0.7rem;
         margin: 0rem 0rem 1rem;
     }
@@ -476,7 +485,8 @@
         height: 30px;
     }
 
-    Button {
+    #signInBtn,
+    #signUpBtn {
         font-size: 1rem;
     }
 

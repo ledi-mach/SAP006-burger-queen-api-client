@@ -10,7 +10,6 @@ export function Input({
     labelValue,
     divForm,
     inputOnChange,
-
 }) {
     return (
         <div className={divForm}>

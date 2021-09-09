@@ -1,0 +1,62 @@
+#menu {
+    background-image: url(/src/assets/images/background-clean.jpg);
+    width: 80vw;
+    height: 100vh;
+    padding: 0rem 2rem;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+}
+
+.categoriesBtn {
+    background-color: #FFB800;
+    border-top: 3px solid #CC9300;
+    border-bottom: 3px solid #CC9300;
+    border-left: 2.5px solid #CC9300;
+    border-right: 6px solid #CC9300;
+    cursor: pointer;
+    width: 9rem;
+    color: #000000;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    padding: 0.2rem;
+    margin: 1rem 1.5rem;
+}
+
+.categoriesBtn:hover {
+    background-color: #FF3D00;
+    border-top: 3px solid #DF3600;
+    border-bottom: 3px solid #DF3600;
+    border-left: 2.5px solid #DF3600;
+    border-right: 6px solid #DF3600;
+    transition: 1s;
+}
+
+.nameItems {
+    display: flex;
+    justify-content: center;
+}
+
+.itemsH1 {
+    font-weight: 500;
+}
+
+.allItems {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ordersItems {
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 12rem;
+    height: 16rem;
+    margin: 1.5rem;
+
+}
