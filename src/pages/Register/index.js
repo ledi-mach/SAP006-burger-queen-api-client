@@ -5,6 +5,8 @@ import { Button } from '../../components/Button/index.js';
 import { Input } from '../../components/Input/index.js'
 import { useState } from 'react';
 import React from 'react';
+import './index.css';
+import './responsive.css';
 
 export function Register() {
 
@@ -28,33 +30,32 @@ export function Register() {
             fetch('https://lab-api-bq.herokuapp.com/users', {
                 method: 'POST',
                 headers: {
-                    'accept': 'application/json',
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 },
-                body: `email=${email}&password=${password}&role="kitchen"&restaurant=testeBurger`
-               /* body: JSON.stringify({  //Ver pq o json.stringify não está funcionando aqui
+                body: JSON.stringify({
+                    name: "fulano",
                     email: email,
                     password: password,
-                    role:"kitchen",
-                    restaurant:"testeBurger"
-                })*/
-               
+                    role: "kitchen",
+                    restaurant: "testeBurger"
+                })
+
             })
-            
-            
+
                 .then(res => res.json())
                 .then((json) => {
+                    const token = json.token
+                    localStorage.setItem("usersToken", token);
                     if (json.id === undefined) {
                         alert('deu ruim')
                     } else {
-                        console.log(json.id)
                         navigateToMenu();
 
                     }
                 })
-                
+
         }
-        
+
     }
 
     return (
@@ -68,8 +69,8 @@ export function Register() {
                     <form className="formRegister">
                         <p className="labelInputs">Email</p>
                         <Input btnType="email" inputClass="inputEmail" inputValue={email}
-                            inputOnChange={(event) => setEmail(event.target.value)} 
-                            />
+                            inputOnChange={(event) => setEmail(event.target.value)}
+                        />
                         <p className="labelInputs">Senha</p>
                         <Input inputType="password" inputClass="inputPassword" inputValue={password}
                             inputOnChange={(event) => setPassword(event.target.value)} />
@@ -80,24 +81,3 @@ export function Register() {
         </main>
     )
 }
-
-//const apiURL = 'https://lab-api-bq.herokuapp.com';
- // const apiUsers = `${apiURL}/users`;
-
-
-/*fetch('https://lab-api-bq.herokuapp.com/users', {
-    method: 'POST',
-    headers: { 'Conten-Type': 'application/json' },
-    body: JSON.stringify({
-        name: 'user2',
-        email: 'lala@gmail.com',
-        password: 'mostarda',
-        role: 'kitchen',
-        restaurant: 'teste-burger-lab',
-
-    })
-}).then(res => {
-    return res.json()
-})
-    .then(data => console.log(data))
-    .catch(error => console.log(error)) */

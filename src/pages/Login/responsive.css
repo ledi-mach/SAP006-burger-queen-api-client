@@ -11,13 +11,11 @@
         width: 20%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 25vw;
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 2rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -62,13 +60,11 @@
         width: 25%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 35vw;
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 2.1rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -113,13 +109,11 @@
         width: 22%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 35vw;
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 2.1rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -160,8 +154,7 @@
         width: 80%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 40vw;
     }
 
@@ -178,13 +171,11 @@
         display: none;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 40vw;
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 1.5rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -226,13 +217,11 @@
         margin-left: 3%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 45vw;
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 2.1rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -275,15 +264,13 @@
         margin-left: 3%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 35vw;
         margin: 5vh 0rem 0rem 0rem;
 
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 1.2rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -325,14 +312,12 @@
         width: 20%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 38vw;
         margin: 5vh 0rem 0rem 0rem;
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 1.3rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -377,15 +362,13 @@
         margin-top: 10%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 80vw;
         margin: 15vh 0rem 0rem 0rem;
 
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 1.5rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -425,15 +408,13 @@
         margin-left: 3%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 35vw;
         margin: 5vh 0rem 0rem 0rem;
 
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 1.2rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -475,15 +456,13 @@
         margin-top: 5%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 70vw;
         margin: 15vh 0rem 0rem 0rem;
 
     }
 
-    .h1Login,
-    .h1Register {
+    .h1Login {
         font-size: 1.5rem;
         padding: 1rem 0rem 0rem 0rem;
     }
@@ -522,8 +501,7 @@
         margin-top: 12%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 80vw;
         margin: 0vh 0rem 0rem 0rem;
 
@@ -547,8 +525,7 @@
         margin-top: 5%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 80vw;
         margin: 10vh 0rem 0rem 0rem;
 
@@ -571,8 +548,7 @@
         margin-top: 2%;
     }
 
-    .formFieldsetLogin,
-    .formFieldsetRegister {
+    .formFieldsetLogin {
         width: 80vw;
         margin: 7vh 0rem 0rem 0rem;
 
