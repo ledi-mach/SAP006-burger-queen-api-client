@@ -27,7 +27,7 @@ export function Menu() {
         <main id='menu'>
             <Header></Header>
             <Orders></Orders>
-            <div class="items">
+            <div className="items">
                 <Button btnType="button" btnClass="categoriesBtn" btnId="breakfast" btnText="Café da Manhã" />
                 <Button btnType="button" btnClass="categoriesBtn" btnId="burgers" btnText="Hambúrgueres" />
                 <Button btnType="button" btnClass="categoriesBtn" btnId="accompaniments" btnText="Acompanhamentos" />
@@ -43,5 +43,6 @@ export function Menu() {
                 <Item divItems="ordersItems"></Item>
             </div>
         </main >
+
     )
 }
