@@ -88,13 +88,16 @@ body {
     margin: 0rem 0rem 1rem 0rem;
 }
 
+button {
+    cursor: pointer;
+}
+
 .orangeBtn {
     background-color: #FF8A00;
     border-top: 4px solid #DC7700;
     border-bottom: 4px solid #DC7700;
     border-left: 2.5px solid #DC7700;
     border-right: 6px solid #DC7700;
-    cursor: pointer;
     width: 93%;
     color: #ffffff;
     font-size: 1.1rem;

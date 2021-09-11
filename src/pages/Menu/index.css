@@ -1,7 +1,6 @@
 #menu {
     background-image: url(/src/assets/images/background-clean.jpg);
     width: 80vw;
-    height: 100vh;
     padding: 0rem 2rem;
 }
 
@@ -51,16 +50,49 @@
     justify-content: center;
 }
 
-.ordersItems {
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    width: 12rem;
-    height: 16rem;
-    margin: 1.5rem;
-
+.aboutItems {
+    border-bottom: 1.5px solid black;
+    padding: 0.8rem 0rem 0.3rem;
 }
 
-.nameProduto{
-    color:cadetblue;
+.imageItem {
+    width: 11rem;
+    object-fit: cover;
+    align-self: center;
+    height: 10rem;
+    margin: 0rem 0rem;
+}
+
+.nameItem {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.complementsItem {
+    padding: 0rem 0.1rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: left;
+}
+
+.priceItem {
+    padding: 0.1rem 0rem 0rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    color: #FF9900;
+}
+
+#addToCart {
+    background-color: #FF9900;
+    border-radius: 3px;
+    border-top: 3.5px solid #DC7700;
+    border-bottom: 3.5px solid #DC7700;
+    border-left: 2px solid #DC7700;
+    border-right: 7px solid #DC7700;
+    color: white;
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+    margin: 0.5rem 0rem;
 }
