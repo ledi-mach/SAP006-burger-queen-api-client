@@ -1,10 +1,12 @@
 import React from "react";
+import "./index.css";
 
 export function Item({
-    divItems
+    children
 }) {
     return (
-        <div className={divItems}>
+        <div className="ordersItems">
+            {children}
         </div>
     )
 }

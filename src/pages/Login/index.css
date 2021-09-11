@@ -12,13 +12,13 @@ body {
     background-image: url('/src/assets/images/background-dark.jpg');
 }
 
-.imgBurger {
+.imgBurgerRoles {
     position: absolute;
     z-index: -3;
-    margin-left: 26%;
-    margin-top: 6%;
-    height: 80vh;
-    width: 48%;
+    margin-top: 2%;
+    height: 90vh;
+    width: 55%;
+    opacity: 0.1;
 }
 
 .burgerLogo {
@@ -88,6 +88,9 @@ body {
     margin: 0rem 0rem 1rem 0rem;
 }
 
+button {
+    cursor: pointer;
+}
 
 .yellowBtn {
     background-color: #FFB800;
@@ -95,7 +98,6 @@ body {
     border-bottom: 4px solid #CC9300;
     border-left: 2.5px solid #CC9300;
     border-right: 6.5px solid #CC9300;
-    cursor: pointer;
     width: 93%;
     color: #ffffff;
     font-size: 1.1rem;
@@ -120,7 +122,6 @@ body {
     border-left: 2.5px solid #DF3600;
     border-right: 6.5px solid #DF3600;
     font-size: 1rem;
-    cursor: pointer;
     width: 93%;
     color: #ffffff;
     border-radius: 3px;

@@ -16,12 +16,13 @@ export function Register() {
         history.push('/login');
     }
 
-    function navigateToMenu() {
-        history.push('/menu');
+    function navigateToRoles() {
+        history.push('/roles');
     }
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const newUser = (e) => {
         e.preventDefault();
         if (email === "" || password === "") {
@@ -33,7 +34,7 @@ export function Register() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    name: "fulano",
+                    name: null,
                     email: email,
                     password: password,
                     role: "kitchen",
@@ -49,7 +50,7 @@ export function Register() {
                     if (json.id === undefined) {
                         alert('deu ruim')
                     } else {
-                        navigateToMenu();
+                        navigateToRoles();
 
                     }
                 })
@@ -63,7 +64,7 @@ export function Register() {
             <img src={imgBurger} className="imgBurger" alt="imgburger" />
             <img src={logo} className="burgerLogo" alt="logo" />
             <div className="divRegister">
-                <Button btnType="button" btnClass="backHome" btnText="← Voltar para a Home" btnOnClick={navigateToLogin}></Button>
+                <Button type="button" className="backHome" onClick={navigateToLogin}>← Voltar para a Home</Button>
                 <fieldset className="formFieldsetLogin">
                     <h1 className="h1Register"> CADASTRO</h1>
                     <form className="formRegister">
@@ -74,7 +75,7 @@ export function Register() {
                         <p className="labelInputs">Senha</p>
                         <Input inputType="password" inputClass="inputPassword" inputValue={password}
                             inputOnChange={(event) => setPassword(event.target.value)} />
-                        <Button btnType="submit" btnClass="orangeBtn" id="registerBtn" btnText="CADASTRAR" btnOnClick={newUser} />
+                        <Button type="submit" className="orangeBtn" id="registerBtn" onClick={newUser}>CADASTRAR</Button>
                     </form>
                 </fieldset>
             </div>

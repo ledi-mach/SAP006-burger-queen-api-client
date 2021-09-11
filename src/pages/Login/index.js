@@ -15,8 +15,8 @@ export function Login() {
     function navigateToRegister() {
         history.push('/register');
     }
-    function navigateToMenu() {
-        history.push('/menu');
+    function navigateToRoles() {
+        history.push('/roles');
     }
 
     const [emailLogin, setEmailLogin] = useState('');
@@ -45,11 +45,9 @@ export function Login() {
                     const role = json.role
                     localStorage.setItem("usersToken", token);
                     if (token !== null && id !== null && role === 'kitchen') {
-                        navigateToMenu()
-                        alert('voce está na cozinha')
+                        navigateToRoles()
                     } else {
-                        navigateToMenu()
-                        alert('voce está na salao')
+                        alert("Não cadastrado")
                     }
                 })
         }
@@ -70,9 +68,9 @@ export function Login() {
                         <Input inputType="password" inputClass="inputPassword" inputValue={passwordLogin}
                             inputOnChange={e => setPasswordLogin(e.target.value)}
                         />
-                        <Button btnType="submit" btnClass="yellowBtn" btnId="signInBtn" btnText="ENTRAR" btnOnClick={logUser} />
+                        <Button type="submit" className="yellowBtn" id="signInBtn" onClick={logUser}>ENTRAR</Button>
                         <p className="isWorker">É funcionário?</p>
-                        <Button btnType="button" btnClass="redBtn" btnId="signUpBtn" btnText="CADASTRE-SE" btnOnClick={navigateToRegister} />
+                        <Button type="button" className="redBtn" id="signUpBtn" onClick={navigateToRegister}>CADASTRE-SE</Button>
                     </form>
                 </fieldset>
             </div>
