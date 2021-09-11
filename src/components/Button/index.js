@@ -1,20 +1,19 @@
 import React from "react";
 
 export function Button({
-    btnType,
-    btnClass,
-    btnText,
-    btnOnClick,
-    btnId
-
+    children,
+    type,
+    className,
+    onClick,
+    id
 }) {
     return (
         <button
-            type={btnType}
-            className={btnClass}
-            onClick={btnOnClick}
-            id={btnId}>
-            {btnText}
+            type={type}
+            className={className}
+            onClick={onClick}
+            id={id}>
+            {children}
         </button>
     )
 }
