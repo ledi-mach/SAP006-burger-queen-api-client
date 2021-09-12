@@ -33,7 +33,7 @@
     transition: 1s;
 }
 
-.nameItems {
+.nameItems, .flavorItem {
     display: flex;
     justify-content: center;
 }
@@ -42,7 +42,8 @@
     font-weight: 500;
 }
 
-.allItems {
+.allItems, .breakfastItems, .drinksItems,
+.hamburgersItems, .garnishItems {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -66,6 +67,11 @@
 .nameItem {
     font-size: 1.3rem;
     text-align: center;
+}
+
+.flavorItem {
+    font-size: 1.2rem;
+    margin-top: -3%;
 }
 
 .complementsItem {

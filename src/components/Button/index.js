@@ -5,13 +5,15 @@ export function Button({
     type,
     className,
     onClick,
-    id
+    id,
+    value
 }) {
     return (
         <button
             type={type}
             className={className}
             onClick={onClick}
+            value = {value}
             id={id}>
             {children}
         </button>
