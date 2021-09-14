@@ -32,8 +32,8 @@ export function Menu() {
                 const burgers = data.filter(item => item.sub_type === 'hamburguer')
                 setBurgers(burgers)
             })
-        //}
-    }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [] );
 
     return (
         <main id="menu" >

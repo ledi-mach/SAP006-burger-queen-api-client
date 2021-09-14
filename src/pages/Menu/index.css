@@ -33,7 +33,8 @@
     transition: 1s;
 }
 
-.nameItems, .flavorItem {
+.nameItems,
+.flavorItem {
     display: flex;
     justify-content: center;
 }
@@ -42,8 +43,11 @@
     font-weight: 500;
 }
 
-.allItems, .breakfastItems, .drinksItems,
-.hamburgersItems, .garnishItems {
+.allItems,
+.breakfastItems,
+.drinksItems,
+.hamburgersItems,
+.garnishItems {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -93,12 +97,17 @@
 #addToCart {
     background-color: #FF9900;
     border-radius: 3px;
-    border-top: 3.5px solid #DC7700;
-    border-bottom: 3.5px solid #DC7700;
+    border-top: 2px solid #DC7700;
+    border-bottom: 5px solid #DC7700;
     border-left: 2px solid #DC7700;
-    border-right: 7px solid #DC7700;
+    border-right: 5px solid #DC7700;
     color: white;
     font-size: 1rem;
     padding: 0.2rem 1rem;
     margin: 0.5rem 0rem;
+}
+
+#addToCart:hover {
+    background-color: #DC7700;
+    transition: 0.7s;
 }
