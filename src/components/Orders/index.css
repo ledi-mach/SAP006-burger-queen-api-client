@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    display: flex;
+    /*display: flex;*/
 }
 
 .ordersH1 {
@@ -13,4 +13,27 @@
     color: black;
     font-size: 1.9rem;
     font-weight: 400;
+    height: 12vh;
+    margin-bottom: 3vh;
+}
+.totalValue {
+    background-color: white;
+    height: 30vh;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 12%;
+}
+.nameTable{
+   width: 90%;
+   margin:auto;
+   height: 30vh;
+   padding: 40px 20px;
+   border-bottom: solid 3px #FFE1BE;
+   border-top:solid 3px #FFE1BE ;
+  
+}
+.clientInfo{
+    font-weight: 400;
+    font-size: 25px;
 }

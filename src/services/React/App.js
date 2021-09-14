@@ -10,7 +10,6 @@ import PrivateRoute from "./router";
 
 function App() {
   return (
-
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Login} />
