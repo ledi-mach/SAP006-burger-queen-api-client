@@ -94,8 +94,8 @@ button {
 
 .yellowBtn {
     background-color: #FFB800;
-    border-top: 4px solid #CC9300;
-    border-bottom: 4px solid #CC9300;
+    border-top: 2.5px solid #CC9300;
+    border-bottom: 6.5px solid #CC9300;
     border-left: 2.5px solid #CC9300;
     border-right: 6.5px solid #CC9300;
     width: 93%;
@@ -108,17 +108,13 @@ button {
 
 .yellowBtn:hover {
     background-color: #CC9300;
-    border-top: 4px solid #FFB800;
-    border-bottom: 4px solid #FFB800;
-    border-left: 2.5px solid #FFB800;
-    border-right: 6.5px solid #FFB800;
     transition: 1s;
 }
 
 .redBtn {
     background-color: #FF3D00;
-    border-top: 4px solid #DF3600;
-    border-bottom: 4px solid #DF3600;
+    border-top: 2.5px solid #DF3600;
+    border-bottom: 6.5px solid #DF3600;
     border-left: 2.5px solid #DF3600;
     border-right: 6.5px solid #DF3600;
     font-size: 1rem;
@@ -131,10 +127,6 @@ button {
 
 .redBtn:hover {
     background-color: #DF3600;
-    border-top: 4px solid #FF3D00;
-    border-bottom: 4px solid #FF3D00;
-    border-left: 2.5px solid #FF3D00;
-    border-right: 6.5px solid #FF3D00;
     transition: 1s;
 }
 

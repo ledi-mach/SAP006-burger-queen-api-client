@@ -10,6 +10,8 @@ export function Input({
     labelValue,
     divForm,
     inputOnChange,
+    max,
+    min,
 }) {
     return (
         <div className={divForm}>
@@ -19,7 +21,9 @@ export function Input({
                 placeholder={inputPlaceholder}
                 required={inputRequired}
                 className={inputClass}
-                onChange={inputOnChange} />
+                onChange={inputOnChange}
+                max={max}
+                min={min} />
 
             <label className={labelInfo}>
                 {labelValue}

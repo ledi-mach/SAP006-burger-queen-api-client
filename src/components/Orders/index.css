@@ -16,6 +16,7 @@
     height: 12vh;
     margin-bottom: 3vh;
 }
+
 .totalValue {
     background-color: white;
     height: 30vh;
@@ -24,16 +25,84 @@
     border-radius: 10px;
     margin-bottom: 12%;
 }
-.nameTable{
-   width: 90%;
-   margin:auto;
-   height: 30vh;
-   padding: 40px 20px;
-   border-bottom: solid 3px #FFE1BE;
-   border-top:solid 3px #FFE1BE ;
-  
+
+.nameTable {
+    width: 90%;
+    margin: 5rem auto 0rem;
+    padding: 10px 5px;
+    border-bottom: solid 3px #ffe1beb6;
+    border-top: solid 3px #ffe1beb6;
 }
-.clientInfo{
+
+.clientInfo {
     font-weight: 400;
     font-size: 25px;
+}
+
+.nameTable {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameCustomer,
+.tableCustomer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.inputCustomer {
+    margin: 0rem 0.7rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-family: Roboto;
+    font-size: 1rem;
+    width: 9.9rem;
+}
+
+.inputTable {
+    margin: 0rem 1.2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-family: Roboto;
+    font-size: 1rem;
+    width: 2rem;
+}
+
+.finishOrder {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.total {
+    color: #763D09;
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+.sendOrder {
+    margin: 0.8rem 0rem;
+    background-color: #FF3D00;
+    border-top: 2.5px solid #DF3600;
+    border-bottom: 6.5px solid #DF3600;
+    border-left: 2.5px solid #DF3600;
+    border-right: 6.5px solid #DF3600;
+    font-size: 1rem;
+    width: 93%;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 0.2rem;
+}
+
+.sendOrder:hover {
+    background-color: #DF3600;
+    transition: 0.7s;
 }
