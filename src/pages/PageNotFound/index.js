@@ -11,7 +11,7 @@ export function PageNotFound() {
     return (
         <div className="container-center">
             <h1 className="h1">404: Página não encontrada</h1>
-            <Button className="back" btnOnClick={navigateToSite}>Retorne para o site</Button>
+            <Button className="back" onClick={navigateToSite}>Retorne para o site</Button>
         </div>
     )
 }

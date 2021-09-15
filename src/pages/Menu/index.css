@@ -111,3 +111,62 @@
     background-color: #DC7700;
     transition: 0.7s;
 }
+
+
+.nameOrder,
+.titleOrder {
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 0.1rem 0rem 0.3rem;
+}
+
+.amountOrder,
+.complementOrder {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.amount,
+.complement {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0rem 0.2rem;
+}
+
+.columOrder1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    width: 3.8vw;
+    object-fit: cover;
+    align-self: center;
+    height: 8vh;
+    justify-content: end;
+    align-items: flex-end;
+    text-align: end;
+}
+
+.imgOrder {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    width: 100vw;
+}
+
+.orderPrice {
+    margin: 1rem 0rem 0rem;
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+.price {
+    color: #FF9900;
+    font-size: 1.5rem;
+    font-weight: 400;
+}

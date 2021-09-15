@@ -5,6 +5,7 @@ import { Input } from "../Input";
 import { Button } from "../Button";
 
 export function Orders({
+    children
 
 }) {
     const [Customer, setCustomer] = useState('');
@@ -34,7 +35,9 @@ export function Orders({
     return (
         <div className="orders">
             <h1 className="ordersH1">PEDIDOS</h1>
-            <div className="totalValue"></div>
+            <div className="divOrderSummary">
+                {children}
+            </div>
             <div className="nameTable">
                 <div className="nameCustomer">
                     <p className="clientInfo">Nome: </p>

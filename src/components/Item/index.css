@@ -8,3 +8,25 @@
     padding: 0rem 0.5rem;
     text-align: center;
 }
+
+.ordersItems1 {
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 12rem;
+    height: 19.7rem;
+    margin: 1.5rem;
+    padding: 0rem 0.5rem;
+    text-align: center;
+}
+
+.orderSummary {
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 0.4rem 1.5rem;
+    padding: 0rem 0.5rem 0.5rem;
+    object-fit: cover;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
