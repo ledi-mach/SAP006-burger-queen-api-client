@@ -80,7 +80,8 @@ export function Menu() {
                                                 <h1 className="nameItem"> {item.name}</h1>
                                                 {item.flavor !== null ? <h2 className="flavorItem">{item.flavor}</h2>
                                                     : null}
-                                                <h2 className="complementsItem">Adicionais: {item.complement}</h2>
+                                                {item.complement !== null ? <h2 className="complementsItem">Adicionais: {item.complement}</h2>
+                                                    : null}
                                                 <h2 className="priceItem"> R$ {item.price},00</h2>
                                             </div>
                                             <Button id="addToCart" type="button" onClick={() => {
@@ -119,7 +120,8 @@ export function Menu() {
                                                 <h1 className="nameItem"> {item.name}</h1>
                                                 {item.flavor !== null ? <h2 className="flavorItem">{item.flavor}</h2>
                                                     : null}
-                                                <h2 className="complementsItem">Adicionais: {item.complement}</h2>
+                                                {item.complement !== null ? <h2 className="complementsItem">Adicionais: {item.complement}</h2>
+                                                    : null}
                                                 <h2 className="priceItem"> R$ {item.price},00</h2>
                                             </div>
                                             <Button id="addToCart" type="button" onClick={() => {
@@ -153,28 +155,29 @@ export function Menu() {
 
                     </div>
                 </section>
-                <Orders>
+                <Orders orders={order}>
                     {order.map((data, index) => (
-                        <Item className="orderSummary">
-                            <ul className="list" key={index}>
+                        <Item className="orderSummary" key={index}>
+                            <ul className="list">
                                 <div className="nameOrder">
                                     <h1 className="titleOrder">{data.name}</h1>
                                     {data.flavor !== null ? <h2 className="flavorItem">{data.flavor}</h2>
                                         : null}
                                 </div>
                                 <div className="columOrder1">
-                                    <div className="">
+                                    <div className="columOrder">
                                         <div className="amountOrder">
                                             <h2 className="amount">
                                                 Quantidade:
                                             </h2>{data.qtd}
                                         </div>
-                                        <div className="complementOrder">
-                                            <h2 className="complement">
-                                                Adicionais:
-                                            </h2>
-                                            {data.complement}
-                                        </div>
+                                        {data.complement !== null ?
+                                            <div className="complementOrder">
+                                                <h2 className="complement">
+                                                    Adicionais:
+                                                </h2>{data.complement}
+                                            </div>
+                                            : null}
                                     </div>
                                     <div className="imgOrder">
                                         <img className="image" src={data.image} alt="imagem" />
