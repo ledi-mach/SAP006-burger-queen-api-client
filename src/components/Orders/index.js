@@ -12,13 +12,15 @@ export function Orders({
     const userToken = localStorage.getItem('usersToken');
     const [Customer, setCustomer] = useState('');
     const [Table, setTable] = useState('');
-    const id = orders.map((data) => (
-        data.id));
-    const qtd = orders.map((data) => (
-        data.qtd
-    ))
 
     function createOrder() {
+
+        const Products = orders.map((data) => ({
+            "id": data.id,
+            "qtd": data.qtd,
+        })
+        )
+
         fetch('https://lab-api-bq.herokuapp.com/orders', {
             method: 'POST',
             headers: {
@@ -28,12 +30,7 @@ export function Orders({
             body: JSON.stringify({
                 "client": Customer,
                 "table": Table,
-                "products": [
-                    {
-                        "id": id,
-                        "qtd": qtd,
-                    }
-                ]
+                "products": Products,
             })
         })
     }

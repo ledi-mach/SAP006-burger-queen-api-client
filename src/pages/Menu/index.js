@@ -98,7 +98,7 @@ export function Menu() {
                                                     // eslint-disable-next-line array-callback-return
                                                     order.map((item, i) => {
                                                         if (item.name === breakfast[index].name) {
-                                                            order[i].qnt++
+                                                            order[i].qtd++
                                                             setOrder([...order]);
                                                         }
                                                     })
@@ -132,17 +132,18 @@ export function Menu() {
                                                         "id": burgers[index].id,
                                                         "flavor": burgers[index].flavor,
                                                         "name": burgers[index].name,
-                                                        "qtd": [],
+                                                        "qtd": 1,
                                                         "image": burgers[index].image,
                                                         "complement": burgers[index].complement,
                                                         "price": burgers[index].price
                                                     }]);
                                                 } else {
-                                                    // eslint-disable-next-line array-callback-return
                                                     order.map((item, i) => {
-                                                        if (item.name === burgers[index].name) {
-                                                            order[i].qnt++
-                                                            setOrder([...order]);
+                                                        if (item => item.name === burgers[index].name
+                                                            && item.flavor === burgers[index].flavor
+                                                            && item.complement === burgers[index].complement) {
+                                                            order[i].qtd++
+                                                            setOrder([...order])
                                                         }
                                                     })
                                                 }
