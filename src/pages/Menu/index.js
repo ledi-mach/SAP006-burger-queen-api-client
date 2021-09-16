@@ -126,8 +126,8 @@ export function Menu() {
                                             </div>
                                             <Button id="addToCart" type="button" onClick={() => {
                                                 if (!order.some(item => item.name === burgers[index].name
-                                                    && item.flavor === breakfast[index].flavor
-                                                    && item.complement === breakfast[index].complement)) {
+                                                    && item.flavor === burgers[index].flavor
+                                                    && item.complement === burgers[index].complement)) {
                                                     setOrder([...order, {
                                                         "id": burgers[index].id,
                                                         "flavor": burgers[index].flavor,
