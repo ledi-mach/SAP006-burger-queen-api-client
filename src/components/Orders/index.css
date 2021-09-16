@@ -5,30 +5,18 @@
     position: fixed;
     top: 0;
     right: 0;
-    /*display: flex;*/
 }
 
 .ordersH1 {
-    padding: 1.5rem 1rem;
     color: black;
     font-size: 1.9rem;
     font-weight: 400;
-    height: 12vh;
-    margin-bottom: 3vh;
-}
-
-.totalValue {
-    background-color: white;
-    height: 30vh;
-    width: 90%;
-    margin: auto;
-    border-radius: 10px;
-    margin-bottom: 12%;
+    margin: 1rem 1.5rem 0rem;
 }
 
 .nameTable {
     width: 90%;
-    margin: 5rem auto 0rem;
+    margin: 0rem auto 0rem;
     padding: 10px 5px;
     border-bottom: solid 3px #ffe1beb6;
     border-top: solid 3px #ffe1beb6;
@@ -105,4 +93,11 @@
 .sendOrder:hover {
     background-color: #DF3600;
     transition: 0.7s;
+}
+
+.divOrderSummary {
+    height: 42vh;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    margin: 1rem 0rem;
 }
