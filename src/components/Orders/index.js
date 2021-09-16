@@ -5,12 +5,18 @@ import { Input } from "../Input";
 import { Button } from "../Button";
 
 export function Orders({
-    children
-
+    children,
+    orders
 }) {
+
+    const userToken = localStorage.getItem('usersToken');
     const [Customer, setCustomer] = useState('');
     const [Table, setTable] = useState('');
-    const userToken = localStorage.getItem('usersToken');
+    const id = orders.map((data) => (
+        data.id));
+    const qtd = orders.map((data) => (
+        data.qtd
+    ))
 
     function createOrder() {
         fetch('https://lab-api-bq.herokuapp.com/orders', {
@@ -24,8 +30,8 @@ export function Orders({
                 "table": Table,
                 "products": [
                     {
-                        "id": 31,
-                        "qtd": 2
+                        "id": id,
+                        "qtd": qtd,
                     }
                 ]
             })
