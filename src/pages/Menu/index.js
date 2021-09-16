@@ -125,12 +125,14 @@ export function Menu() {
                                                 <h2 className="priceItem"> R$ {item.price},00</h2>
                                             </div>
                                             <Button id="addToCart" type="button" onClick={() => {
-                                                if (!order.some(item => item.name === burgers[index].name)) {
+                                                if (!order.some(item => item.name === burgers[index].name
+                                                    && item.flavor === breakfast[index].flavor
+                                                    && item.complement === breakfast[index].complement)) {
                                                     setOrder([...order, {
                                                         "id": burgers[index].id,
                                                         "flavor": burgers[index].flavor,
                                                         "name": burgers[index].name,
-                                                        "qtd": 1,
+                                                        "qtd": [],
                                                         "image": burgers[index].image,
                                                         "complement": burgers[index].complement,
                                                         "price": burgers[index].price
