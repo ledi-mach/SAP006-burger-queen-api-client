@@ -76,8 +76,8 @@
     font-size: 1.8rem;
 }
 
-.sendOrder {
-    margin: 0.8rem 0rem;
+.sendOrder, .cancelOrder {
+    margin: 0.5rem 0rem;
     background-color: #FF3D00;
     border-top: 2.5px solid #DF3600;
     border-bottom: 6.5px solid #DF3600;

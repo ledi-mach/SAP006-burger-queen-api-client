@@ -162,9 +162,9 @@
 
 .imgOrder {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: flex-end;
-    width: 100vw;
+    width: 100%;
 }
 
 .orderPrice {
@@ -197,4 +197,12 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     cursor: pointer;
+}
+.moreItem, .lessItem{
+    background-color: red;
+    border: none;
+    height: 20px;
+    width: 20px;
+    margin: 2%;
+    
 }
