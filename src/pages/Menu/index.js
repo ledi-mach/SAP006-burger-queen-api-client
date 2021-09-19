@@ -7,6 +7,7 @@ import { Item } from "../../components/Item/index.js";
 import "./index.css";
 import "./responsive.css";
 
+
 export function Menu() {
     const api = 'https://lab-api-bq.herokuapp.com';
     const apiProducts = `${api}/products`
@@ -34,7 +35,14 @@ export function Menu() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+
+function cancelOrder(event){
+    event.preventDefault()
+    setOrder([]);
+}
+
     return (
+
         <main id="menu" >
             <Header></Header>
             <div className="btn-menu">
@@ -96,7 +104,7 @@ export function Menu() {
                                                         "complement": breakfast[index].complement,
                                                         "price": breakfast[index].price
                                                     }]);
-                                                } else {
+                                                } /*else {
                                                     // eslint-disable-next-line array-callback-return
                                                     order.map((item, i) => {
                                                         if (item.name === breakfast[index].name) {
@@ -104,10 +112,11 @@ export function Menu() {
                                                             setOrder([...order]);
                                                         }
                                                     })
-                                                }
+                                                }*/
                                             }
                                             }
                                             >ADICIONAR</Button>
+                                            
                                         </section>
                                     </Item>
                                 ))}
@@ -134,12 +143,13 @@ export function Menu() {
                                                         "id": burgers[index].id,
                                                         "flavor": burgers[index].flavor,
                                                         "name": burgers[index].name,
-                                                        "qtd": 1,
+                                                        "qtd": 1, //aqui é o contador inicial
                                                         "image": burgers[index].image,
                                                         "complement": burgers[index].complement,
                                                         "price": burgers[index].price
                                                     }]);
-                                                } else {
+                
+                                                } /*else {//talvez tenha que colocar o contador do botão + e - aqui
                                                     order.map((item, i) => {
                                                         if (item => item.name === burgers[index].name
                                                             && item.flavor === burgers[index].flavor
@@ -147,8 +157,10 @@ export function Menu() {
                                                             order[i].qtd++
                                                             setOrder([...order])
                                                         }
+                                                        return item;
                                                     })
-                                                }
+                                                   
+                                                } */
                                             }
                                             }
                                             >ADICIONAR</Button>
@@ -156,25 +168,61 @@ export function Menu() {
                                     </Item>
                                 ))}
                             </ul>
+                           
                         )}
-
                     </div>
                 </section>
+                
                 <Orders orders={order}>
+                    
+                <Button onClick={cancelOrder}>teste limpar pedido</Button>
                     {order.map((data, index) => (
                         <Item className="orderSummary" key={index}>
+
                             <ul className="list">
                                 <div className="nameOrder">
                                     <h1 className="titleOrder">{data.name}</h1>
                                     {data.flavor !== null ? <h2 className="flavorItem">{data.flavor}</h2>
                                         : null}
                                 </div>
+                                <div className="imgOrder">
+                                        <img className="image" src={data.image} alt="imagem" />
+                                    </div>
+
                                 <div className="columOrder1">
                                     <div className="columOrder">
                                         <div className="amountOrder">
                                             <h2 className="amount">
+                            
                                                 Quantidade:
                                             </h2>{data.qtd}
+                                            <Button className="lessItem" onClick={()=>{
+                                                order.map((item, i) => {
+                                                    if (item.qtd >1) {
+                                                        order[i].qtd--
+                                                        setOrder([...order])
+
+                                                    } else if(item.qtd ===1){
+                                                        order.splice(index, 1);
+                                                        setOrder([...order])
+                                                        console.log('excluiu')
+                                                    }
+                                                    return item;
+                                                })
+                                            }}  
+                                                > - </Button>
+                                            <button className="moreItem" onClick={()=>{
+                                                order.map((item, i) => {
+                                                    if (item => item.name === burgers[index].name
+                                                        && item.flavor === burgers[index].flavor
+                                                        && item.complement === burgers[index].complement) {
+                                                        order[i].qtd++
+                                                        setOrder([...order])        
+                                                    }
+                                                    return item;
+                                                })
+                                            }}
+                                            > + </button>
                                         </div>
                                         {data.complement !== null ?
                                             <div className="complementOrder">
@@ -184,19 +232,19 @@ export function Menu() {
                                             </div>
                                             : null}
                                     </div>
-                                    <div className="imgOrder">
-                                        <img className="image" src={data.image} alt="imagem" />
-                                    </div>
+                                    
                                 </div>
                                 <div className="orderPrice">
-                                    <h1 className="price">R${data.price},00</h1>
+                                    <h1 className="price">R${data.price*data.qtd},00</h1>
                                 </div>
                             </ul>
                         </Item>
+                         
                     )
+                    
                     )}
-
                 </Orders>
+               
             </div>
 
         </main>

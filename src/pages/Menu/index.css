@@ -162,9 +162,9 @@
 
 .imgOrder {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: flex-end;
-    width: 100vw;
+    width: 100%;
 }
 
 .orderPrice {
@@ -179,3 +179,32 @@
     font-weight: 400;
 }
 
+.deleteOrder {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    text-align: end;
+}
+
+.delete {
+    position: fixed;
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    padding: 0rem 1rem;
+    margin: 5rem 0rem 0rem 1rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+
+.moreItem,
+.lessItem {
+    background-color: red;
+    border: none;
+    height: 20px;
+    width: 20px;
+    margin: 2%;
+
+}
