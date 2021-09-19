@@ -1,3 +1,4 @@
+
 export const isAuthenticated = () => {
     const token = localStorage.getItem("usersToken");
         if (token) {
@@ -5,8 +6,4 @@ export const isAuthenticated = () => {
         } else {
             return false;
         }
-}
-
-export const logOut = () => {
-    localStorage.removeItem("usersToken");
 }

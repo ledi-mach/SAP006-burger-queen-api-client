@@ -34,15 +34,16 @@ export function Menu() {
     }, [])
 
 
-function cancelOrder(event){
-    event.preventDefault()
-    setOrder([]);
-}
+    function cancelOrder(event) {
+        event.preventDefault()
+        setOrder([]);
+    }
 
     return (
 
         <main id="menu" >
             <Header></Header>
+            
             <div className="btn-menu">
                 <div className="items">
                     <Button
@@ -114,7 +115,7 @@ function cancelOrder(event){
                                             }
                                             }
                                             >ADICIONAR</Button>
-                                            
+
                                         </section>
                                     </Item>
                                 ))}
@@ -146,7 +147,7 @@ function cancelOrder(event){
                                                         "complement": burgers[index].complement,
                                                         "price": burgers[index].price
                                                     }]);
-                
+
                                                 } /*else {//talvez tenha que colocar o contador do botão + e - aqui
                                                     order.map((item, i) => {
                                                         if (item => item.name === burgers[index].name
@@ -166,14 +167,14 @@ function cancelOrder(event){
                                     </Item>
                                 ))}
                             </ul>
-                           
+
                         )}
                     </div>
                 </section>
-                
+
                 <Orders orders={order}>
-                    
-                <Button onClick={cancelOrder}>teste limpar pedido</Button>
+
+                    <Button onClick={cancelOrder}>teste limpar pedido</Button>
                     {order.map((data, index) => (
                         <Item className="orderSummary" key={index}>
 
@@ -184,38 +185,38 @@ function cancelOrder(event){
                                         : null}
                                 </div>
                                 <div className="imgOrder">
-                                        <img className="image" src={data.image} alt="imagem" />
-                                    </div>
+                                    <img className="image" src={data.image} alt="imagem" />
+                                </div>
 
                                 <div className="columOrder1">
                                     <div className="columOrder">
                                         <div className="amountOrder">
                                             <h2 className="amount">
-                            
+
                                                 Quantidade:
                                             </h2>{data.qtd}
-                                            <Button className="lessItem" onClick={()=>{
+                                            <Button className="lessItem" onClick={() => {
                                                 order.map((item, i) => {
-                                                    if (item.qtd >1) {
+                                                    if (item.qtd > 1) {
                                                         order[i].qtd--
                                                         setOrder([...order])
 
-                                                    } else if(item.qtd ===1){
+                                                    } else if (item.qtd === 1) {
                                                         order.splice(index, 1);
                                                         setOrder([...order])
                                                         console.log('excluiu')
                                                     }
                                                     return item;
                                                 })
-                                            }}  
-                                                > - </Button>
-                                            <button className="moreItem" onClick={()=>{
+                                            }}
+                                            > - </Button>
+                                            <button className="moreItem" onClick={() => {
                                                 order.map((item, i) => {
                                                     if (item => item.name === burgers[index].name
                                                         && item.flavor === burgers[index].flavor
                                                         && item.complement === burgers[index].complement) {
                                                         order[i].qtd++
-                                                        setOrder([...order])        
+                                                        setOrder([...order])
                                                     }
                                                     return item;
                                                 })
@@ -230,19 +231,18 @@ function cancelOrder(event){
                                             </div>
                                             : null}
                                     </div>
-                                    
+
                                 </div>
                                 <div className="orderPrice">
-                                    <h1 className="price">R${data.price*data.qtd},00</h1>
+                                    <h1 className="price">R${data.price * data.qtd},00</h1>
                                 </div>
                             </ul>
                         </Item>
-                         
                     )
-                    
+
                     )}
                 </Orders>
-               
+
             </div>
 
         </main>
