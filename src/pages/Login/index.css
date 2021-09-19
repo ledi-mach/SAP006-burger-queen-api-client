@@ -118,11 +118,14 @@ button {
     border-left: 2.5px solid #DF3600;
     border-right: 6.5px solid #DF3600;
     font-size: 1rem;
-    width: 93%;
     color: #ffffff;
     border-radius: 3px;
     padding: 0.2rem;
     margin: 0rem 0rem 2rem;
+}
+
+#signUpBtn{
+    width: 93%;
 }
 
 .redBtn:hover {

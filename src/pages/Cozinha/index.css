@@ -1,0 +1,80 @@
+.kitchen {
+    background-image: url(/src/assets/images/background-clean.jpg);
+    background-repeat: repeat;
+    width: 100vw;
+    padding: 0rem 2rem;
+    height: 100%;
+}
+
+.ordersKitchen {
+    width: 15rem;
+
+}
+
+.ordersList {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ListOfOrders {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.headerOrder {
+    border-bottom: 1.5px solid #FF9900;
+    padding: 0.8rem 0rem 0.3rem;
+    text-align: start;
+}
+
+.tableNumber,
+.customerName {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.customerName {
+    margin-bottom: 20px;
+}
+
+.timeOrder {
+    color: #763D09;
+}
+
+.titleKitchen {
+    color: #FF9900;
+    margin: 4%;
+}
+
+#statusOrderBtn {
+    width: 60%;
+}
+
+.listProductOrder {
+    border-bottom: 1.5px solid #763D09;
+}
+
+.bodyOrder {
+    height: 120px;
+    overflow: auto;
+}
+
+.listProductOrder {
+    display: flex;
+    margin: 2%;
+    padding: 4%;
+}
+
+.nameItemOrder {
+    width: 40%;
+    margin-right: 5px;
+    font-weight: bold;
+    word-break: break-word;
+    border-right: 1px solid black;
+}

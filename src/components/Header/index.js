@@ -9,3 +9,12 @@ export function Header() {
         </header>
     )
 }
+export function HeaderKitchen({
+
+}) {
+    return(
+        <header className="header">
+            <h1 className="headerH1">PEDIDOS</h1>
+        </header>
+    )
+}
