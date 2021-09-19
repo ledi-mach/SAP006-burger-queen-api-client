@@ -75,7 +75,7 @@
 
 .flavorItem {
     font-size: 1.2rem;
-    margin-top: -3%;
+    margin-top: -5%;
 }
 
 .complementsItem {
@@ -123,31 +123,35 @@
     line-height: 1.5rem;
 }
 
-.amountOrder,
-.complementOrder {
+.amountOrder {
     display: flex;
     align-items: center;
     font-size: 0.9rem;
     font-weight: 400;
+    width: 100%;
 }
 
-.amount,
-.complement {
+.complementOrder,
+.flavorOrder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.complement,
+.flavor {
     font-size: 0.9rem;
     font-weight: 400;
-    padding: 0rem 0.2rem;
+    text-align: center;
+    align-items: center;
+    padding: 0rem 0.2rem 0rem 0rem;
 }
 
 .columOrder1 {
     display: flex;
     flex-direction: row;
-}
-
-.columOrder {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
 }
 
 .image {
@@ -158,19 +162,20 @@
     justify-content: end;
     align-items: flex-end;
     text-align: end;
+    border-radius: 5px;
 }
 
 .imgOrder {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-end;
-    width: 100%;
 }
 
 .orderPrice {
-    margin: 1rem 0rem 0rem;
-    text-align: center;
+    margin: 0.2rem 0rem 0rem;
     border-top: 1px solid black;
+    display: flex;
+    flex-direction: row;
 }
 
 .price {
@@ -179,30 +184,39 @@
     font-weight: 400;
 }
 
-.deleteOrder {
+.moreItem,
+.lessItem {
+    width: 1rem;
+    height: 1.2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    align-items: center;
     display: flex;
-    justify-content: end;
-    align-items: flex-end;
-    text-align: end;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: Roboto;
 }
 
-.delete {
-    position: fixed;
-    background-color: red;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bolder;
-    padding: 0rem 1rem;
-    margin: 5rem 0rem 0rem 1rem;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    cursor: pointer;
+.inputQtd {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 1rem;
+    height: 1.2rem;
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid rgba(75, 75, 75, 0.349);
 }
-.moreItem, .lessItem{
-    background-color: red;
-    border: none;
-    height: 20px;
-    width: 20px;
-    margin: 2%;
-    
+
+.complementsColum {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    align-items: flex-start;
+    margin: 0rem 0.5rem;
 }

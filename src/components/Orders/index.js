@@ -7,7 +7,7 @@ import { Button } from "../Button";
 export function Orders({
     children,
     orders,
-   
+    cancelOrder,
 }) {
 
     const userToken = localStorage.getItem('usersToken');
@@ -36,11 +36,12 @@ export function Orders({
             })
         })
     }
-//divOrderSummary é a div onde vão os pedidos
+
+    //divOrderSummary é a div onde vão os pedidos
     return (
         <div className="orders">
             <h1 className="ordersH1">PEDIDOS</h1>
-            <div className="divOrderSummary"> 
+            <div className="divOrderSummary">
                 {children}
             </div>
             <div className="nameTable">
@@ -58,9 +59,7 @@ export function Orders({
             <div className="finishOrder">
                 <p className="total">TOTAL: R$ 00</p>
                 <Button type="button" className="sendOrder" onClick={createOrder}>FAZER PEDIDO</Button>
-                <Button type="button" className="cancelOrder"
-                //aqui ver como usar o setState que está no menu ou mandar a função e acessar lá}
-                >CANCELAR PEDIDO</Button>
+                <Button type="button" className="cancelOrder" onClick={cancelOrder}>CANCELAR PEDIDO</Button>
             </div>
         </div>
 
