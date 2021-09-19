@@ -76,7 +76,8 @@
     font-size: 1.8rem;
 }
 
-.sendOrder, .cancelOrder {
+.sendOrder,
+.cancelOrder {
     margin: 0.5rem 0rem;
     background-color: #FF3D00;
     border-top: 2.5px solid #DF3600;
@@ -100,4 +101,60 @@
     overflow-y: auto;
     overflow-wrap: break-word;
     margin: 1rem 0rem;
+}
+
+.confirm-delete,
+.confirm-delete-comment {
+    width: 100%;
+    height: 100%;
+    background: #2e1c5762;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+}
+
+.h1-confirm-delete,
+.h1-confirm-delete-comment {
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 1rem 0rem;
+    align-items: center;
+    text-align: center;
+}
+
+.confirm-modal,
+.confirm-modal-comment {
+    width: 25rem;
+    height: 15rem;
+    background: linear-gradient(600.92deg, #5e74af 50.15%, #6da7ce 100.44%);
+    border-radius: 20px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.confirm-buttons,
+.confirm-buttons-comment {
+    align-items: center;
+    text-align: center;
+    background-color: #d5e2ff;
+    padding: 0.5rem 1rem;
+    width: 11rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-purple);
+    font-size: 1.3rem;
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-buttons:hover,
+.confirm-buttons-comment:hover {
+    filter: invert(77%) sepia(58%) saturate(1717%) hue-rotate(203deg) brightness(100%) contrast(88%);
+    transition: 1s
 }
