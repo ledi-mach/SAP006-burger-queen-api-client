@@ -1,9 +1,11 @@
+/* eslint-disable array-callback-return */
 import { useEffect, useState } from "react";
 import { Header } from '../../components/Header/index.js';
 import { Orders } from '../../components/Orders/index.js';
 import { Button } from '../../components/Button/index.js';
 import { Item } from "../../components/Item/index.js";
 import "./index.css";
+import "./responsive.css";
 
 export function Menu() {
     const api = 'https://lab-api-bq.herokuapp.com';

@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+    #menu {
+        width: 100vw;
+    }
+
+    .orders {
+        width: 40vw;
+        transition: 1s;
+
+    }
+
+    .image {
+        width: 8vw;
+        height: 6vh;
+        margin: 0.5rem 0rem 0rem;
+    }
+
+    .titleOrder {
+        font-size: 1.7rem;
+        padding: 0.4rem 0rem 0rem;
+    }
+
+    .amount,
+    .complement,
+    .amountOrder,
+    .complementOrder {
+        font-size: 1.5rem;
+    }
+
+    .ordersH1 {
+        font-size: 2.5rem;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+}
