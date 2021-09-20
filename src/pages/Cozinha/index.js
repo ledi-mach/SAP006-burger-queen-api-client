@@ -44,15 +44,15 @@ export function Cozinha() {
 
     return (
         <main className="kitchen">
-            <div>
-                <Button onClick={() => {
+            <div className="divLogoutBtn">
+                <Button  className="LogoutBtn" onClick={() => {
                     localStorage.removeItem("usersToken")
                     alert('saindo...')
                     history.push('/login')
                 }}>Sair</Button>
             </div>
 
-            <div>
+            <div className='divHeaderKitchen'>
                 <HeaderKitchen />
             </div>
             <div className="kitchen-wrap">

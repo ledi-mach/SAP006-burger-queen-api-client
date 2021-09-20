@@ -103,15 +103,7 @@ export function Menu() {
                                                         "complement": breakfast[index].complement,
                                                         "price": breakfast[index].price
                                                     }]);
-                                                } /*else {
-                                                    // eslint-disable-next-line array-callback-return
-                                                    order.map((item, i) => {
-                                                        if (item.name === breakfast[index].name) {
-                                                            order[i].qtd++
-                                                            setOrder([...order]);
-                                                        }
-                                                    })
-                                                }*/
+                                                } 
                                             }
                                             }
                                             >ADICIONAR</Button>
@@ -197,7 +189,8 @@ export function Menu() {
                                     <div className="amountOrder">
                                         <Button className="lessItem" onClick={() => {
                                             order.map((item, i) => {
-                                                if (item.qtd > 1) {
+                                                if (item.qtd >1 &&(data.id===item.id) ) 
+                                                {
                                                     order[i].qtd--
                                                     setOrder([...order])
 
@@ -206,6 +199,7 @@ export function Menu() {
                                                     setOrder([...order])
                                                     console.log('excluiu')
                                                 }
+                                                
                                                 return item;
                                             })
                                         }}
@@ -215,9 +209,9 @@ export function Menu() {
                                         </div>
                                         <Button className="moreItem" onClick={() => {
                                             order.map((item, i) => {
-                                                if (item => item.name === burgers[index].name
-                                                    && item.flavor === burgers[index].flavor
-                                                    && item.complement === burgers[index].complement) {
+                                                if (
+                                                item.qtd>=1 && (data.id === item.id)
+                                                    ) {
                                                     order[i].qtd++
                                                     setOrder([...order])
                                                 }
@@ -231,7 +225,6 @@ export function Menu() {
                                 </div>
                             </ul>
                         </Item>
-
                     )
 
                     )}
