@@ -7,8 +7,7 @@
 }
 
 .ordersKitchen {
-    width: 15rem;
-
+    width: 20rem;
 }
 
 .ordersList {
@@ -49,11 +48,15 @@
 
 .titleKitchen {
     color: #FF9900;
-    margin: 4%;
+    margin: 4% 0% 2% 0%;
+    text-align: center;
+    z-index: 3;
 }
+
 
 #statusOrderBtn {
     width: 60%;
+    margin: 4% 20%;
 }
 
 .listProductOrder {
@@ -63,6 +66,7 @@
 .bodyOrder {
     height: 120px;
     overflow: auto;
+    line-height: 17px;
 }
 
 .listProductOrder {
@@ -77,4 +81,26 @@
     font-weight: bold;
     word-break: break-word;
     border-right: 1px solid black;
+}
+
+.order-wrap{
+    background-color: white;
+    margin: 1.5rem;
+    padding: 0rem 0.5rem;
+    width: 15rem;
+    height: 23rem;
+    border-radius: 5px;
+
+}
+.LogoutBtn{
+   background-color:#FF9900;
+   border: none;
+   width: 5vw;
+   border-radius: 5px;  
+   margin-left: 90vw;
+}
+.divLogoutBtn{
+    position: absolute;
+    z-index: 3;
+    margin-top: 1.5%;
 }
