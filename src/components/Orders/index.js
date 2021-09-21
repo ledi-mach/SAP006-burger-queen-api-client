@@ -8,12 +8,18 @@ export function Orders({
     children,
     orders,
     cancelOrder,
+
 }) {
 
     const userToken = localStorage.getItem('usersToken');
     const [Customer, setCustomer] = useState('');
     const [Table, setTable] = useState('');
 
+    function cancelCustomer() {
+        setTable([]);
+        setCustomer([]);
+        cancelOrder([])
+    }
 
     function createOrder() {
 
@@ -48,18 +54,18 @@ export function Orders({
                 <div className="nameCustomer">
                     <p className="clientInfo">Nome: </p>
                     <Input inputType="name" inputClass="inputCustomer" inputValue={Customer}
-                        inputOnChange={e => setCustomer(e.target.value)}></Input>
+                        inputOnChange={e => setCustomer(e.target.value)} table={setCustomer}></Input>
                 </div>
                 <div className="tableCustomer">
                     <p className="clientInfo">Mesa: </p>
                     <Input inputType="number" inputClass="inputTable" min="1" max="15" inputValue={Table}
-                        inputOnChange={e => setTable(e.target.value)} ></Input>
+                        inputOnChange={e => setTable(e.target.value)} customer={setTable}></Input>
                 </div>
             </div>
             <div className="finishOrder">
                 <p className="total">TOTAL: R$ 00</p>
                 <Button type="button" className="sendOrder" onClick={createOrder}>FAZER PEDIDO</Button>
-                <Button type="button" className="cancelOrder" onClick={cancelOrder}>CANCELAR PEDIDO</Button>
+                <Button type="button" className="cancelOrder" onClick={cancelCustomer}>CANCELAR PEDIDO</Button>
             </div>
         </div>
 
