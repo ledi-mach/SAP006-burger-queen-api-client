@@ -8,6 +8,7 @@ import "./index.css";
 import "./responsive.css";
 
 
+
 export function Menu() {
     const api = 'https://lab-api-bq.herokuapp.com';
     const apiProducts = `${api}/products`
@@ -16,6 +17,11 @@ export function Menu() {
     const [order, setOrder] = useState([]);
     const [breakfast, setBreakfast] = useState([]);
     const [burgers, setBurgers] = useState([]);
+
+
+function priceTotal(valor){
+    return valor.reduce((priceItem, item)=>priceItem+(item.qtd * item.price), 0)
+}
 
     useEffect(() => {
 
@@ -43,7 +49,8 @@ export function Menu() {
     return (
 
         <main id="menu" >
-            <Header></Header>
+       
+            <Header />
             <div className="btn-menu">
                 <div className="items">
                     <Button
@@ -152,8 +159,9 @@ export function Menu() {
                     </div>
                 </section>
 
-                <Orders orders={order} cancelOrder={cancelOrder}>
+                <Orders orders={order} cancelOrder={cancelOrder} priceTotal={priceTotal(order)}>
                     {order.map((data, index) => (
+                        
                         <Item className="orderSummary" key={index}>
 
                             <ul className="list">
@@ -194,19 +202,21 @@ export function Menu() {
                                                     order[i].qtd--
                                                     setOrder([...order])
 
-                                                } else if (item.qtd === 1) {
+                                                } else if (item.qtd ===1 && data.id===item.id) {
                                                     order.splice(index, 1);
                                                     setOrder([...order])
                                                     console.log('excluiu')
                                                 }
-                                                
+
                                                 return item;
                                             })
                                         }}
                                         > - </Button>
+
                                         <div className="inputQtd">
                                             {data.qtd}
                                         </div>
+                                        
                                         <Button className="moreItem" onClick={() => {
                                             order.map((item, i) => {
                                                 if (
@@ -219,19 +229,21 @@ export function Menu() {
                                             })
                                         }}
                                         > + </Button>
+                                      
                                     </div>
-
+ 
                                     <h1 className="price">R${data.price * data.qtd},00</h1>
+                                  
                                 </div>
                             </ul>
+                        
                         </Item>
                     )
 
                     )}
                 </Orders>
-
             </div>
-
         </main >
+       
     )
 }

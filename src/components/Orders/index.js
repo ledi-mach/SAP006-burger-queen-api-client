@@ -8,13 +8,15 @@ export function Orders({
     children,
     orders,
     cancelOrder,
+    priceTotal
+   
 }) {
 
     const userToken = localStorage.getItem('usersToken');
     const [Customer, setCustomer] = useState('');
     const [Table, setTable] = useState('');
 
-
+    
     function createOrder() {
 
         const Products = orders.map((data) => ({ //aqui tô pegando os produtos da orders e mapeando pra pegar o id e qtd
@@ -37,7 +39,7 @@ export function Orders({
         })
     }
 
-    //divOrderSummary é a div onde vão os pedidos
+    //divOrderSummary onde vão os pedidos
     return (
         <div className="orders">
             <h1 className="ordersH1">PEDIDOS</h1>
@@ -57,7 +59,7 @@ export function Orders({
                 </div>
             </div>
             <div className="finishOrder">
-                <p className="total">TOTAL: R$ 00</p>
+                <p className="total">TOTAL: R$ {priceTotal},00</p>
                 <Button type="button" className="sendOrder" onClick={createOrder}>FAZER PEDIDO</Button>
                 <Button type="button" className="cancelOrder" onClick={cancelOrder}>CANCELAR PEDIDO</Button>
             </div>
@@ -65,3 +67,4 @@ export function Orders({
 
     )
 }
+//  <p className="total">TOTAL: R$ {sumPriceTotal(order)}</p>
