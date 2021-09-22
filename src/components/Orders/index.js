@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import "./index.css";
+import "./responsive.css";
 import { Input } from "../Input";
 import { Button } from "../Button";
 
@@ -21,7 +22,6 @@ export function Orders({
         setCustomer([]);
         cancelOrder([])
     }
-
 
     function createOrder() {
 
