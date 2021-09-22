@@ -17,6 +17,8 @@ export function Menu() {
     const [order, setOrder] = useState([]);
     const [breakfast, setBreakfast] = useState([]);
     const [burgers, setBurgers] = useState([]);
+    const [side, setSide] = useState([]);
+    const [drinks, setDrinks] = useState([]);
 
 
 function priceTotal(valor){
@@ -24,7 +26,6 @@ function priceTotal(valor){
 }
 
     useEffect(() => {
-
         fetch(apiProducts, {
             headers: {
                 'accept': 'application/json',
@@ -34,132 +35,114 @@ function priceTotal(valor){
             .then((response) => response.json())
             .then((data) => {
                 const breakfast = data.filter(item => item.sub_type === 'breakfast')
-                setBreakfast(breakfast)
+                setBreakfast(breakfast);
                 const burgers = data.filter(item => item.sub_type === 'hamburguer')
-                setBurgers(burgers)
+                setBurgers(burgers);
+                const side = data.filter(item => item.sub_type === 'side')
+                setSide(side);
+                const drinks = data.filter(item => item.sub_type === 'drinks')
+                setDrinks(drinks);
+
             })
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-    function cancelOrder(event) {
-        event.preventDefault()
-        setOrder([]);
-    }
-
+    }, []);
+   
     return (
 
         <main id="menu" >
        
             <Header />
             <div className="btn-menu">
-                <div className="items">
-                    <Button
-                        className="categoriesBtn"
-                        id="breakfast"
-                        onClick={() => setMenu(true)}>
-                        Café da Manhã
-                    </Button>
-                    <Button
-                        className="categoriesBtn"
-                        id="burgers"
-                        onClick={() => setMenu(false)}>
-                        Almoço/Jantar
-                    </Button>
-                    <Button
-                        className="categoriesBtn"
-                        id="accompaniments"
-                        onClick={() => setMenu(false)}>
-                        Acompanhamentos
-                    </Button>
-                    <Button
-                        className="categoriesBtn"
-                        id="drinks"
-                        onClick={() => setMenu(false)}
-                    >
-                        Bebidas
-                    </Button>
+                <div className="types">
+                    <div className="item">
+                        <Button
+                            className="categoriesBtn"
+                            id="breakfast"
+                            onClick={() => setMenu(breakfast,
+                                // [{
+                                //     "nome": "Café da Manhã"
+                                // }]
+                            )}>
+                            Café da Manhã
+                        </Button>
+                        <Button
+                            className="categoriesBtn"
+                            id="burgers"
+                            onClick={() => setMenu(burgers,
+                                // [{
+                                //     "nome": "Almoço/Jantar"
+                                // }]
+                            )}>
+                            Almoço/Jantar
+                        </Button>
+                    </div>
+                    <div className="items">
+                        <Button
+                            className="categoriesBtn"
+                            id="accompaniments"
+                            onClick={() => setMenu(side,
+                                // [{
+                                //     "nome": "Acompanhamentos"
+                                // }]
+                            )}>
+                            Acompanhamentos
+                        </Button>
+                        <Button
+                            className="categoriesBtn"
+                            id="drinks"
+                            onClick={() => setMenu(drinks,
+                                // [{
+                                //     "nome": "Bebidas"
+                                // }]
+                            )}
+                        >
+                            Bebidas
+                        </Button>
+                    </div>
                 </div>
-
 
                 <div className="nameItems" >
-                    <h1 className="itemsH1">ITEMS</h1>
+                    {menu.map((item, index) => (
+                        <h1 className="itemsH1" key={`menuItem-${index}`}>{item.nome}</h1>
+                    ))}
                 </div>
-                <section className="menu-filter">
-                    <div className="item-main-section">
-                        {menu ? (
-                            <ul className="breakfastItems">
-                                {breakfast.map((item, index) => (
-                                    <Item className="ordersItems1" key={`menuItem-${index}`}>
-                                        <section>
-                                            <div className="aboutItems">
-                                                <img src={item.image} alt="items" className="imageItem" />
-                                                <h1 className="nameItem"> {item.name}</h1>
-                                                {item.flavor !== null ? <h2 className="flavorItem">{item.flavor}</h2>
-                                                    : null}
-                                                {item.complement !== null ? <h2 className="complementsItem">Adicionais: {item.complement}</h2>
-                                                    : null}
-                                                <h2 className="priceItem"> R$ {item.price},00</h2>
-                                            </div>
-                                            <Button id="addToCart" type="button" onClick={() => {
-                                                if (!order.some(item => item.name === breakfast[index].name)) {
-                                                    setOrder([...order, {
-                                                        "id": breakfast[index].id,
-                                                        "name": breakfast[index].name,
-                                                        "qtd": 1,
-                                                        "image": breakfast[index].image,
-                                                        "complement": breakfast[index].complement,
-                                                        "price": breakfast[index].price
-                                                    }]);
-                                                } 
-                                            }
-                                            }
-                                            >ADICIONAR</Button>
-
-                                        </section>
-                                    </Item>
-                                ))}
-                            </ul>
-                        ) : (
-                            <ul className="hamburgersItems">
-                                {burgers.map((item, index) => (
-                                    <Item className="ordersItems" key={`menuItem-${index}`}>
-                                        <section>
-                                            <div className="aboutItems">
-                                                <img src={item.image} alt="items" className="imageItem" />
-                                                <h1 className="nameItem"> {item.name}</h1>
-                                                {item.flavor !== null ? <h2 className="flavorItem">{item.flavor}</h2>
-                                                    : null}
-                                                {item.complement !== null ? <h2 className="complementsItem">Adicionais: {item.complement}</h2>
-                                                    : null}
-                                                <h2 className="priceItem"> R$ {item.price},00</h2>
-                                            </div>
-                                            <Button id="addToCart" type="button" onClick={() => {
-                                                if (!order.some(item => item.name === burgers[index].name
-                                                    && item.flavor === burgers[index].flavor
-                                                    && item.complement === burgers[index].complement)) {
-                                                    setOrder([...order, {
-                                                        "id": burgers[index].id,
-                                                        "flavor": burgers[index].flavor,
-                                                        "name": burgers[index].name,
-                                                        "qtd": 1, //aqui é o contador inicial
-                                                        "image": burgers[index].image,
-                                                        "complement": burgers[index].complement,
-                                                        "price": burgers[index].price
-                                                    }]);
-                                                }
-                                            }
-                                            }
-                                            >ADICIONAR</Button>
-                                        </section>
-                                    </Item>
-                                ))}
-                            </ul>
-
-                        )}
-                    </div>
+                <section className="sectionItems">
+                    <ul className="allItems">
+                        {menu.map((item, index) => (
+                            <Item className="ordersItems" key={`menuItem-${index}`}>
+                                <div className="aboutItems">
+                                    <img src={item.image} alt="items" className="imageItem" />
+                                    <h1 className="nameItem"> {item.name}</h1>
+                                    {item.flavor !== null ? <h2 className="flavorItem">{item.flavor}</h2>
+                                        : null}
+                                    {item.complement !== null ? <h2 className="complementsItem">Adicionais: {item.complement}</h2>
+                                        : null}
+                                    <h2 className="priceItem"> R$ {item.price},00</h2>
+                                </div>
+                                <Button id="addToCart" type="button" onClick={() => {
+                                    if (!order.some(item => item.name === menu[index].name
+                                        && item.flavor === menu[index].flavor
+                                        && item.complement === menu[index].complement)) {
+                                        setOrder([...order, {
+                                            "id": menu[index].id,
+                                            "flavor": menu[index].flavor,
+                                            "name": menu[index].name,
+                                            "qtd": 1, //aqui é o contador inicial
+                                            "image": menu[index].image,
+                                            "complement": menu[index].complement,
+                                            "price": menu[index].price
+                                        }]);
+                                    }
+                                }
+                                }
+                                >ADICIONAR</Button>
+                            </Item>
+                        ))}
+                    </ul>
                 </section>
 
-                <Orders orders={order} cancelOrder={cancelOrder} priceTotal={priceTotal(order)}>
+                <Orders orders={order} cancelOrder={setOrder} priceTotal={priceTotal(order)}>
                     {order.map((data, index) => (
                         
                         <Item className="orderSummary" key={index}>
@@ -197,12 +180,11 @@ function priceTotal(valor){
                                     <div className="amountOrder">
                                         <Button className="lessItem" onClick={() => {
                                             order.map((item, i) => {
-                                                if (item.qtd >1 &&(data.id===item.id) ) 
-                                                {
+                                                if (item.qtd > 1 && (data.id === item.id)) {
                                                     order[i].qtd--
                                                     setOrder([...order])
 
-                                                } else if (item.qtd ===1 && data.id===item.id) {
+                                                } else if (item.qtd === 1 && (data.id === item.id)) {
                                                     order.splice(index, 1);
                                                     setOrder([...order])
                                                     console.log('excluiu')
@@ -220,8 +202,8 @@ function priceTotal(valor){
                                         <Button className="moreItem" onClick={() => {
                                             order.map((item, i) => {
                                                 if (
-                                                item.qtd>=1 && (data.id === item.id)
-                                                    ) {
+                                                    item.qtd >= 1 && (data.id === item.id)
+                                                ) {
                                                     order[i].qtd++
                                                     setOrder([...order])
                                                 }

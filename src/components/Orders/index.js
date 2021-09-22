@@ -9,14 +9,19 @@ export function Orders({
     orders,
     cancelOrder,
     priceTotal
-   
 }) {
 
     const userToken = localStorage.getItem('usersToken');
     const [Customer, setCustomer] = useState('');
     const [Table, setTable] = useState('');
 
-    
+    function cancelCustomer() {
+        setTable([]);
+        setCustomer([]);
+        cancelOrder([])
+    }
+
+
     function createOrder() {
 
         const Products = orders.map((data) => ({ //aqui tô pegando os produtos da orders e mapeando pra pegar o id e qtd
@@ -61,7 +66,7 @@ export function Orders({
             <div className="finishOrder">
                 <p className="total">TOTAL: R$ {priceTotal},00</p>
                 <Button type="button" className="sendOrder" onClick={createOrder}>FAZER PEDIDO</Button>
-                <Button type="button" className="cancelOrder" onClick={cancelOrder}>CANCELAR PEDIDO</Button>
+                <Button type="button" className="cancelOrder" onClick={cancelCustomer}>CANCELAR PEDIDO</Button>
             </div>
         </div>
 

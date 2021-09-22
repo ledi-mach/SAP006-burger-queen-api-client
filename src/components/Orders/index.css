@@ -7,6 +7,7 @@
     right: 0;
 }
 
+
 .ordersH1 {
     color: black;
     font-size: 1.9rem;
@@ -63,7 +64,7 @@
 
 .finishOrder {
     display: flex;
-    margin: 1rem;
+    margin: 0rem 0.2rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -78,7 +79,7 @@
 
 .sendOrder,
 .cancelOrder {
-    margin: 0.5rem 0rem;
+    margin: 0.2rem 0rem;
     background-color: #FF3D00;
     border-top: 2.5px solid #DF3600;
     border-bottom: 6.5px solid #DF3600;

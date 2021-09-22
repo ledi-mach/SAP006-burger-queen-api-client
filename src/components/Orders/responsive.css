@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+    .inputQtd {
+        font-size: 1rem;
+    }
+
+    .columOrder1 {
+        padding: 0.5rem 0rem;
+    }
+
+    .orders {
+        width: 40vw;
+        transition: 1s;
+
+    }
+}
+
+@media (min-width: 270px) and (max-width: 600px) {
+    .orders {
+        width: 55vw;
+        transition: 1s;
+
+    }
+}
