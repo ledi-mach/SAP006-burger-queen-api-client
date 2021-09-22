@@ -30,12 +30,13 @@ export function Menu() {
             .then((data) => {
                 const breakfast = data.filter(item => item.sub_type === 'breakfast')
                 setBreakfast(breakfast);
-                const burgers = data.filter(item => item.sub_type === 'hamburguer')
+                const burgers = data.filter(item => item.id === 33 || item.id === 42)
                 setBurgers(burgers);
                 const side = data.filter(item => item.sub_type === 'side')
                 setSide(side);
                 const drinks = data.filter(item => item.sub_type === 'drinks')
                 setDrinks(drinks);
+                console.log(data)
 
             })
 
@@ -64,7 +65,7 @@ export function Menu() {
                         <Button
                             className="categoriesBtn"
                             id="burgers"
-                            onClick={() => setMenu(burgers,
+                            onClick={() => setMenu(burgers
                                 // [{
                                 //     "nome": "Almoço/Jantar"
                                 // }]
@@ -109,10 +110,6 @@ export function Menu() {
                                 <div className="aboutItems">
                                     <img src={item.image} alt="items" className="imageItem" />
                                     <h1 className="nameItem"> {item.name}</h1>
-                                    {item.flavor !== null ? <h2 className="flavorItem">{item.flavor}</h2>
-                                        : null}
-                                    {item.complement !== null ? <h2 className="complementsItem">Adicionais: {item.complement}</h2>
-                                        : null}
                                     <h2 className="priceItem"> R$ {item.price},00</h2>
                                 </div>
                                 <Button id="addToCart" type="button" onClick={() => {
