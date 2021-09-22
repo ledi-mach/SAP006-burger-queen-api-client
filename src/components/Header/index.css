@@ -1,15 +1,46 @@
 .header {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 0.5rem;
     border-bottom: 10px #FF3D00 solid;
+}
 
+.divHeader {
+    display: flex;
+}
+
+.divHeaderH1 {
+    width: 100%;
 }
 
 .headerH1 {
     color: #763D09;
     font-weight: 900;
     font-size: 2.1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.orderImg {
+    width: 3rem;
+}
+
+.btnOrders {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    color: #ff9100;
+    display: none;
+}
+
+.btnOrders:hover {
+    color: #763D09;
+    transition: 1s;
+}
+
+.divBtnOrder {
+    width: 0%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    text-align: end;
 }
