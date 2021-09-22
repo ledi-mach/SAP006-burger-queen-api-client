@@ -3,27 +3,17 @@
         width: 100vw;
     }
 
-    .orders {
-        width: 40vw;
-        transition: 1s;
-
-    }
-
     .image {
         width: 8vw;
-        height: 6vh;
-        margin: 0.5rem 0rem 0rem;
     }
 
     .titleOrder {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         padding: 0.4rem 0rem 0rem;
     }
 
     .amount,
-    .complement,
-    .amountOrder,
-    .complementOrder {
+    .amountOrder {
         font-size: 1.5rem;
     }
 
@@ -32,6 +22,114 @@
     }
 
     .price {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .inputQtd {
+        font-size: 1rem;
+    }
+
+    .items,
+    .item {
+        display: flex;
+    }
+
+    .ordersItems {
+        margin: 1rem;
+    }
+
+    .categoriesBtn {
+        margin: 1rem 1vw;
+    }
+
+    .inputCustomer {
+        font-size: 1rem;
+        width: 12.8rem;
+    }
+
+    .total {
+        padding: 0.5rem 0rem
+    }
+
+    .sendOrder,
+    .cancelOrder {
+        margin: 0.2rem 0rem;
+        font-size: 1rem;
+        padding: 0.3rem;
+    }
+}
+
+@media (min-width: 270px) and (max-width: 600px) {
+    .categoriesBtn {
+        margin: 0.3rem 1vw;
+        padding: 0rem 1rem;
+        font-size: 0.8rem;
+        width: 40vw;
+    }
+
+    .items,
+    .item {
+        display: block;
+    }
+
+    .ordersItems {
+        width: 10rem;
+        margin: 0.5rem;
+    }
+
+    .imageItem {
+        width: 9rem;
+        height: 7rem;
+    }
+
+    .titleOrder {
+        font-size: 1rem;
+        padding: 0.5rem 0rem 0rem;
+        line-height: 1rem;
+    }
+
+    .amount,
+    .amountOrder {
+        font-size: 1.5rem;
+    }
+
+    .ordersH1 {
+        font-size: 1.7rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    .inputQtd {
+        font-size: 1rem;
+    }
+
+    .inputCustomer {
+        font-size: 1rem;
+        width: 35vw;
+    }
+
+    .clientInfo {
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .total {
+        color: #763D09;
+        font-weight: 900;
+        font-size: 1.3rem;
+    }
+
+    .sendOrder,
+    .cancelOrder {
+        margin: 0.2rem 0rem;
+        font-size: 0.9rem;
+        padding: 0rem;
+    }
+
+    .orderSummary {
+        margin: 0.4rem 1.5rem;
+        padding: 0rem 0.5rem 0.5rem;
     }
 }
