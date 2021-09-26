@@ -36,7 +36,6 @@ export function Menu() {
                 setSide(side);
                 const drinks = data.filter(item => item.sub_type === 'drinks')
                 setDrinks(drinks);
-                console.log(data)
 
             })
 
@@ -178,7 +177,6 @@ export function Menu() {
                                                 } else if (item.qtd === 1 && (data.id === item.id)) {
                                                     order.splice(index, 1);
                                                     setOrder([...order])
-                                                    console.log('excluiu')
                                                 }
 
                                                 return item;

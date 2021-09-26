@@ -15,11 +15,12 @@ export function Header() {
                     <h1 className="headerH1">MENU</h1>
                 </div>
                 <div className="divBtnOrder">
-                    <button className="btnOrders"><img className="orderImg" src={orderImg} alt="orders" /></button>
+                    <button className="btnOrders"><img className="orderImg" src={orderImg} alt="orders" />
+                    </button>
                 </div>
             </div>
-
         </header>
+
     )
 }
 export function HeaderKitchen({
