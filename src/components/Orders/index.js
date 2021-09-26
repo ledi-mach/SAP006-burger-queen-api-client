@@ -10,7 +10,6 @@ export function Orders({
     orders,
     cancelOrder,
     priceTotal
-
 }) {
 
     const userToken = localStorage.getItem('usersToken');

@@ -84,9 +84,6 @@ body {
     padding: 0rem 0.5rem;
 }
 
-.inputPassword {
-    margin: 0rem 0rem 1rem 0rem;
-}
 
 button {
     cursor: pointer;
@@ -104,6 +101,7 @@ button {
     border-radius: 3px;
     padding: 0.2rem;
     margin: 0rem 0rem 2rem;
+    margin: 1rem 0rem 0rem 0rem;
 }
 
 .yellowBtn:hover {
@@ -139,4 +137,8 @@ button {
     color: #3B1E04;
     font-family: Roboto;
     margin-bottom: 0.3rem;
+}
+.msgErro{
+    color: #DF3600;
+    margin-top: 0;
 }

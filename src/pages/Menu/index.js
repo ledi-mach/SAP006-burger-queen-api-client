@@ -8,6 +8,7 @@ import "./index.css";
 import "./responsive.css";
 
 
+
 export function Menu() {
     const api = 'https://lab-api-bq.herokuapp.com';
     const apiProducts = `${api}/products`
@@ -18,6 +19,11 @@ export function Menu() {
     const [burgers, setBurgers] = useState([]);
     const [side, setSide] = useState([]);
     const [drinks, setDrinks] = useState([]);
+
+
+function priceTotal(valor){
+    return valor.reduce((priceItem, item)=>priceItem+(item.qtd * item.price), 0)
+}
 
     useEffect(() => {
         fetch(apiProducts, {
@@ -42,13 +48,12 @@ export function Menu() {
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    function priceTotal(valor) {
-        return valor.reduce((priceItem, item) => priceItem + (item.qtd * item.price), 0)
-    }
+   
     return (
 
         <main id="menu" >
-            <Header></Header>
+       
+            <Header />
             <div className="btn-menu">
                 <div className="types">
                     <div className="item">
@@ -136,6 +141,7 @@ export function Menu() {
 
                 <Orders orders={order} cancelOrder={setOrder} priceTotal={priceTotal(order)}>
                     {order.map((data, index) => (
+                        
                         <Item className="orderSummary" key={index}>
 
                             <ul className="list">
@@ -185,9 +191,11 @@ export function Menu() {
                                             })
                                         }}
                                         > - </Button>
+
                                         <div className="inputQtd">
                                             {data.qtd}
                                         </div>
+                                        
                                         <Button className="moreItem" onClick={() => {
                                             order.map((item, i) => {
                                                 if (
@@ -200,19 +208,21 @@ export function Menu() {
                                             })
                                         }}
                                         > + </Button>
+                                      
                                     </div>
-
+ 
                                     <h1 className="price">R${data.price * data.qtd},00</h1>
+                                  
                                 </div>
                             </ul>
+                        
                         </Item>
                     )
 
                     )}
                 </Orders>
-
-            </div >
-
+            </div>
         </main >
+       
     )
 }
