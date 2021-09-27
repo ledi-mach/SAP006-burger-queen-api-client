@@ -125,4 +125,14 @@ button {
     text-decoration: underline;
     transition: 1s;
 }
+.radioBtn1, .radioBtn2{
+  display: inline;
+  margin: 5%;
+}
 
+.radioBtn{
+    margin-top: 5%;
+}
+.roleLabel{
+    color: #763D09;
+}

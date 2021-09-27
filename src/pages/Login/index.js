@@ -19,8 +19,14 @@ export function Login() {
     function navigateToRegister() {
         history.push('/register');
     }
-    function navigateToRoles() {
-        history.push('/roles');
+   // function navigateToRoles() {
+     //   history.push('/roles');
+    //}
+    function navigateToMenu(){
+        history.push('/menu')
+    }
+    function navigateToKitchen(){
+        history.push('/cozinha')
     }
 
     const [errors, setErrors] = useState({});
@@ -52,8 +58,11 @@ export function Login() {
                 const id = json.id
                 const role = json.role
                 localStorage.setItem("usersToken", token);
-                if (token !== null && id !== null && role === 'kitchen') {
-                    navigateToRoles()
+                if (token !== null && id !== null && role === 'hall') {
+                    //navigateToRoles()
+                    navigateToMenu()
+                } else if(token !== null && id !== null && role === 'kitchen') {
+                    navigateToKitchen()
                 }
             })
     }
