@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 #menu {
     background-image: url(/src/assets/images/background-clean.jpg);
     width: 80vw;
@@ -31,6 +34,7 @@
 .nameItems,
 .flavorItem {
     display: flex;
+
     justify-content: center;
 }
 

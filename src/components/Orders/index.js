@@ -4,27 +4,29 @@ import "./index.css";
 import "./responsive.css";
 import { Input } from "../Input";
 import { Button } from "../Button";
+import { Modal } from "../Modal";
 
 export function Orders({
     children,
     orders,
     cancelOrder,
-    priceTotal
+    priceTotal,
 }) {
 
     const userToken = localStorage.getItem('usersToken');
     const [Customer, setCustomer] = useState('');
     const [Table, setTable] = useState('');
+    const [modalCancel, setModalCancel] = useState(false);
 
     function cancelCustomer() {
         setTable([]);
         setCustomer([]);
         cancelOrder([])
+        setModalCancel(false)
     }
 
     function createOrder() {
-
-        const Products = orders.map((data) => ({ //aqui tô pegando os produtos da orders e mapeando pra pegar o id e qtd
+        const Products = orders.map((data) => ({
             "id": data.id,
             "qtd": data.qtd,
         })
@@ -44,7 +46,6 @@ export function Orders({
         })
     }
 
-    //divOrderSummary onde vão os pedidos
     return (
         <div className="orders">
             <h1 className="ordersH1">PEDIDOS</h1>
@@ -54,22 +55,30 @@ export function Orders({
             <div className="nameTable">
                 <div className="nameCustomer">
                     <p className="clientInfo">Nome: </p>
-                    <Input inputType="name" inputClass="inputCustomer" inputValue={Customer}
-                        inputOnChange={e => setCustomer(e.target.value)}></Input>
+                    <Input type="name" inputClass="inputCustomer" value={Customer}
+                        onChange={e => setCustomer(e.target.value)}></Input>
                 </div>
                 <div className="tableCustomer">
                     <p className="clientInfo">Mesa: </p>
-                    <Input inputType="number" inputClass="inputTable" min="1" max="15" inputValue={Table}
-                        inputOnChange={e => setTable(e.target.value)} ></Input>
+                    <Input type="number" inputClass="inputTable" min="1" max="15" value={Table}
+                        onChange={e => setTable(e.target.value)} ></Input>
                 </div>
             </div>
             <div className="finishOrder">
                 <p className="total">TOTAL: R$ {priceTotal},00</p>
                 <Button type="button" className="sendOrder" onClick={createOrder}>FAZER PEDIDO</Button>
-                <Button type="button" className="cancelOrder" onClick={cancelCustomer}>CANCELAR PEDIDO</Button>
+                <Button type="button" className="cancelOrder" onClick={() => setModalCancel(true)}>CANCELAR PEDIDO</Button>
+                {modalCancel ? <Modal>
+                    <div className="modalCancel">
+                        <h1 className="h1ModalCancel">Tem certeza que deseja cancelar seu pedido?</h1>
+                        <Button className="cancelModal" type="button"
+                            onClick={cancelCustomer}>CANCELAR</Button>
+                        <Button className="cancelModal"
+                            onClick={() => setModalCancel(false)}>VOLTAR</Button>
+                    </div>
+                </Modal> : null}
             </div>
-        </div>
+        </div >
 
     )
 }
-//  <p className="total">TOTAL: R$ {sumPriceTotal(order)}</p>
