@@ -15,14 +15,24 @@ export function Header() {
                     <h1 className="headerH1">MENU</h1>
                 </div>
                 <div className="divBtnOrder">
-                    <button className="btnOrders"><img className="orderImg" src={orderImg} alt="orders" /></button>
+                    <button className="btnOrders">
+                        <img className="orderImg" src={orderImg} alt="orders" />
+                    </button>
                 </div>
             </div>
-
         </header>
     )
 }
 export function HeaderKitchen({
+
+}) {
+    return (
+        <header className="header">
+            <h1 className="headerH1">COZINHA</h1>
+        </header>
+    )
+}
+export function HeaderAttendance({
 
 }) {
     return (

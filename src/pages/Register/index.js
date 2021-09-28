@@ -17,15 +17,22 @@ export function Register() {
         history.push('/login');
     }
 
-    function navigateToRoles() {
-        history.push('/roles');
+    //function navigateToRoles() {
+      //  history.push('/roles');
+    //}
+
+    function navigateToMenu(){
+        history.push('/menu')
+    }
+    function navigateToKitchen(){
+        history.push('/cozinha')
     }
 
     const [errors, setErrors] = useState({});
     const [values, setValues] = useState({
         email: "",
         password: "",
-        role: "kitchen",
+        role: "",
         restaurant: "testeBurger"
     })
 
@@ -51,13 +58,18 @@ export function Register() {
             .then(res => res.json())
             .then((json) => {
                 const token = json.token
+                const role = json.role
                 localStorage.setItem("usersToken", token);
-                if (json.id !== undefined) {
-                    navigateToRoles();
+                localStorage.setItem("role", role)
+                if (json.id !== undefined && role==="hall") {
+                    //navigateToRoles();
+                    navigateToMenu()
+                } else if(json.id !== undefined && role==="kitchen") {
+                    navigateToKitchen()
                 }
             })
     }
-
+    
     return (
         <main>
             <img src={imgBurger} className="imgBurger" alt="imgburger" />
@@ -86,7 +98,32 @@ export function Register() {
                             onChange={handleChange}
                         />
                         {errors.password && <p className="msgErro">{errors.password}</p>}
-                    
+
+                        <div className="radioBtn">
+                            <div className="radioBtn1">
+                                <label className="roleLabel">
+                                    <input type="radio" name="role" value="hall"
+                                    onChange={handleChange}
+                                    />
+                                    &nbsp;Salão
+                                </label>
+                            </div>
+
+                            <div className="radioBtn2">
+                                <label className="roleLabel">
+                                    <input 
+                                    type="radio"
+                                     name="role" 
+                                     value="kitchen" 
+                                     onChange={handleChange}
+                                     />
+                                    &nbsp;Cozinha
+                                </label>
+                            </div>
+                        </div>
+                        {errors.role && <p className="msgErro">{errors.role}</p>}
+
+
                         <Button type="submit"
                             className="orangeBtn"
                             id="registerBtn"

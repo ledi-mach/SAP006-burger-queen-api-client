@@ -51,7 +51,7 @@ function priceTotal(valor){
    
     return (
 
-        <main id="menu" >
+        <main className="menu" >
        
             <Header />
             <div className="btn-menu">

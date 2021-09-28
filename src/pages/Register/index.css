@@ -8,10 +8,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url('/src/assets/images/background-dark.jpg');
-}
-
 .imgBurger {
     position: absolute;
     z-index: -3;
@@ -99,8 +95,8 @@ button {
     font-size: 1.1rem;
     border-radius: 3px;
     padding: 0.2rem;
-    /*margin: 0rem 0rem 2rem;*/
-    margin: 1rem 0rem 2rem 0rem;
+    margin: 0rem 0rem 2rem;
+    /*margin: 1rem 0rem 2rem 0rem;*/
 }
 
 .orangeBtn:hover {
@@ -125,4 +121,14 @@ button {
     text-decoration: underline;
     transition: 1s;
 }
+.radioBtn1, .radioBtn2{
+  display: inline;
+  margin: 5%;
+}
 
+.radioBtn{
+    margin-top: 5%;
+}
+.roleLabel{
+    color: #763D09;
+}
