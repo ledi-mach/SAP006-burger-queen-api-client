@@ -49,8 +49,9 @@ export function Menu() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    return (
-        <main id="menu" >
+    return(
+        <main className="menu" >
+       
             <Header />
             <div className="btn-menu">
                 <div className="types">
@@ -253,7 +254,6 @@ export function Menu() {
                                                 } else if (item.qtd === 1 && (data.id === item.id)) {
                                                     order.splice(index, 1);
                                                     setOrder([...order])
-                                                    console.log('excluiu')
                                                 }
 
                                                 return item;

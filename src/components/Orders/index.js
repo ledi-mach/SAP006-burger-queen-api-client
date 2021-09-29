@@ -82,3 +82,4 @@ export function Orders({
 
     )
 }
+//  <p className="total">TOTAL: R$ {sumPriceTotal(order)}</p> */

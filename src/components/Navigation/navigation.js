@@ -21,7 +21,7 @@ function Navigation() {
       <div
         className="bg-black fixed top-0 left-0 w-full h-full">
       </div>
-  }
+  } 
 
 
   return (

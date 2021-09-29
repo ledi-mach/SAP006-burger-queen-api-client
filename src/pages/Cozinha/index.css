@@ -1,4 +1,4 @@
-.kitchen {
+.kitchen, .mainAttendance {
     background-image: url(/src/assets/images/background-clean.jpg);
     background-repeat: repeat;
     width: 100vw;
@@ -54,11 +54,10 @@
 }
 
 
-#statusOrderBtn {
-    width: 60%;
-    margin: 4% 20%;
+.statusBtn{
+    max-height: 54.8px;
+    justify-content: center;
 }
-
 .listProductOrder {
     border-bottom: 1.5px solid #763D09;
 }

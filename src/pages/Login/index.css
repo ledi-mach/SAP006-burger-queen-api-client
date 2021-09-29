@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     background-image: url('/src/assets/images/background-dark.jpg');
 }
 
@@ -112,15 +112,16 @@ button {
     border-bottom: 6.5px solid #DF3600;
     border-left: 2.5px solid #DF3600;
     border-right: 6.5px solid #DF3600;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #ffffff;
     border-radius: 3px;
     padding: 0.2rem;
     margin: 0rem 0rem 2rem;
 }
 
-#signUpBtn {
+#signUpBtn, #signInBtn{
     width: 93%;
+    
 }
 
 .redBtn:hover {
