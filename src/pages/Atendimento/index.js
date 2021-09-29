@@ -1,23 +1,24 @@
-import React, {useState, useEffect} from "react";
-import { useHistory } from "react-router-dom"
+import React, { useState, useEffect } from "react";
+//import { useHistory } from "react-router-dom"
 import { OrderKitchen } from "../../components/OrderKitchen";
-import { Button } from "../../components/Button";
+//import { Button } from "../../components/Button";
 import { HeaderAttendance } from "../../components/Header";
 import { convertTime, convertDate } from "../../services/React/auth";
+import { LogoutButton } from "../../components/LogoutButton";
 
 
 export function Attendance() {
 
-    const history = useHistory()
+    //const history = useHistory()
     const [order, setOrder] = useState([]);
     const userToken = localStorage.getItem('usersToken');
     const api = 'https://lab-api-bq.herokuapp.com/orders/'
     const apiOrders = 'https://lab-api-bq.herokuapp.com/orders';
 
     //function navigateToMenu(){
-       // history.push('/menu');
+    // history.push('/menu');
     //}
-   
+
     const listAllOrders = () => {
 
         const userToken = localStorage.getItem('usersToken');
@@ -57,16 +58,11 @@ export function Attendance() {
                 listAllOrders()
             })
     }
-    
-    return(
-        <main className="mainAttendance">
-            <div className="divLogoutBtn">
-                <Button className="LogoutBtn" onClick={() => {
-                    localStorage.removeItem("usersToken")
-                    history.push('/login')
-                }}>Sair</Button>
-            </div>
 
+    return (
+        <main className="mainAttendance">
+
+            <LogoutButton />
             <HeaderAttendance />
             <OrderKitchen
                 convertTime={convertTime}
