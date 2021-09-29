@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom"
 import { OrderKitchen } from "../../components/OrderKitchen";
 import { Button } from "../../components/Button";
-import { HeaderAttendance } from "../../components/Header";
+import { HeaderPedidos } from "../../components/Header";
 import { convertTime, convertDate } from "../../services/React/auth";
 
 
-export function Attendance() {
+export function Pedidos() {
 
     const history = useHistory()
     const [order, setOrder] = useState([]);
@@ -15,9 +15,9 @@ export function Attendance() {
     const apiOrders = 'https://lab-api-bq.herokuapp.com/orders';
 
     //function navigateToMenu(){
-       // history.push('/menu');
+    // history.push('/menu');
     //}
-   
+
     const listAllOrders = () => {
 
         const userToken = localStorage.getItem('usersToken');
@@ -57,8 +57,8 @@ export function Attendance() {
                 listAllOrders()
             })
     }
-    
-    return(
+
+    return (
         <main className="mainAttendance">
             <div className="divLogoutBtn">
                 <Button className="LogoutBtn" onClick={() => {
@@ -67,7 +67,7 @@ export function Attendance() {
                 }}>Sair</Button>
             </div>
 
-            <HeaderAttendance />
+            <HeaderPedidos />
             <OrderKitchen
                 convertTime={convertTime}
                 convertDate={convertDate}
