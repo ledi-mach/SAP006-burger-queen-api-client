@@ -1,9 +1,9 @@
+import React, {useState, useEffect} from "react";
 import { useHistory } from "react-router-dom"
 import { OrderKitchen } from "../../components/OrderKitchen";
 import { Button } from "../../components/Button";
 import { HeaderAttendance } from "../../components/Header";
-import { useState } from "react";
-import { useEffect } from "react";
+import { convertTime, convertDate } from "../../services/React/auth";
 
 
 export function Attendance() {
@@ -17,14 +17,7 @@ export function Attendance() {
     //function navigateToMenu(){
        // history.push('/menu');
     //}
-    const convertTime = (apiTime) => {
-        const getDate = new Date(apiTime);
-        const getHours = getDate.getHours();
-        const getMinutes = getDate.getMinutes();
-        const correctTime = `${getHours}: ${getMinutes}`
-
-        return correctTime;
-    }
+   
     const listAllOrders = () => {
 
         const userToken = localStorage.getItem('usersToken');
@@ -38,7 +31,7 @@ export function Attendance() {
             .then((response) => response.json())
             .then((data) => {
                 const pendingOrders = data.filter((item) => {
-                    return item.status.includes('ready') 
+                    return item.status.includes('ready') || item.status.includes('served')
                 })
                 setOrder(pendingOrders)
             });
@@ -77,6 +70,7 @@ export function Attendance() {
             <HeaderAttendance />
             <OrderKitchen
                 convertTime={convertTime}
+                convertDate={convertDate}
                 order={order}
                 handleServing={handleServing}
             />

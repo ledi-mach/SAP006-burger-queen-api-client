@@ -51,7 +51,6 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
 
 .h1Login {
@@ -84,7 +83,6 @@ body{
     padding: 0rem 0.5rem;
 }
 
-
 button {
     cursor: pointer;
 }
@@ -100,8 +98,7 @@ button {
     font-size: 1.1rem;
     border-radius: 3px;
     padding: 0.2rem;
-    margin: 0rem 0rem 2rem;
-    /*margin: 1rem 0rem 0rem 0rem;*/
+    margin: 1rem 0rem 1rem;
 }
 
 .yellowBtn:hover {
@@ -137,7 +134,10 @@ button {
     font-family: Roboto;
     margin-bottom: 0.3rem;
 }
-.msgErro{
+
+.msgErro {
     color: #DF3600;
-    margin-top: 0;
+    margin: 0rem 0.8rem;
+    text-align: left;
+    font-family: Roboto;
 }

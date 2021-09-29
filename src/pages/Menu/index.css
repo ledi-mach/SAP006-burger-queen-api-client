@@ -33,6 +33,7 @@
 .nameItems,
 .flavorItem {
     display: flex;
+
     justify-content: center;
 }
 

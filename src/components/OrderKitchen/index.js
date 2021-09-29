@@ -1,9 +1,11 @@
 import {Button} from "../Button/index"
 import {Item} from "../Item/index"
 import React from "react"
+import './index.css';
 
 export function OrderKitchen({
     convertTime,
+    convertDate,
     order,
     handlePreparing,
     handleFinished,
@@ -26,8 +28,11 @@ export function OrderKitchen({
                                 .replace('pending', 'Pendente')
                                 .replace('preparing', 'Preparando')
                                 .replace('ready', 'Pronto')
+                                .replace('served', 'Servido')
                                 } </p>
-                                <p className="timeOrder"> Pedido feito às {convertTime(data.createdAt)} </p>
+                                <p className="timeOrder">
+                                Pedido feito em {convertDate(data.createdAt)} às {convertTime(data.createdAt)} </p>
+                                    
                             </div>
 
                             <h1 className="titleKitchen">PEDIDOS</h1>
@@ -57,10 +62,14 @@ export function OrderKitchen({
                         <Button className="yellowBtn"  id="statusOrderFinish"
                         onClick={(e)=>handleFinished(data,e)}
                         > Finalizar</Button>
-                        : 
+                        :  data.status==='ready' ?
                         <Button className="yellowBtn"  id="statusOrderToServe"
                         onClick={(e)=>handleServing(data,e)}
                         > Servir</Button>
+                        :
+                        <p className="redBtn" id="statusOrderServed">
+                            Finalizado
+                        </p>
                           }
 
                            </div>   

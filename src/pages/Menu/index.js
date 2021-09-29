@@ -4,10 +4,9 @@ import { Header } from '../../components/Header/index.js';
 import { Orders } from '../../components/Orders/index.js';
 import { Button } from '../../components/Button/index.js';
 import { Item } from "../../components/Item/index.js";
+import { Modal } from "../../components/Modal/index.js";
 import "./index.css";
 import "./responsive.css";
-
-
 
 export function Menu() {
     const api = 'https://lab-api-bq.herokuapp.com';
@@ -17,13 +16,14 @@ export function Menu() {
     const [order, setOrder] = useState([]);
     const [breakfast, setBreakfast] = useState([]);
     const [burgers, setBurgers] = useState([]);
+    const [burger, setBurger] = useState([]);
     const [side, setSide] = useState([]);
     const [drinks, setDrinks] = useState([]);
+    const [isModalVisible, setIsModalVisible] = useState(false);
 
-
-function priceTotal(valor){
-    return valor.reduce((priceItem, item)=>priceItem+(item.qtd * item.price), 0)
-}
+    function priceTotal(valor) {
+        return valor.reduce((priceItem, item) => priceItem + (item.qtd * item.price), 0)
+    }
 
     useEffect(() => {
         fetch(apiProducts, {
@@ -36,21 +36,20 @@ function priceTotal(valor){
             .then((data) => {
                 const breakfast = data.filter(item => item.sub_type === 'breakfast')
                 setBreakfast(breakfast);
-                const burgers = data.filter(item => item.id === 33 || item.id === 42)
-                setBurgers(burgers);
+                const burgers = data.filter(item => item.sub_type === 'hamburguer')
+                setBurgers(burgers)
+                const burger = burgers.filter(item => item.id === 33 || item.id === 42)
+                setBurger(burger);
                 const side = data.filter(item => item.sub_type === 'side')
                 setSide(side);
                 const drinks = data.filter(item => item.sub_type === 'drinks')
                 setDrinks(drinks);
-                console.log(data)
-
             })
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-   
-    return (
 
+    return(
         <main className="menu" >
        
             <Header />
@@ -70,7 +69,7 @@ function priceTotal(valor){
                         <Button
                             className="categoriesBtn"
                             id="burgers"
-                            onClick={() => setMenu(burgers
+                            onClick={() => setMenu(burger
                                 // [{
                                 //     "nome": "Almoço/Jantar"
                                 // }]
@@ -117,33 +116,105 @@ function priceTotal(valor){
                                     <h1 className="nameItem"> {item.name}</h1>
                                     <h2 className="priceItem"> R$ {item.price},00</h2>
                                 </div>
-                                <Button id="addToCart" type="button" onClick={() => {
-                                    if (!order.some(item => item.name === menu[index].name
-                                        && item.flavor === menu[index].flavor
-                                        && item.complement === menu[index].complement)) {
-                                        setOrder([...order, {
-                                            "id": menu[index].id,
-                                            "flavor": menu[index].flavor,
-                                            "name": menu[index].name,
-                                            "qtd": 1, //aqui é o contador inicial
-                                            "image": menu[index].image,
-                                            "complement": menu[index].complement,
-                                            "price": menu[index].price
-                                        }]);
+                                {menu === breakfast || menu === side || menu === drinks ?
+                                    <Button id="addToCart" type="button" onClick={() => {
+                                        if (!order.some(item => item.name === menu[index].name
+                                            && item.flavor === menu[index].flavor
+                                            && item.complement === menu[index].complement)) {
+                                            setOrder([...order, {
+                                                "id": menu[index].id,
+                                                "flavor": menu[index].flavor,
+                                                "name": menu[index].name,
+                                                "qtd": 1, //aqui é o contador inicial
+                                                "image": menu[index].image,
+                                                "complement": menu[index].complement,
+                                                "price": menu[index].price
+                                            }]);
+                                        }
                                     }
+                                    } >ADICIONAR</Button>
+                                    : <Button id="addToCart" onClick={() => setIsModalVisible(true)}>ADICIONAR</Button>
                                 }
-                                }
-                                >ADICIONAR</Button>
+                                {isModalVisible ? <Modal>
+                                    {burgers.map((item, index) => (
+                                        <div className="confirmModal" key="index">
+                                            <img src={item.image} alt="items" className="imageItemModal" />
+                                            <div className="colunsModal">
+                                                <div className="flavorsModal">
+                                                    <h1 className="h1Modal">SABOR: </h1>
+                                                    <Button
+                                                        className="categoriesBtnModal"
+                                                        onClick={() => setBurgers(
+                                                            burgers.filter(item => item.id === 33)
+                                                        )}>
+                                                        Carne
+                                                    </Button>
+                                                    <Button
+                                                        className="categoriesBtnModal"
+                                                        onClick={() => setBurgers(
+                                                            burgers.filter(item => item.id === 34)
+                                                        )}>
+                                                        Frango
+                                                    </Button>
+                                                    <Button
+                                                        className="categoriesBtnModal"
+                                                        onClick={() => setBurgers(
+                                                            burgers.filter(item => item.id === 35)
+                                                        )}>
+                                                        Vegetariano
+                                                    </Button>
+                                                </div>
+                                                <div className="complementsModal">
+                                                    <h1 className="h1Modal">ADICIONAIS: </h1>
+                                                    <Button
+                                                        className="categoriesBtnModalC"
+                                                        onClick={() => setBurgers(
+                                                            burgers.filter(item => item.id === 39)
+                                                        )}>
+                                                        Ovo
+                                                    </Button>
+                                                    <Button
+                                                        className="categoriesBtnModalC"
+                                                        onClick={() => setBurgers(
+                                                            burgers.filter(item => item.id === 36)
+                                                        )}>
+                                                        Queijo
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                            <div className="btnModal">
+                                                <Button className="btnModals" type="button" onClick={() => {
+                                                    if (!order.some(item => item.name === burgers[index].name
+                                                        && item.flavor === burgers[index].flavor
+                                                        && item.complement === burgers[index].complement)) {
+                                                        setOrder([...order, {
+                                                            "id": burgers[index].id,
+                                                            "flavor": burgers[index].flavor,
+                                                            "name": burgers[index].name,
+                                                            "qtd": 1, //aqui é o contador inicial
+                                                            "image": burgers[index].image,
+                                                            "complement": burgers[index].complement,
+                                                            "price": burgers[index].price
+                                                        }]);
+                                                    }
+                                                    setIsModalVisible(false)
+                                                }
+
+                                                }>ADICIONAR</Button>
+                                                <Button className="btnModals"
+                                                    onClick={() => setIsModalVisible(false)}>CANCELAR</Button>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </Modal> : null}
                             </Item>
                         ))}
                     </ul>
                 </section>
 
-                <Orders orders={order} cancelOrder={setOrder} priceTotal={priceTotal(order)}>
+                <Orders orders={order} cancelOrder={setOrder} priceTotal={priceTotal(order)} order={order} menu={menu}>
                     {order.map((data, index) => (
-                        
                         <Item className="orderSummary" key={index}>
-
                             <ul className="list">
                                 <div className="nameOrder">
                                     <h1 className="titleOrder">{data.name}</h1>
@@ -151,7 +222,6 @@ function priceTotal(valor){
                                 <div className="columOrder1">
                                     <div className="imgOrder">
                                         <img className="image" src={data.image} alt="imagem" />
-
                                     </div>
                                     <div className="complementsColum">
                                         {data.flavor != null ?
@@ -184,7 +254,6 @@ function priceTotal(valor){
                                                 } else if (item.qtd === 1 && (data.id === item.id)) {
                                                     order.splice(index, 1);
                                                     setOrder([...order])
-                                                    console.log('excluiu')
                                                 }
 
                                                 return item;
@@ -195,7 +264,7 @@ function priceTotal(valor){
                                         <div className="inputQtd">
                                             {data.qtd}
                                         </div>
-                                        
+
                                         <Button className="moreItem" onClick={() => {
                                             order.map((item, i) => {
                                                 if (
@@ -208,21 +277,18 @@ function priceTotal(valor){
                                             })
                                         }}
                                         > + </Button>
-                                      
+
                                     </div>
- 
+
                                     <h1 className="price">R${data.price * data.qtd},00</h1>
-                                  
+
                                 </div>
                             </ul>
-                        
-                        </Item>
-                    )
 
-                    )}
+                        </Item>
+                    ))}
                 </Orders>
             </div>
         </main >
-       
     )
 }

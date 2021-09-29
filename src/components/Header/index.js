@@ -24,7 +24,7 @@ export function Header() {
     )
 }
 export function HeaderKitchen({
-
+value,
 }) {
     return (
         <header className="header">

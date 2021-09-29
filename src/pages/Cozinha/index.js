@@ -1,11 +1,10 @@
-import React from "react";
-import { useState } from "react";
+import React, {useState, useEffect} from "react";
 import { useHistory } from "react-router";
 import { Button } from "../../components/Button";
-import { useEffect } from "react";
 import { HeaderKitchen } from '../../components/Header'
 import "./index.css";
 import { OrderKitchen } from "../../components/OrderKitchen";
+import { convertDate, convertTime } from "../../services/React/auth";
 
 export function Cozinha() {
 
@@ -38,15 +37,7 @@ export function Cozinha() {
         listAllOrders()
     }, [userToken])
 
-    const convertTime = (apiTime) => {
-        const getDate = new Date(apiTime);
-        const getHours = getDate.getHours();
-        const getMinutes = getDate.getMinutes();
-        const correctTime = `${getHours}: ${getMinutes}`
-
-        return correctTime;
-    }
-
+   
     const handlePreparing = (data) => {
         const orderId = data.id;
         const status = { status: 'preparing' };
@@ -91,9 +82,10 @@ export function Cozinha() {
                 }}>Sair</Button>
             </div>
 
-            <HeaderKitchen />
+            <HeaderKitchen/>
             <OrderKitchen
                 convertTime={convertTime}
+                convertDate={convertDate}
                 order={order}
                 handlePreparing={handlePreparing}
                 handleFinished={handleFinished}
