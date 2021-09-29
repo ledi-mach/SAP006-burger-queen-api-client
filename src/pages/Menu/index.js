@@ -20,6 +20,7 @@ export function Menu() {
     const [side, setSide] = useState([]);
     const [drinks, setDrinks] = useState([]);
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const [select, setSelect] = useState({})
 
     function priceTotal(valor) {
         return valor.reduce((priceItem, item) => priceItem + (item.qtd * item.price), 0)
@@ -44,14 +45,16 @@ export function Menu() {
                 setSide(side);
                 const drinks = data.filter(item => item.sub_type === 'drinks')
                 setDrinks(drinks);
+
             })
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    return(
+
+    return (
         <main className="menu" >
-       
+
             <Header />
             <div className="btn-menu">
                 <div className="types">
@@ -59,10 +62,7 @@ export function Menu() {
                         <Button
                             className="categoriesBtn"
                             id="breakfast"
-                            onClick={() => setMenu(breakfast,
-                                // [{
-                                //     "nome": "Café da Manhã"
-                                // }]
+                            onClick={() => setMenu(breakfast
                             )}>
                             Café da Manhã
                         </Button>
@@ -70,9 +70,6 @@ export function Menu() {
                             className="categoriesBtn"
                             id="burgers"
                             onClick={() => setMenu(burger
-                                // [{
-                                //     "nome": "Almoço/Jantar"
-                                // }]
                             )}>
                             Almoço/Jantar
                         </Button>
@@ -81,20 +78,14 @@ export function Menu() {
                         <Button
                             className="categoriesBtn"
                             id="accompaniments"
-                            onClick={() => setMenu(side,
-                                // [{
-                                //     "nome": "Acompanhamentos"
-                                // }]
+                            onClick={() => setMenu(side
                             )}>
                             Acompanhamentos
                         </Button>
                         <Button
                             className="categoriesBtn"
                             id="drinks"
-                            onClick={() => setMenu(drinks,
-                                // [{
-                                //     "nome": "Bebidas"
-                                // }]
+                            onClick={() => setMenu(drinks
                             )}
                         >
                             Bebidas
@@ -118,48 +109,65 @@ export function Menu() {
                                 </div>
                                 {menu === breakfast || menu === side || menu === drinks ?
                                     <Button id="addToCart" type="button" onClick={() => {
-                                        if (!order.some(item => item.name === menu[index].name
-                                            && item.flavor === menu[index].flavor
-                                            && item.complement === menu[index].complement)) {
-                                            setOrder([...order, {
+                                        if (!order.some(item => item.name === menu[index].name)) {
+                                            setOrder([{
                                                 "id": menu[index].id,
-                                                "flavor": menu[index].flavor,
                                                 "name": menu[index].name,
                                                 "qtd": 1, //aqui é o contador inicial
                                                 "image": menu[index].image,
-                                                "complement": menu[index].complement,
                                                 "price": menu[index].price
-                                            }]);
+                                            }, ...order]);
                                         }
                                     }
                                     } >ADICIONAR</Button>
-                                    : <Button id="addToCart" onClick={() => setIsModalVisible(true)}>ADICIONAR</Button>
+                                    : <Button id="addToCart" onClick={() => {
+                                        setIsModalVisible(true)
+                                        setSelect({
+                                            ...select,
+                                            "name": item.name,
+                                            "price": item.price,
+                                            "qtd": item.qtd
+                                        })
+                                    }
+                                    }
+                                    >ADICIONAR</Button>
                                 }
                                 {isModalVisible ? <Modal>
                                     {burgers.map((item, index) => (
-                                        <div className="confirmModal" key="index">
+                                        <div className="confirmModal" key={index}>
                                             <img src={item.image} alt="items" className="imageItemModal" />
                                             <div className="colunsModal">
                                                 <div className="flavorsModal">
                                                     <h1 className="h1Modal">SABOR: </h1>
                                                     <Button
                                                         className="categoriesBtnModal"
-                                                        onClick={() => setBurgers(
-                                                            burgers.filter(item => item.id === 33)
+                                                        onClick={() => setSelect(
+                                                            {
+                                                                ...select,
+                                                                "flavor": "carne",
+                                                            }
                                                         )}>
                                                         Carne
                                                     </Button>
                                                     <Button
                                                         className="categoriesBtnModal"
-                                                        onClick={() => setBurgers(
-                                                            burgers.filter(item => item.id === 34)
-                                                        )}>
+                                                        onClick={() => {
+                                                            setSelect(
+                                                                {
+                                                                    ...select,
+                                                                    "flavor": "frango",
+                                                                }
+                                                            )
+                                                        }}>
                                                         Frango
                                                     </Button>
                                                     <Button
                                                         className="categoriesBtnModal"
-                                                        onClick={() => setBurgers(
-                                                            burgers.filter(item => item.id === 35)
+                                                        onClick={() => setSelect(
+                                                            {
+                                                                ...select,
+                                                                "flavor": "vegetariano",
+                                                            }
                                                         )}>
                                                         Vegetariano
                                                     </Button>
@@ -168,17 +176,33 @@ export function Menu() {
                                                     <h1 className="h1Modal">ADICIONAIS: </h1>
                                                     <Button
                                                         className="categoriesBtnModalC"
-                                                        onClick={() => setBurgers(
-                                                            burgers.filter(item => item.id === 39)
+                                                        onClick={() => setSelect(
+                                                            {
+                                                                ...select,
+                                                                "complement": "ovo",
+                                                            }
                                                         )}>
                                                         Ovo
                                                     </Button>
                                                     <Button
                                                         className="categoriesBtnModalC"
-                                                        onClick={() => setBurgers(
-                                                            burgers.filter(item => item.id === 36)
+                                                        onClick={() => setSelect(
+                                                            {
+                                                                ...select,
+                                                                "complement": "queijo",
+                                                            }
                                                         )}>
                                                         Queijo
+                                                    </Button>
+                                                    <Button
+                                                        className="categoriesBtnModalC"
+                                                        onClick={() => setSelect(
+                                                            {
+                                                                ...select,
+                                                                "complement": null,
+                                                            }
+                                                        )}>
+                                                        Nenhum
                                                     </Button>
                                                 </div>
                                             </div>
@@ -187,22 +211,20 @@ export function Menu() {
                                                     if (!order.some(item => item.name === burgers[index].name
                                                         && item.flavor === burgers[index].flavor
                                                         && item.complement === burgers[index].complement)) {
-                                                        setOrder([...order, {
-                                                            "id": burgers[index].id,
-                                                            "flavor": burgers[index].flavor,
-                                                            "name": burgers[index].name,
-                                                            "qtd": 1, //aqui é o contador inicial
-                                                            "image": burgers[index].image,
-                                                            "complement": burgers[index].complement,
-                                                            "price": burgers[index].price
-                                                        }]);
+                                                        const selectBurger = burgers.find((burg) => burg.name === select.name &&
+                                                            burg.flavor === select.flavor && burg.complement === select.complement)
+                                                        selectBurger.qtd = 1;
+                                                        setOrder([selectBurger, ...order]);
+                                                        setIsModalVisible(false)
                                                     }
-                                                    setIsModalVisible(false)
                                                 }
 
                                                 }>ADICIONAR</Button>
                                                 <Button className="btnModals"
-                                                    onClick={() => setIsModalVisible(false)}>CANCELAR</Button>
+                                                    onClick={() => {
+                                                        setIsModalVisible(false)
+                                                    }
+                                                    }>CANCELAR</Button>
                                             </div>
                                         </div>
                                     ))}
@@ -212,7 +234,7 @@ export function Menu() {
                     </ul>
                 </section>
 
-                <Orders orders={order} cancelOrder={setOrder} priceTotal={priceTotal(order)} order={order} menu={menu}>
+                <Orders orders={order} cancelOrder={setOrder} priceTotal={  priceTotal(order)} order={order} menu={menu}>
                     {order.map((data, index) => (
                         <Item className="orderSummary" key={index}>
                             <ul className="list">
@@ -232,7 +254,7 @@ export function Menu() {
                                                 {data.flavor}
                                             </div>
                                             : null}
-                                        {data.complement !== null ?
+                                        {data.complement != null ?
                                             <div className="complementOrder">
                                                 <h2 className="complement">
                                                     Adicionais:

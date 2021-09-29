@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Login } from '../../pages/Login/index.js';
 import { Register } from '../../pages/Register/index.js';
-import { Attendance } from '../../pages/Atendimento/index.js';
+import { Pedidos } from '../../pages/Pedidos/index.js';
 import { PageNotFound } from '../../pages/PageNotFound/index.js';
 import { Cozinha } from '../../pages/Cozinha/index.js';
 import { Menu } from '../../pages/Menu/index.js';
@@ -16,7 +16,7 @@ function App() {
         <Route path="/register" component={Register} />
         <PrivateRoute component={Menu} path="/menu" />
         <PrivateRoute component={Cozinha} path="/cozinha" />
-        <PrivateRoute component={Attendance} path="/atendimento" />
+        <PrivateRoute component={Pedidos} path="/pedidos" />
         <Route path='*' exact={true} component={PageNotFound} />
         <Route path="/pagenotfound" component={PageNotFound} />
       </Switch>

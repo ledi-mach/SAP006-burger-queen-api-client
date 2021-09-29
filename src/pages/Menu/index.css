@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-#menu {
+.menu {
     background-image: url(/src/assets/images/background-clean.jpg);
     background-repeat: repeat;
     width: 80vw;

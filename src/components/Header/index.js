@@ -8,7 +8,6 @@ import "./responsive.css";
 export function Header() {
     return (
         <header className="header">
-
             {/* <Navigation /> */}
             <div className="divHeader">
                 <div className="divHeaderH1">
@@ -24,7 +23,7 @@ export function Header() {
     )
 }
 export function HeaderKitchen({
-value,
+    value,
 }) {
     return (
         <header className="header">
@@ -32,7 +31,7 @@ value,
         </header>
     )
 }
-export function HeaderAttendance({
+export function HeaderPedidos({
 
 }) {
     return (
