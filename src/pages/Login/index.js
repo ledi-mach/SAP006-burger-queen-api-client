@@ -9,6 +9,7 @@ import logo from '../../assets/images/logo.png';
 import './index.css';
 import './responsive.css';
 import validation from '../../services/React/validateInfo.js';
+import { OrderKitchen } from '../../components/OrderKitchen/index.js';
 
 export function Login() {
 
@@ -21,7 +22,7 @@ export function Login() {
     function navigateToMenu(){
         history.push('/menu')
     }
-    function navigateToKitchen(){
+    function navigateToKitchen() {
         history.push('/cozinha')
     }
 
@@ -56,9 +57,10 @@ export function Login() {
                 localStorage.setItem("usersToken", token);
                 if (token !== null && id !== null && role === 'hall') {
                     navigateToMenu()
-                } else if(token !== null && id !== null && role === 'kitchen') {
+                } else if (token !== null && id !== null && role === 'kitchen') {
                     navigateToKitchen()
                 }
+                <OrderKitchen role={role} />
             })
     }
 
@@ -82,7 +84,7 @@ export function Login() {
                             />
                             {errors.email && <p className="msgErro">{errors.email}</p>}
                         </div>
-                        
+
                         <div className="divPassword">
                             <p className="labelInputs">Senha</p>
                             <Input

@@ -5,6 +5,7 @@ import "./responsive.css";
 import { Input } from "../Input";
 import { Button } from "../Button";
 import { Modal } from "../Modal";
+import { useHistory } from "react-router";
 
 export function Orders({
     children,
@@ -17,12 +18,18 @@ export function Orders({
     const [Customer, setCustomer] = useState('');
     const [Table, setTable] = useState('');
     const [modalCancel, setModalCancel] = useState(false);
+    const [modalOrder, setModalOrder] = useState(false);
 
     function cancelCustomer() {
         setTable([]);
         setCustomer([]);
         cancelOrder([])
         setModalCancel(false)
+    }
+
+    const history = useHistory()
+    function navigateToOrders() {
+        history.push('/pedidos');
     }
 
     function createOrder() {
@@ -43,6 +50,8 @@ export function Orders({
                 "table": Table,
                 "products": Products,
             })
+        }).then(() => {
+            setModalOrder(true)
         })
     }
 
@@ -67,6 +76,15 @@ export function Orders({
             <div className="finishOrder">
                 <p className="total">TOTAL: R$ {priceTotal},00</p>
                 <Button type="button" className="sendOrder" onClick={createOrder}>FAZER PEDIDO</Button>
+                {modalOrder ? <Modal>
+                    <div className="modalCancel">
+                        <h1 className="h1ModalOrder">Seu pedido foi feito com sucesso.</h1>
+                        <Button className="btnModalOrder" type="button"
+                            onClick={navigateToOrders}>IR PARA OS PEDIDOS</Button>
+                        <Button className="btnModalOrder"
+                            onClick={() => setModalOrder(false, cancelCustomer())}>PERMANECER NO MENU</Button>
+                    </div>
+                </Modal> : null}
                 <Button type="button" className="cancelOrder" onClick={() => setModalCancel(true)}>CANCELAR PEDIDO</Button>
                 {modalCancel ? <Modal>
                     <div className="modalCancel">
@@ -82,4 +100,3 @@ export function Orders({
 
     )
 }
-//  <p className="total">TOTAL: R$ {sumPriceTotal(order)}</p> */

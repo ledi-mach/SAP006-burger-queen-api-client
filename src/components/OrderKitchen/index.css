@@ -1,11 +1,24 @@
-
-#statusOrderBtn, #statusOrderFinish, 
-#statusOrderToServe, #statusOrderServed {
+#statusOrderBtn,
+#statusOrderFinish,
+#statusOrderToServe,
+#statusOrderServed {
     width: 60%;
     margin: 1.5% 20%;
     font-size: 1.1rem;
     text-align: center;
 }
+
+.orderReady {
+    color: green;
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 21, 0.075);
+    width: auto;
+    padding: 0.6rem;
+}
+
 /*
 .greenBtn{
     background-color: #76d04d;

@@ -36,7 +36,7 @@ export function Cozinha() {
         listAllOrders()
     }, [userToken])
 
-   
+
     const handlePreparing = (data) => {
         const orderId = data.id;
         const status = { status: 'preparing' };
