@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { Button } from "../../components/Button";
 import { HeaderKitchen } from '../../components/Header'
@@ -37,7 +37,7 @@ export function Cozinha() {
         listAllOrders()
     }, [userToken])
 
-   
+
     const handlePreparing = (data) => {
         const orderId = data.id;
         const status = { status: 'preparing' };
@@ -82,7 +82,7 @@ export function Cozinha() {
                 }}>Sair</Button>
             </div>
 
-            <HeaderKitchen/>
+            <HeaderKitchen />
             <OrderKitchen
                 convertTime={convertTime}
                 convertDate={convertDate}
