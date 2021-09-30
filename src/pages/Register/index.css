@@ -8,10 +8,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url('/src/assets/images/background-dark.jpg');
-}
-
 .imgBurger {
     position: absolute;
     z-index: -3;
@@ -84,10 +80,6 @@ body {
     padding: 0rem 0.5rem;
 }
 
-.inputPassword {
-    margin: 0rem 0rem 1rem 0rem;
-}
-
 button {
     cursor: pointer;
 }
@@ -104,6 +96,7 @@ button {
     border-radius: 3px;
     padding: 0.2rem;
     margin: 0rem 0rem 2rem;
+    /*margin: 1rem 0rem 2rem 0rem;*/
 }
 
 .orangeBtn:hover {
@@ -111,7 +104,7 @@ button {
     transition: 1s;
 }
 
-.backHome {
+.backHome, .backMenu {
     outline: none;
     border: none;
     margin: 1% 0% 38% 0%;
@@ -127,4 +120,18 @@ button {
     color: #FF8A00;
     text-decoration: underline;
     transition: 1s;
+}
+
+.radioBtn1,
+.radioBtn2 {
+    display: inline;
+    margin: 5%;
+}
+
+.radioBtn {
+    margin: 1rem 0rem;
+}
+
+.roleLabel {
+    color: #763D09;
 }

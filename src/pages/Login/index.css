@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     background-image: url('/src/assets/images/background-dark.jpg');
 }
 
@@ -51,7 +51,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
 
 .h1Login {
@@ -84,10 +83,6 @@ body {
     padding: 0rem 0.5rem;
 }
 
-.inputPassword {
-    margin: 0rem 0rem 1rem 0rem;
-}
-
 button {
     cursor: pointer;
 }
@@ -103,7 +98,7 @@ button {
     font-size: 1.1rem;
     border-radius: 3px;
     padding: 0.2rem;
-    margin: 0rem 0rem 2rem;
+    margin: 1rem 0rem 1rem;
 }
 
 .yellowBtn:hover {
@@ -117,15 +112,16 @@ button {
     border-bottom: 6.5px solid #DF3600;
     border-left: 2.5px solid #DF3600;
     border-right: 6.5px solid #DF3600;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #ffffff;
     border-radius: 3px;
     padding: 0.2rem;
     margin: 0rem 0rem 2rem;
 }
 
-#signUpBtn{
+#signUpBtn, #signInBtn{
     width: 93%;
+    
 }
 
 .redBtn:hover {
@@ -133,10 +129,15 @@ button {
     transition: 1s;
 }
 
-
-
 .isWorker {
     color: #3B1E04;
     font-family: Roboto;
     margin-bottom: 0.3rem;
+}
+
+.msgErro {
+    color: #DF3600;
+    margin: 0rem 0.8rem;
+    text-align: left;
+    font-family: Roboto;
 }

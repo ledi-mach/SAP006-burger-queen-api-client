@@ -1,27 +1,29 @@
 import React from "react";
 
 export function Input({
-    inputValue,
-    inputType,
+    value,
+    type,
+    name,
     inputPlaceholder,
     inputRequired,
     inputClass,
     labelInfo,
     labelValue,
     divForm,
-    inputOnChange,
+    onChange,
     max,
     min,
 }) {
     return (
         <div className={divForm}>
             <input
-                value={inputValue}
-                type={inputType}
+            name={name}
+                value={value}
+                type={type}
                 placeholder={inputPlaceholder}
                 required={inputRequired}
                 className={inputClass}
-                onChange={inputOnChange}
+                onChange={onChange}
                 max={max}
                 min={min} />
 

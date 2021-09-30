@@ -1,4 +1,4 @@
-.kitchen {
+.kitchen, .mainAttendance {
     background-image: url(/src/assets/images/background-clean.jpg);
     background-repeat: repeat;
     width: 100vw;
@@ -54,11 +54,10 @@
 }
 
 
-#statusOrderBtn {
-    width: 60%;
-    margin: 4% 20%;
+.statusBtn{
+    max-height: 54.8px;
+    justify-content: center;
 }
-
 .listProductOrder {
     border-bottom: 1.5px solid #763D09;
 }
@@ -92,15 +91,17 @@
     border-radius: 5px;
 
 }
+
 .LogoutBtn{
-   background-color:#FF9900;
+   color:#763D09;
    border: none;
    width: 5vw;
+   height: 8vh;
    border-radius: 5px;  
    margin-left: 90vw;
+   margin-top: 0.5%;
+   position: absolute;
+   z-index: 3;
+  
 }
-.divLogoutBtn{
-    position: absolute;
-    z-index: 3;
-    margin-top: 1.5%;
-}
+
