@@ -124,9 +124,7 @@ export function Menu() {
                                         setIsModalVisible(true)
                                         setSelect({
                                             ...select,
-                                            "name": item.name,
-                                            "price": item.price,
-                                            "qtd": item.qtd
+                                            "name": item.name
                                         })
                                     }
                                     }
@@ -234,7 +232,7 @@ export function Menu() {
                     </ul>
                 </section>
 
-                <Orders orders={order} cancelOrder={setOrder} priceTotal={  priceTotal(order)} order={order} menu={menu}>
+                <Orders orders={order} cancelOrder={setOrder} priceTotal={priceTotal(order)} order={order} menu={menu}>
                     {order.map((data, index) => (
                         <Item className="orderSummary" key={index}>
                             <ul className="list">
