@@ -18,10 +18,8 @@ export function Login() {
     function navigateToRegister() {
         history.push('/register');
     }
-    // function navigateToRoles() {
-    //   history.push('/roles');
-    //}
-    function navigateToMenu() {
+
+    function navigateToMenu(){
         history.push('/menu')
     }
     function navigateToKitchen() {
@@ -58,7 +56,6 @@ export function Login() {
                 const role = json.role
                 localStorage.setItem("usersToken", token);
                 if (token !== null && id !== null && role === 'hall') {
-                    //navigateToRoles()
                     navigateToMenu()
                 } else if (token !== null && id !== null && role === 'kitchen') {
                     navigateToKitchen()

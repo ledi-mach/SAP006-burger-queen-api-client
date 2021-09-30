@@ -1,0 +1,13 @@
+.LogoutBtn{
+    color:#763D09;
+    border: none;
+    width: 5vw;
+    height: 8vh;
+    border-radius: 5px;  
+    margin-left: 90vw;
+    margin-top: 0.5%;
+    position: absolute;
+    z-index: 3;
+   
+ }
+ 

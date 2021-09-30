@@ -1,16 +1,19 @@
 /* eslint-disable array-callback-return */
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom"
 import { Header } from '../../components/Header/index.js';
 import { Orders } from '../../components/Orders/index.js';
 import { Button } from '../../components/Button/index.js';
 import { Item } from "../../components/Item/index.js";
 import { Modal } from "../../components/Modal/index.js";
+import { MdArrowForward } from "react-icons/md";
 import "./index.css";
 import "./responsive.css";
 
 export function Menu() {
     const api = 'https://lab-api-bq.herokuapp.com';
     const apiProducts = `${api}/products`
+    const history = useHistory()
     const userToken = localStorage.getItem('usersToken');
     const [menu, setMenu] = useState([]);
     const [order, setOrder] = useState([]);
@@ -24,6 +27,10 @@ export function Menu() {
 
     function priceTotal(valor) {
         return valor.reduce((priceItem, item) => priceItem + (item.qtd * item.price), 0)
+    }
+
+    function navigateToPedidos() {
+        history.push('/pedidos');
     }
 
     useEffect(() => {
@@ -54,9 +61,10 @@ export function Menu() {
 
     return (
         <main className="menu" >
+            <Button type="button" className="backMenu"
+                onClick={navigateToPedidos}><MdArrowForward />PEDIDOS</Button>
 
             <Header />
-            <div className="btn-menu">
                 <div className="types">
                     <div className="item">
                         <Button
@@ -73,8 +81,7 @@ export function Menu() {
                             )}>
                             Almoço/Jantar
                         </Button>
-                    </div>
-                    <div className="items">
+
                         <Button
                             className="categoriesBtn"
                             id="accompaniments"
@@ -93,11 +100,6 @@ export function Menu() {
                     </div>
                 </div>
 
-                <div className="nameItems" >
-                    {menu.map((item, index) => (
-                        <h1 className="itemsH1" key={`menuItem-${index}`}>{item.nome}</h1>
-                    ))}
-                </div>
                 <section className="sectionItems">
                     <ul className="allItems">
                         {menu.map((item, index) => (
@@ -307,8 +309,14 @@ export function Menu() {
 
                         </Item>
                     ))}
-                </Orders>
-            </div>
+                </Orders>       
         </main >
     )
 }
+/* EStava na linha 94 (ver se estava sendo utilizado):
+
+   <div className="nameItems" >
+                    {menu.map((item, index) => (
+                        <h1 className="itemsH1" key={`menuItem-${index}`}>{item.nome}</h1>
+                    ))}
+                </div> */

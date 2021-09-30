@@ -1,0 +1,17 @@
+.backMenu {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    z-index: 3;
+  min-width: 82px;
+    font-size: 1.6rem;
+    color: #763D09;
+    text-align: start;
+}
+
+.backMenu:hover {
+    color: #FF8A00;
+    text-decoration: underline;
+    transition: 1s;
+}

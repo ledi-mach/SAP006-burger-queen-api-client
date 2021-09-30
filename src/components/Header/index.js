@@ -1,9 +1,9 @@
 /* eslint-disable no-empty-pattern */
 import React from "react";
-// import Navigation from "../Navigation/navigation";
 import orderImg from '../../assets/images/orders.png';
 import "./index.css";
 import "./responsive.css";
+
 
 export function Header() {
     return (
@@ -23,16 +23,15 @@ export function Header() {
     )
 }
 export function HeaderKitchen({
-    value,
 }) {
     return (
         <header className="header">
             <h1 className="headerH1">COZINHA</h1>
         </header>
+
     )
 }
 export function HeaderPedidos({
-
 }) {
     return (
         <header className="header">

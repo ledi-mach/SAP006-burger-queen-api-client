@@ -1,6 +1,6 @@
 import { Button } from "../Button/index"
 import { Item } from "../Item/index"
-import React from "react";
+import React from "react"
 import './index.css';
 
 export function OrderKitchen({

@@ -104,7 +104,7 @@ button {
     transition: 1s;
 }
 
-.backHome {
+.backHome, .backMenu {
     outline: none;
     border: none;
     margin: 1% 0% 38% 0%;
