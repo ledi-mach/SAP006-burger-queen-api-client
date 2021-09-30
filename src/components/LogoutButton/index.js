@@ -6,12 +6,13 @@ export function LogoutButton() {
     const history = useHistory();
     return (
         <span>
-  
-  <FiLogOut className="LogoutBtn"
-     onClick={() => {localStorage.removeItem("usersToken")
-        history.push('/login')
-    }}
-     /> 
+
+            <FiLogOut className="LogoutBtn"
+                onClick={() => {
+                    localStorage.removeItem("usersToken")
+                    history.push('/login')
+                }}
+            />
         </span>
     )
 }

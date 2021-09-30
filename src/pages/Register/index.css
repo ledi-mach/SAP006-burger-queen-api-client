@@ -104,7 +104,7 @@ button {
     transition: 1s;
 }
 
-.backHome {
+.backHome, .backMenu {
     outline: none;
     border: none;
     margin: 1% 0% 38% 0%;
@@ -121,14 +121,17 @@ button {
     text-decoration: underline;
     transition: 1s;
 }
-.radioBtn1, .radioBtn2{
-  display: inline;
-  margin: 5%;
+
+.radioBtn1,
+.radioBtn2 {
+    display: inline;
+    margin: 5%;
 }
 
-.radioBtn{
-    margin-top: 5%;
+.radioBtn {
+    margin: 1rem 0rem;
 }
-.roleLabel{
+
+.roleLabel {
     color: #763D09;
 }

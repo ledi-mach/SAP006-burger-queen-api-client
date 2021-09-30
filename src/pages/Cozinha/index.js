@@ -1,18 +1,14 @@
 import React, {useState, useEffect} from "react";
-import { useHistory } from "react-router";
 //import { Button } from "../../components/Button";
 import { HeaderKitchen } from '../../components/Header'
 import "./index.css";
 import { OrderKitchen } from "../../components/OrderKitchen";
 import { convertDate, convertTime } from "../../services/React/auth";
-//import { FaBeer } from 'react-icons/fa';
-//import {FiLogOut} from 'react-icons/fi';
 import {LogoutButton} from '../../components/LogoutButton/index'
 
 export function Cozinha() {
 
     const [order, setOrder] = useState([]);
-    //const history = useHistory();
     const userToken = localStorage.getItem('usersToken');
     const api = 'https://lab-api-bq.herokuapp.com/orders/'
     const apiOrders = 'https://lab-api-bq.herokuapp.com/orders';
@@ -81,19 +77,12 @@ export function Cozinha() {
 <LogoutButton />
             <HeaderKitchen/>
             <OrderKitchen
-                convertTime={convertTime}
-                convertDate={convertDate}
+                convertTime={()=>convertTime}
+                convertDate={()=>convertDate}
                 order={order}
-                handlePreparing={handlePreparing}
-                handleFinished={handleFinished}
+                handlePreparing={()=>handlePreparing}
+                handleFinished={()=>handleFinished}
             />
         </main >
     )
 }
-/*  <div className="divLogoutBtn">
-                <Button className="LogoutBtn" onClick={() => {
-                    localStorage.removeItem("usersToken")
-
-                    history.push('/login')
-                }}>Sair</Button>
-            </div>*/

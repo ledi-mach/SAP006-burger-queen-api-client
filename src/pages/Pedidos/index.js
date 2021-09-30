@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
-//import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import { OrderKitchen } from "../../components/OrderKitchen";
-//import { Button } from "../../components/Button";
-import { HeaderAttendance } from "../../components/Header";
+import { Button } from "../../components/Button";
+import { HeaderPedidos } from "../../components/Header";
 import { convertTime, convertDate } from "../../services/React/auth";
 import { LogoutButton } from "../../components/LogoutButton";
+import './index.css'
+import { MdArrowBack } from "react-icons/md";
 
+export function Pedidos() {
 
-export function Attendance() {
-
-    //const history = useHistory()
+    const history = useHistory()
     const [order, setOrder] = useState([]);
     const userToken = localStorage.getItem('usersToken');
     const api = 'https://lab-api-bq.herokuapp.com/orders/'
     const apiOrders = 'https://lab-api-bq.herokuapp.com/orders';
 
-    //function navigateToMenu(){
-    // history.push('/menu');
-    //}
+    function navigateToMenu() {
+        history.push('/menu');
+    }
 
     const listAllOrders = () => {
 
@@ -63,15 +64,16 @@ export function Attendance() {
         <main className="mainAttendance">
 
             <LogoutButton />
-            <HeaderAttendance />
+            <Button type="button" className="backMenu"
+                onClick={navigateToMenu}><MdArrowBack />MENU</Button>
+
+            <HeaderPedidos />
             <OrderKitchen
                 convertTime={convertTime}
                 convertDate={convertDate}
                 order={order}
                 handleServing={handleServing}
             />
-
-
         </main>
     )
 }
