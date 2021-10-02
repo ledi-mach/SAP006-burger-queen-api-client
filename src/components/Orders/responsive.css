@@ -1,3 +1,13 @@
+/* @media (min-width: 1000px) and (max-width: 2400px) {
+    .alignCloseOrders {
+        display: none;
+    }
+
+    .ordersH1 {
+        margin: 1rem;
+    }
+} */
+
 @media (max-width: 1024px) {
     .orders {
         background-color: #FF9900;
@@ -5,6 +15,10 @@
         min-height: 100vh;
         position: fixed;
     }
+
+    /* .alignCloseOrders {
+        display: none;
+    } */
 }
 
 @media (max-width: 768px) {
@@ -19,14 +33,24 @@
     .orders {
         width: 40vw;
         transition: 1s;
-
     }
+
+    .alignCloseOrders {
+        display: flex;
+    }
+
 }
 
 @media (min-width: 270px) and (max-width: 600px) {
     .orders {
-        width: 55vw;
+        width: 100vw;
         transition: 1s;
+        min-height: 100vh;
+        position: fixed;
+        z-index: 3;
+    }
 
+    .divOrderSummary {
+        height: 50vh;
     }
 }

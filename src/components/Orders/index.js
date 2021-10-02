@@ -12,8 +12,8 @@ export function Orders({
     orders,
     cancelOrder,
     priceTotal,
+    orderHidden
 }) {
-
     const userToken = localStorage.getItem('usersToken');
     const [Customer, setCustomer] = useState('');
     const [Table, setTable] = useState('');
@@ -57,6 +57,9 @@ export function Orders({
 
     return (
         <div className="orders">
+            <div className="alignCloseOrders">
+                <Button className="closeOrders" onClick={() => orderHidden(false)}>X</Button>
+            </div>
             <h1 className="ordersH1">PEDIDOS</h1>
             <div className="divOrderSummary">
                 {children}

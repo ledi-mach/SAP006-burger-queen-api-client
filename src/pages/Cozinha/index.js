@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react";
-//import { Button } from "../../components/Button";
+import React, { useState, useEffect } from "react";
 import { HeaderKitchen } from '../../components/Header'
 import "./index.css";
 import { OrderKitchen } from "../../components/OrderKitchen";
 import { convertDate, convertTime } from "../../services/React/auth";
-import {LogoutButton} from '../../components/LogoutButton/index'
+import { Background } from "../../services/React/auth";
+// import { LogoutButton } from '../../components/LogoutButton/index'
 
 export function Cozinha() {
 
@@ -71,17 +71,17 @@ export function Cozinha() {
             })
     }
 
+    Background()
     return (
-        <main className="kitchen">
-  
-<LogoutButton />
-            <HeaderKitchen/>
+        < main className="kitchen" >
+            {/* <LogoutButton /> */}
+            < HeaderKitchen />
             <OrderKitchen
-                convertTime={()=>convertTime}
-                convertDate={()=>convertDate}
+                convertTime={() => convertTime}
+                convertDate={() => convertDate}
                 order={order}
-                handlePreparing={()=>handlePreparing}
-                handleFinished={()=>handleFinished}
+                handlePreparing={() => handlePreparing}
+                handleFinished={() => handleFinished}
             />
         </main >
     )

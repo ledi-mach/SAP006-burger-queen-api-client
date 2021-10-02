@@ -1,5 +1,12 @@
+@media (max-width: 1200px) {
+    .inputCustomer {
+        font-size: 1rem;
+        width: 8rem;
+    }
+}
+
 @media (max-width: 1024px) {
-    #menu {
+    .menu {
         width: 72vw;
     }
 
@@ -45,7 +52,6 @@
 
     .inputCustomer {
         font-size: 1rem;
-        width: 12.8rem;
     }
 
     .total {
@@ -66,7 +72,7 @@
 }
 
 @media (max-width: 768px) {
-    #menu {
+    .menu {
         width: 100vw;
     }
 
@@ -111,7 +117,6 @@
 
     .inputCustomer {
         font-size: 1rem;
-        width: 12.8rem;
     }
 
     .total {
@@ -150,9 +155,14 @@
     }
 
     .titleOrder {
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 0.5rem 0rem 0rem;
         line-height: 1rem;
+    }
+
+    .image {
+        width: 20vw;
+        height: 15vh;
     }
 
     .amount,
@@ -165,27 +175,30 @@
     }
 
     .price {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .inputQtd {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .inputCustomer {
         font-size: 1rem;
-        width: 35vw;
+        width: 60vw;
     }
 
     .clientInfo {
         font-weight: 400;
-        font-size: 20px;
+        font-size: 25px;
+    }
+
+    .moreItem,
+    .lessItem {
+        font-size: 1.5rem;
     }
 
     .total {
-        color: #763D09;
-        font-weight: 900;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .sendOrder,
@@ -198,5 +211,9 @@
     .orderSummary {
         margin: 0.4rem 1.5rem;
         padding: 0rem 0.5rem 0.5rem;
+    }
+
+    .divOrderSummary {
+        height: 40vh;
     }
 }

@@ -4,9 +4,10 @@ import { OrderKitchen } from "../../components/OrderKitchen";
 import { Button } from "../../components/Button";
 import { HeaderPedidos } from "../../components/Header";
 import { convertTime, convertDate } from "../../services/React/auth";
-import { LogoutButton } from "../../components/LogoutButton";
+import { Background } from "../../services/React/auth";
+// import { LogoutButton } from "../../components/LogoutButton";
 import './index.css'
-import { MdArrowBack } from "react-icons/md";
+// import { MdArrowBack } from "react-icons/md";
 
 export function Pedidos() {
 
@@ -74,12 +75,15 @@ export function Pedidos() {
                 listAllOrders()
             })
     }
+    Background()
     return (
         <main className="mainAttendance">
 
-            <LogoutButton />
+            {/* <LogoutButton /> */}
             <Button type="button" className="backMenu"
-                onClick={navigateToMenu}><MdArrowBack />MENU</Button>
+                onClick={navigateToMenu}>
+                {/* <MdArrowBack /> */}
+                MENU</Button>
 
             <HeaderPedidos />
             <div className="btn-menu">

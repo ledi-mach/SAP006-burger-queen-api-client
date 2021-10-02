@@ -4,8 +4,9 @@ import orderImg from '../../assets/images/orders.png';
 import "./index.css";
 import "./responsive.css";
 
-
-export function Header() {
+export function Header({
+    showModal
+}) {
     return (
         <header className="header">
             {/* <Navigation /> */}
@@ -14,7 +15,7 @@ export function Header() {
                     <h1 className="headerH1">MENU</h1>
                 </div>
                 <div className="divBtnOrder">
-                    <button className="btnOrders">
+                    <button className="btnOrders" onClick={() => showModal(true)}>
                         <img className="orderImg" src={orderImg} alt="orders" />
                     </button>
                 </div>
@@ -22,6 +23,7 @@ export function Header() {
         </header>
     )
 }
+
 export function HeaderKitchen({
 }) {
     return (
@@ -31,6 +33,7 @@ export function HeaderKitchen({
 
     )
 }
+
 export function HeaderPedidos({
 }) {
     return (
