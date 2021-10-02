@@ -1,9 +1,8 @@
-.kitchen, .mainAttendance {
+.internal-bg {
     background-image: url(/src/assets/images/background-clean.jpg);
     background-repeat: repeat;
-    width: 100vw;
     padding: 0rem 2rem;
-    height: 100%;
+  
 }
 
 .ordersKitchen {

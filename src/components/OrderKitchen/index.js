@@ -10,7 +10,6 @@ export function OrderKitchen({
     handlePreparing,
     handleFinished,
     handleServing,
-    role
 }) {
 
     return (
@@ -33,6 +32,9 @@ export function OrderKitchen({
                                             } </p>
                                             <p className="timeOrder">
                                                 Pedido feito em {convertDate(data.createdAt)} às {convertTime(data.createdAt)} </p>
+
+                                                <p>{convertTime(data.processedAt)} - {convertTime(data.createdAt)}</p>
+                                        
                                         </div>
                                         <h1 className="titleKitchen">PEDIDOS</h1>
 
