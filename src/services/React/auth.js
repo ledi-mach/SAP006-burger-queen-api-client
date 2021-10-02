@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 export const isAuthenticated = () => {
     const token = localStorage.getItem("usersToken");
@@ -31,4 +32,15 @@ export const convertDate = (apiDate) => {
     const correctDate = `${getDay}/${getMonth}`;
 
     return correctDate;
+}
+
+export const Background = () => {
+    useEffect(() => {
+        const body = document.body;
+        body.classList.add("internal-bg")
+
+        return () => {
+            body.classList.remove("internal-bg")
+        }
+    }, [])
 }

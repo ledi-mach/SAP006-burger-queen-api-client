@@ -12,7 +12,7 @@
     color: black;
     font-size: 1.9rem;
     font-weight: 400;
-    margin: 1rem 1.5rem 0rem;
+    margin: 0rem 1rem 0rem;
 }
 
 .nameTable {
@@ -98,8 +98,33 @@
 }
 
 .divOrderSummary {
-    height: 42vh;
+    height: 35vh;
     overflow-y: auto;
     overflow-wrap: break-word;
     margin: 1rem 0rem;
+}
+
+.alignCloseOrders {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0.5rem 1rem 0rem;
+}
+
+.closeOrders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: red;
+    padding: 0.5rem;
+    border-radius: 50px;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: Roboto;
+    cursor: pointer;
+    border: 3px solid rgb(194, 1, 1);
+    color: white;
 }

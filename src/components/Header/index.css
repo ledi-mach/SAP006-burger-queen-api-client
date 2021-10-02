@@ -1,6 +1,7 @@
 .header {
     padding: 0.5rem;
     border-bottom: 10px #FF3D00 solid;
+    margin: 0rem 2rem;
 }
 
 .divHeader {
@@ -29,7 +30,7 @@
     border: none;
     font-size: 1.7rem;
     color: #ff9100;
-    display: none;
+    display: block;
 }
 
 .btnOrders:hover {
