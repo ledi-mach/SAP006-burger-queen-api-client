@@ -2,12 +2,24 @@ import React, { useState, useEffect } from "react";
 import { HeaderKitchen } from '../../components/Header'
 import "./index.css";
 import { OrderKitchen } from "../../components/OrderKitchen";
-import { convertDate, convertTime } from "../../services/React/auth";
+import { convertDate, convertTime, prepareTime } from "../../services/React/auth";
 import { Background } from "../../services/React/auth";
-// import { LogoutButton } from '../../components/LogoutButton/index'
+//import { LogoutButton } from '../../components/LogoutButton/index'
+
+const useInternalBackground = () => {
+    useEffect(() => {
+        const body = document.body;
+        body.classList.add("internal-bg")
+
+        return () => {
+            body.classList.remove("internal-bg")
+        }
+    }, [])
+}
 
 export function Cozinha() {
 
+    useInternalBackground()
     const [order, setOrder] = useState([]);
     const userToken = localStorage.getItem('usersToken');
     const api = 'https://lab-api-bq.herokuapp.com/orders/'
@@ -74,14 +86,16 @@ export function Cozinha() {
     Background()
     return (
         < main className="kitchen" >
-            {/* <LogoutButton /> */}
+           
+           {/* <LogoutButton />*/}
             < HeaderKitchen />
             <OrderKitchen
-                convertTime={() => convertTime}
-                convertDate={() => convertDate}
+                prepareTime={prepareTime}
+                convertTime={convertTime}
+                convertDate={convertDate}
                 order={order}
-                handlePreparing={() => handlePreparing}
-                handleFinished={() => handleFinished}
+                handlePreparing={handlePreparing}
+                handleFinished={handleFinished}
             />
         </main >
     )

@@ -3,11 +3,11 @@ import { useHistory } from "react-router-dom"
 import { OrderKitchen } from "../../components/OrderKitchen";
 import { Button } from "../../components/Button";
 import { HeaderPedidos } from "../../components/Header";
-import { convertTime, convertDate } from "../../services/React/auth";
+import { convertTime, convertDate, prepareTime } from "../../services/React/auth";
 import { Background } from "../../services/React/auth";
-// import { LogoutButton } from "../../components/LogoutButton";
-import './index.css'
-// import { MdArrowBack } from "react-icons/md";
+ //import { LogoutButton } from "../../components/LogoutButton/index";
+import './index.css';
+//import { MdArrowBack } from "react-icons/md";
 
 export function Pedidos() {
 
@@ -129,6 +129,7 @@ export function Pedidos() {
                 </div>
             </div>
             <OrderKitchen
+                prepareTime={prepareTime}
                 convertTime={convertTime}
                 convertDate={convertDate}
                 order={order}
