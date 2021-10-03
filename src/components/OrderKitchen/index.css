@@ -18,33 +18,3 @@
     width: auto;
     padding: 0.6rem;
 }
-
-/*
-.greenBtn{
-    background-color: #76d04d;
-    border-top: 2.5px solid #467c2e;
-    border-bottom: 6.5px solid #467c2e;
-    border-left: 2.5px solid #467c2e;
-    border-right: 6.5px solid #467c2e;
-    color: #ffffff;
-    font-size: 1.1rem;
-    border-radius: 3px;
-    padding: 0.2rem;
-    margin: 1rem 0rem 1rem;
-}
-.greenBtn:hover {
-    background-color: #467c2e;
-    transition: 1s;
-}
-.finishOrder{
-    background-color:#6084d5;
-    border-top: 2.5px solid #3966cb;
-    border-bottom: 6.5px solid #3966cb;
-    border-left: 2.5px solid #3966cb;
-    border-right: 6.5px solid #3966cb;
-    color: #ffffff;
-    font-size: 1.1rem;
-    border-radius: 3px;
-    padding: 0.2rem;
-    margin: 1rem 0rem 1rem;
-}*/

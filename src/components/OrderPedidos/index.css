@@ -1,0 +1,40 @@
+.withoutOrders {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: red;
+}
+
+.orderPending {
+    color: #ff0000;
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff000013;
+    width: auto;
+    padding: 0.6rem;
+}
+
+.orderPreparing {
+    color: #ffd000;
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffd00013;
+    width: auto;
+    padding: 0.6rem;
+}
+
+.orderReady {
+    color: green;
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 255, 21, 0.075);
+    width: auto;
+    padding: 0.6rem;
+}

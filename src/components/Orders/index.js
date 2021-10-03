@@ -92,10 +92,12 @@ export function Orders({
                 {modalCancel ? <Modal>
                     <div className="modalCancel">
                         <h1 className="h1ModalCancel">Tem certeza que deseja cancelar seu pedido?</h1>
-                        <Button className="cancelModal" type="button"
-                            onClick={cancelCustomer}>CANCELAR</Button>
-                        <Button className="cancelModal"
-                            onClick={() => setModalCancel(false)}>VOLTAR</Button>
+                        <div className="cancelItemModal">
+                            <Button className="cancelModal" type="button"
+                                onClick={cancelCustomer}>CANCELAR</Button>
+                            <Button className="cancelModal"
+                                onClick={() => setModalCancel(false)}>VOLTAR</Button>
+                        </div>
                     </div>
                 </Modal> : null}
             </div>

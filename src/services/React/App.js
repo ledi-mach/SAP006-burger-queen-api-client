@@ -15,18 +15,17 @@ function App() {
         <Route exact path="/" component={Login}>
           {isAuthenticated
             ? <Redirect to="/menu" />
-            || <Redirect to="/roles" />
+            || <Redirect to="/pedidos" />
             || <Redirect to="/cozinha" />
             : <Login />
           }
         </Route>
         <Route path="/login" exact component={Login} />
-        <Route path="/register" component={Register} />
+        <Route path="/cadastro" component={Register} />
         <PrivateRoute component={Menu} path="/menu" />
         <PrivateRoute component={Cozinha} path="/cozinha" />
         <PrivateRoute component={Pedidos} path="/pedidos" />
-        <Route path='*' exact={true} component={PageNotFound} />
-        <Route path="/pagenotfound" component={PageNotFound} />
+        <Route path='*' exact={true} component={PageNotFound} />  
       </Switch>
     </BrowserRouter >
   )

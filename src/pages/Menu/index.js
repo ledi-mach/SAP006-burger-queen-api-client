@@ -25,7 +25,7 @@ export function Menu() {
     const [drinks, setDrinks] = useState([]);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [isOrdersVisible, setIsOrdersVisible] = useState(false);
-    // const [deskOrders, setDeskOrders] = useState(false);
+    const [deleteOrder, setDeleteOrder] = useState(false);
     const [select, setSelect] = useState({})
 
     function priceTotal(valor) {
@@ -68,83 +68,7 @@ export function Menu() {
                 {/* <MdArrowForward /> */}
                 PEDIDOS</Button>
             <Header showModal={setIsOrdersVisible}></Header>
-            {isOrdersVisible ? <Orders orders={order} setIsOrdersVisible={setIsOrdersVisible} cancelOrder={setOrder} priceTotal={priceTotal(order)} order={order} menu={menu}>
-                {order.map((data, index) => (
-                    <Item className="orderSummary" key={index}>
-                        <ul className="list">
-                            <div className="nameOrder">
-                                <h1 className="titleOrder">{data.name}</h1>
-                            </div>
-                            <div className="columOrder1">
-                                <div className="imgOrder">
-                                    <img className="image" src={data.image} alt="imagem" />
-                                </div>
-                                <div className="complementsColum">
-                                    {data.flavor != null ?
-                                        <div className="flavorOrder">
-                                            <h2 className="flavor">
-                                                Sabor:
-                                            </h2>
-                                            {data.flavor}
-                                        </div>
-                                        : null}
-                                    {data.complement != null ?
-                                        <div className="complementOrder">
-                                            <h2 className="complement">
-                                                Adicionais:
-                                            </h2>
-                                            {data.complement}
-                                        </div>
-                                        : null}
-                                </div>
-                            </div>
 
-                            <div className="orderPrice">
-                                <div className="amountOrder">
-                                    <Button className="lessItem" onClick={() => {
-                                        order.map((item, i) => {
-                                            if (item.qtd > 1 && (data.id === item.id)) {
-                                                order[i].qtd--
-                                                setOrder([...order])
-
-                                            } else if (item.qtd === 1 && (data.id === item.id)) {
-                                                order.splice(index, 1);
-                                                setOrder([...order])
-                                            }
-
-                                            return item;
-                                        })
-                                    }}
-                                    > - </Button>
-
-                                    <div className="inputQtd">
-                                        {data.qtd}
-                                    </div>
-
-                                    <Button className="moreItem" onClick={() => {
-                                        order.map((item, i) => {
-                                            if (
-                                                item.qtd >= 1 && (data.id === item.id)
-                                            ) {
-                                                order[i].qtd++
-                                                setOrder([...order])
-                                            }
-                                            return item;
-                                        })
-                                    }}
-                                    > + </Button>
-
-                                </div>
-
-                                <h1 className="price">R${data.price * data.qtd},00</h1>
-
-                            </div>
-                        </ul>
-
-                    </Item>
-                ))}
-            </Orders>
-                : null}
             <div className="types">
                 <div className="item">
                     <Button
@@ -161,6 +85,8 @@ export function Menu() {
                         )}>
                         Almoço/Jantar
                     </Button>
+                </div>
+                <div className="items">
                     <Button
                         className="categoriesBtn"
                         id="accompaniments"
@@ -190,6 +116,7 @@ export function Menu() {
                             {menu === breakfast || menu === side || menu === drinks ?
                                 <Button id="addToCart" type="button" onClick={() => {
                                     if (!order.some(item => item.name === menu[index].name)) {
+                                        setIsOrdersVisible(true)
                                         setOrder([{
                                             "id": menu[index].id,
                                             "name": menu[index].name,
@@ -294,6 +221,7 @@ export function Menu() {
                                                     selectBurger.qtd = 1;
                                                     setOrder([selectBurger, ...order]);
                                                     setIsModalVisible(false)
+                                                    setIsOrdersVisible(true)
                                                 }
                                             }
 
@@ -311,86 +239,98 @@ export function Menu() {
                     ))}
                 </ul>
             </section>
-            {isOrdersVisible
-                // || deskOrders 
-                ?
-                <Orders orders={order} orderHidden={setIsOrdersVisible} cancelOrder={setOrder} priceTotal={priceTotal(order)} order={order} menu={menu}>
-                    {order.map((data, index) => (
-                        <Item className="orderSummary" key={index}>
-                            <ul className="list">
-                                <div className="nameOrder">
-                                    <h1 className="titleOrder">{data.name}</h1>
-                                </div>
-                                <div className="columOrder1">
-                                    <div className="imgOrder">
-                                        <img className="image" src={data.image} alt="imagem" />
+            {
+                isOrdersVisible ?
+                    <Orders orders={order} orderHidden={setIsOrdersVisible} cancelOrder={setOrder} priceTotal={priceTotal(order)} order={order} menu={menu}>
+                        {order.map((data, index) => (
+                            <Item className="orderSummary" key={index}>
+                                <ul className="list">
+                                    <div className="nameOrder">
+                                        <h1 className="titleOrder">{data.name}</h1>
                                     </div>
-                                    <div className="complementsColum">
-                                        {data.flavor != null ?
-                                            <div className="flavorOrder">
-                                                <h2 className="flavor">
-                                                    Sabor:
-                                                </h2>
-                                                {data.flavor}
-                                            </div>
-                                            : null}
-                                        {data.complement != null ?
-                                            <div className="complementOrder">
-                                                <h2 className="complement">
-                                                    Adicionais:
-                                                </h2>
-                                                {data.complement}
-                                            </div>
-                                            : null}
+                                    <div className="columOrder1">
+                                        <div className="imgOrder">
+                                            <img className="image" src={data.image} alt="imagem" />
+                                        </div>
+                                        <div className="complementsColum">
+                                            {data.flavor != null ?
+                                                <div className="flavorOrder">
+                                                    <h2 className="flavor">
+                                                        Sabor:
+                                                    </h2>
+                                                    {data.flavor}
+                                                </div>
+                                                : null}
+                                            {data.complement != null ?
+                                                <div className="complementOrder">
+                                                    <h2 className="complement">
+                                                        Adicionais:
+                                                    </h2>
+                                                    {data.complement}
+                                                </div>
+                                                : null}
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div className="orderPrice">
-                                    <div className="amountOrder">
-                                        <Button className="lessItem" onClick={() => {
-                                            order.map((item, i) => {
-                                                if (item.qtd > 1 && (data.id === item.id)) {
-                                                    order[i].qtd--
-                                                    setOrder([...order])
+                                    <div className="orderPrice">
+                                        <div className="amountOrder">
+                                            <Button className="lessItem" onClick={() => setDeleteOrder(true)}
+                                            > - </Button>
+                                            {deleteOrder ? <Modal>
+                                                <div className="modalCancel">
+                                                    <h1 className="h1OrderDelete">Tem certeza que deseja deletar esse item dos pedidos?</h1>
+                                                    <div className="cancelItemModal">
+                                                        <Button className="cancelModal" type="button"
+                                                            onClick={() => {
+                                                                order.map((item, i) => {
+                                                                    if (item.qtd > 1 && (data.id === item.id)) {
+                                                                        order[i].qtd--
+                                                                        setOrder([...order])
 
-                                                } else if (item.qtd === 1 && (data.id === item.id)) {
-                                                    order.splice(index, 1);
-                                                    setOrder([...order])
-                                                }
+                                                                    } else if (item.qtd === 1 && (data.id === item.id)) {
+                                                                        order.splice(index, 1);
+                                                                        setOrder([...order])
+                                                                    }
 
-                                                return item;
-                                            })
-                                        }}
-                                        > - </Button>
+                                                                    return item;
+                                                                })
+                                                                setDeleteOrder(false)
+                                                            }}>DELETAR</Button>
+                                                        <Button className="cancelModal"
+                                                            onClick={() => setDeleteOrder(false)}>CANCELAR</Button>
+                                                    </div>
+                                                </div>
+                                            </Modal> : null}
 
-                                        <div className="inputQtd">
-                                            {data.qtd}
+                                            <div className="inputQtd">
+                                                {data.qtd}
+                                            </div>
+
+                                            <Button className="moreItem" onClick={() => {
+                                                order.map((item, i) => {
+                                                    if (
+                                                        item.qtd >= 1 && (data.id === item.id)
+                                                    ) {
+                                                        order[i].qtd++
+                                                        setOrder([...order])
+                                                    }
+                                                    return item;
+                                                })
+                                            }}
+                                            > + </Button>
+
                                         </div>
 
-                                        <Button className="moreItem" onClick={() => {
-                                            order.map((item, i) => {
-                                                if (
-                                                    item.qtd >= 1 && (data.id === item.id)
-                                                ) {
-                                                    order[i].qtd++
-                                                    setOrder([...order])
-                                                }
-                                                return item;
-                                            })
-                                        }}
-                                        > + </Button>
+                                        <h1 className="price">R${data.price * data.qtd},00</h1>
 
                                     </div>
+                                </ul>
 
-                                    <h1 className="price">R${data.price * data.qtd},00</h1>
-
-                                </div>
-                            </ul>
-
-                        </Item>
-                    ))}
-                </Orders>
-                : null}
+                            </Item>
+                        ))}
+                    </Orders>
+                    : null
+            }
         </main >
     )
 }
