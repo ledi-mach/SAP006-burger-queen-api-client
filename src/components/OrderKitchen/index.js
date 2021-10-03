@@ -3,6 +3,7 @@ import { Item } from "../Item/index"
 import React from "react"
 import './index.css';
 
+
 export function OrderKitchen({
     convertTime,
     convertDate,
@@ -10,11 +11,12 @@ export function OrderKitchen({
     handlePreparing,
     handleFinished,
     handleServing,
+    prepareTime
 }) {
 
     return (
         <div className="kitchen-wrap">
-            {order ? (
+            {order.length >0 && order.sort((a,b)=> a.id - b.id) ? (
                 <ul className="ListOfOrders">
                     {order.map((data, index) => {
                         return (
@@ -32,9 +34,6 @@ export function OrderKitchen({
                                             } </p>
                                             <p className="timeOrder">
                                                 Pedido feito em {convertDate(data.createdAt)} às {convertTime(data.createdAt)} </p>
-
-                                                <p>{convertTime(data.processedAt)} - {convertTime(data.createdAt)}</p>
-                                        
                                         </div>
                                         <h1 className="titleKitchen">PEDIDOS</h1>
 
@@ -45,9 +44,9 @@ export function OrderKitchen({
                                                     return (
                                                         <ul className="listProductOrder" key={id}>
                                                             <p className="nameItemOrder">{data.name}</p>
-                                                            <p className="quantityItem"> Quantidade: {data.qtd}
+                                                            <div className="quantityItem"> Quantidade: {data.qtd}
                                                                 {data.complement !== null ? <p>Extra: {data.complement}</p> : <p>Extra: nenhum</p>}
-                                                            </p>
+                                                            </div>
                                                         </ul>
                                                     )
                                                 })}
@@ -67,7 +66,7 @@ export function OrderKitchen({
                                                             onClick={(e) => handleServing(data, e)}
                                                         > Servir</Button>
                                                         : < p className="orderReady" >
-                                                            Pedido entregue
+                                                            Pedido entregue em {prepareTime(data.createdAt, data.updatedAt)} min.
                                                         </p>
                                             }
 
@@ -87,3 +86,4 @@ export function OrderKitchen({
     )
 }
 
+//  <p className="timeOrder">Tempo de preparo: {prepareTime(data.createdAt, data.updatedAt)} min.</p>
