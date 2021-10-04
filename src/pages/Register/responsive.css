@@ -124,6 +124,14 @@
     body {
         padding: 0rem 0rem 5rem;
     }
+
+    .divRegister {
+        padding: 1rem 0rem;
+    }
+
+    .divInfo {
+        padding: 1rem 0rem;
+    }
 }
 
 @media(min-width: 280px) and (max-width: 590px) {
@@ -176,5 +184,13 @@
 
     .burger {
         margin: 0.1rem 0rem 0rem 6.5rem;
+    }
+
+    .divRegister {
+        padding: 1rem 0rem;
+    }
+
+    .divInfo {
+        padding: 1rem 0rem;
     }
 }
