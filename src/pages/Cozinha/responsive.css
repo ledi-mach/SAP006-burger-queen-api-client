@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+    .LogoutBtn {
+        width: 6.5vw;
+        height: 8vh;
+        margin-left: 90%;
+    }
+}
+
+@media (min-width: 270px) and (max-width: 600px) {
+    .LogoutBtn {
+        width: 7vw;
+        margin-left: 88%;
+    }
+
+}

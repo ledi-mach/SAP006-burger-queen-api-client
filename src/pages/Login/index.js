@@ -16,7 +16,7 @@ export function Login() {
     const history = useHistory()
 
     function navigateToRegister() {
-        history.push('/register');
+        history.push('/cadastro');
     }
 
     function navigateToMenu() {
@@ -118,6 +118,12 @@ export function Login() {
 
                     </form>
                 </fieldset>
+
+                <footer>
+                    <p className="pFooter">copyright@2021 |
+                        feito por <a href="https://github.com/LarissaSiq" target="blank">Larissa Siqueira</a> e <a
+                            href="https://github.com/ledi-mach" target="new">Lediane Machado</a></p>
+                </footer>
             </div>
         </main>
     )

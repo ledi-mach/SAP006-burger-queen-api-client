@@ -30,7 +30,7 @@
     border: none;
     font-size: 1.7rem;
     color: #ff9100;
-    display: block;
+    display: none;
 }
 
 .btnOrders:hover {

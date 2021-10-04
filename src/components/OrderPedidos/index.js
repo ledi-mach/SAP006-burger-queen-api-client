@@ -1,15 +1,14 @@
 import { Button } from "../Button/index"
 import { Item } from "../Item/index"
 import React from "react"
-import './index.css';
+import "./index.css"
 
-
-export function OrderKitchen({
+export function OrderPedidos({
     convertTime,
     convertDate,
     order,
-    handlePreparing,
-    handleFinished,
+    handleServing,
+    prepareTime
 }) {
 
     return (
@@ -42,9 +41,9 @@ export function OrderKitchen({
                                                     return (
                                                         <ul className="listProductOrder" key={id}>
                                                             <p className="nameItemOrder">{data.name}</p>
-                                                            <div className="quantityItem"> Quantidade: {data.qtd}
+                                                            <p className="quantityItem"> Quantidade: {data.qtd}
                                                                 {data.complement !== null ? <p>Extra: {data.complement}</p> : <p>Extra: nenhum</p>}
-                                                            </div>
+                                                            </p>
                                                         </ul>
                                                     )
                                                 })}
@@ -52,14 +51,20 @@ export function OrderKitchen({
                                         </div>
                                         <div className="statusBtn">
                                             {data.status === 'pending' ?
-                                                <Button className="redBtn" id="statusOrderBtn"
-                                                    onClick={(e) => handlePreparing(data, e)}
-                                                > Preparar</Button>
+                                                < p className="orderPending" >
+                                                    PENDENTE
+                                                </p>
                                                 : data.status === 'preparing' ?
-                                                    <Button className="yellowBtn" id="statusOrderFinish"
-                                                        onClick={(e) => handleFinished(data, e)}
-                                                    > Finalizar</Button>
-                                                    : null
+                                                    < p className="orderPreparing" >
+                                                        PREPARANDO
+                                                    </p>
+                                                    : data.status === 'ready' ?
+                                                        <Button className="yellowBtn" id="statusOrderToServe"
+                                                            onClick={(e) => handleServing(data, e)}
+                                                        > Servir</Button>
+                                                        : < p className="orderReady" >
+                                                            Pedido entregue em {prepareTime(data.createdAt, data.updatedAt)} min.
+                                                        </p>
                                             }
 
                                         </div>
@@ -72,10 +77,9 @@ export function OrderKitchen({
                     }
                 </ul>
 
-            ) : <p className="withoutOrders">Sem pedidos no momento!</p>
+            ) : null
             }
         </div >
     )
 }
 
-//  <p className="timeOrder">Tempo de preparo: {prepareTime(data.createdAt, data.updatedAt)} min.</p>

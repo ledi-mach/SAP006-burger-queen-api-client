@@ -19,3 +19,12 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
+
+.orderWrap {
+    background-color: white;
+    margin: 1.5rem;
+    padding: 0rem 0.5rem 0.5rem;
+    width: 15rem;
+    border-radius: 5px;
+
+}

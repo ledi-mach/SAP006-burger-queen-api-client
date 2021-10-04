@@ -505,6 +505,10 @@
         margin: 1% 0% 55% 0%;
         font-size: 1rem;
     }
+
+    .pFooter {
+        font-size: 0.8rem;
+    }
 }
 
 
@@ -572,5 +576,9 @@
     .backHome {
         width: 70vw;
         margin: 1% 0% 90% 0%;
+    }
+
+    .pFooter {
+        font-size: 0.7rem;
     }
 }

@@ -16,7 +16,6 @@ describe('tests to Login Page', () => {
         expect(screen.queryByTestId('errorEmail')).not.toBeInTheDocument();
     })
     
-
 })
 
 /*it('pass invalid email to test email input field', ()=>{
