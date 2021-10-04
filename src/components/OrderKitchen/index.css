@@ -18,3 +18,9 @@
     width: auto;
     padding: 0.6rem;
 }
+
+.ordered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,586 +1,141 @@
-@media (min-width:1400px) {
+@media (min-width:2560px) {
 
     .imgBurger {
-        margin-top: 5%;
+        display: none;
+    }
+
+    .backHome {
+        margin: 15% 0% 0% 15%;
+        width: 70%;
+    }
+}
+
+
+@media (min-width: 1200px) and (min-width: 1400px) {
+    .imgBurger {
+        margin-top: 6%;
         margin-left: 25%;
-        height: 80vh;
-        width: 50%;
+        height: 70vh;
+        width: 50vw;
     }
 
     .burgerLogo {
-        width: 20%;
+        width: 18vw;
+    }
+
+    .labelInputs {
+        font-size: 1rem;
+    }
+
+    .inputEmail,
+    .inputPassword {
+        font-size: 0.9rem;
+        padding: 0rem 0.5rem;
+    }
+
+    Button {
+        font-size: 1.5rem;
+    }
+
+    #signInBtn {
+        font-size: 1.2rem;
+    }
+
+    .isWorker,
+    .redBtn {
+        font-size: 1rem;
+    }
+
+    .backHome {
+        margin: 3% 0% 0% 15%;
+        width: 70%;
     }
 
     .formFieldsetLogin,
     .formFieldsetRegister {
         width: 25vw;
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 2rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 1.2rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 40px;
-        font-size: 1.5rem;
-        padding: 0rem 1rem;
-    }
-
-    Button {
-        font-size: 1.4rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 1.3rem;
-    }
-
-    .backHome {
-        margin: 1% 0% 39% 0%;
-        font-size: 1.5rem;
-        width: 30vw;
-    }
-
-}
-
-@media (min-width: 1366px) and (max-width: 1400px) {
-    .imgBurger {
-        margin-top: 12%;
-        margin-left: 20%;
-        height: 65vh;
-        width: 60%;
-    }
-
-    .burgerLogo {
-        width: 25%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 35vw;
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 2.1rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 1.2rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 45px;
-        font-size: 1.2em;
-        padding: 0rem 1rem;
-    }
-
-    Button {
-        font-size: 1.5rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 1.4rem;
-    }
-
-    .backHome {
-        margin: 1% 0% 58% 0%;
-        font-size: 1.8rem;
-        width: 30vw;
-    }
-}
-
-@media (max-width: 1200px) {
-
-    .imgBurger {
-        margin-top: 10%;
-        margin-left: 20%;
-        height: 70vh;
-        width: 60%;
-    }
-
-    .burgerLogo {
-        width: 22%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 35vw;
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 2.1rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 1.2rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 45px;
-        font-size: 1.2em;
-        padding: 0rem 1rem;
-    }
-
-    Button {
-        font-size: 1.4rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 1.4rem;
-    }
-
-    .backHome {
-        margin: 1% 0% 50% 0%;
-        font-size: 1.8rem;
-        width: 30vw;
+        margin: 1rem 0rem 0rem 0rem;
     }
 }
 
 @media (max-width: 1024px) {
 
     .imgBurger {
-        margin-top: 17%;
-        margin-left: 10%;
-        height: 65vh;
-        width: 80%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 40vw;
-    }
-
-    .backHome {
-        margin: 1% 0% 68% 0%;
-        font-size: 1.5rem;
-        width: 50vw;
-    }
-}
-
-@media (min-width: 812px) and (max-width: 1024px) {
-
-    .imgBurger {
-        display: none;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 40vw;
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 1.5rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 1rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 30px;
-    }
-
-    Button {
-        font-size: 1rem;
-        margin: 0rem 0rem 1rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 0.9rem;
-    }
-
-    .backHome {
-        margin: 1% 0% 30% 0%;
-        font-size: 1.3rem;
-        width: 50vw;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 800px) {
-
-    .imgBurger {
-        display: none;
-    }
-
-    .burgerLogo {
-        width: 23vw;
-        margin-left: 3%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 45vw;
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 2.1rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 1.2rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 45px;
-        font-size: 1.2em;
-        padding: 0rem 1rem;
-    }
-
-    Button {
-        font-size: 1.5rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 1.4rem;
-    }
-
-    .backHome {
-        width: 50vw;
-        margin: 1% 0% 42% 0%;
-        font-size: 1.3rem;
-    }
-}
-
-@media (min-width: 653px) and (max-width: 736px) {
-
-    .imgBurger {
-        display: none;
-    }
-
-    .burgerLogo {
-        width: 23vw;
-        margin-left: 3%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 35vw;
-        margin: 5vh 0rem 0rem 0rem;
-
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 1.2rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 0.5rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 25px;
-        font-size: 0.7rem;
-        padding: 0rem 0.5rem;
-    }
-
-    Button {
-        font-size: 0.7rem;
-        margin: 0rem 0rem 1rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 0.6rem;
-    }
-
-    .backHome {
-        width: 50vw;
-        margin: 1% 0% 35% 0%;
-        font-size: 0.8rem;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 653px) {
-    .imgBurger {
-        display: none;
-    }
-
-    .burgerLogo {
-        width: 20%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 38vw;
-        margin: 5vh 0rem 0rem 0rem;
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 1.3rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 1rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 25px;
-        font-size: 0.8rem;
-        padding: 0rem 0.8rem 0rem;
-    }
-
-    Button {
-        font-size: 0.8rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 0.7rem;
-    }
-
-    .backHome {
-        width: 50vw;
-        margin: 1% 0% 42% 0%;
-        font-size: 0.9rem;
-    }
-}
-
-
-
-@media (max-width: 596px) {
-    .imgBurger {
-        display: none;
-    }
-
-    .burgerLogo {
-        width: 45vw;
-        margin-left: 28%;
-        margin-top: 10%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 80vw;
-        margin: 15vh 0rem 0rem 0rem;
-
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 1.5rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 1rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 30px;
-    }
-
-    Button {
-        font-size: 1rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 0.9rem;
-    }
-
-    .backHome {
-        width: 50vw;
-        margin: 1% 0% 40% 0%;
-        font-size: 1.5rem;
-    }
-}
-
-@media(min-width: 568px) and (max-width: 596px) {
-    .imgBurger {
-        display: none;
-    }
-
-    .burgerLogo {
-        width: 23vw;
-        margin-left: 3%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 35vw;
-        margin: 5vh 0rem 0rem 0rem;
-
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 1.2rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 0.8rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 25px;
-    }
-
-    Button {
-        font-size: 0.7rem;
-        margin: 0rem 0rem 1rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 0.6rem;
-    }
-
-    .backHome {
-        width: 50vw;
-        margin: 1% 0% 40% 0%;
-        font-size: 0.8rem;
-    }
-}
-
-@media(max-width: 496px) {
-    .imgBurger {
-        display: none;
-    }
-
-    .burgerLogo {
-        width: 40vw;
-        margin-left: 28%;
-        margin-top: 5%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 70vw;
-        margin: 15vh 0rem 0rem 0rem;
-
-    }
-
-    .h1Login,
-    .h1Register {
-        font-size: 1.5rem;
-        padding: 1rem 0rem 0rem 0rem;
-    }
-
-    .labelInputs {
-        font-size: 1rem;
-    }
-
-    .inputEmail,
-    .inputPassword {
-        height: 30px;
-        padding: 0rem 0.5rem;
-        font-size: 0.9rem;
-    }
-
-    Button {
-        font-size: 1rem;
-    }
-
-    .isWorker,
-    .redBtn {
-        font-size: 0.9rem;
-    }
-
-    .backHome {
-        width: 70vw;
-        margin: 1% 0% 55% 0%;
-        font-size: 1rem;
-    }
-}
-
-
-
-@media(min-width: 411px) and (max-width: 416px) {
-    .burgerLogo {
+        margin-top: 9%;
+        margin-left: 20%;
+        height: 70vh;
         width: 60vw;
+    }
+
+    .burgerLogo {
+        width: 20vw;
+    }
+
+    .formFieldsetLogin,
+    .formFieldsetRegister {
+        width: 30vw;
+        margin: 1rem 0rem 0rem 0rem;
+    }
+
+    .backHome {
+        margin: 2% 0% 0% 15%;
+        width: 70%;
+        font-size: 1.2rem;
+
+    }
+
+}
+
+@media(max-width: 768px) {
+    .imgBurger {
+        display: none;
+    }
+
+    .burgerLogo {
+        width: 35vw;
+        margin-left: 30%;
+        margin-top: 8%;
+    }
+
+    .formFieldsetLogin,
+    .formFieldsetRegister {
+        width: 70vw;
+        margin: 15% 0rem 0rem 0rem;
+
+    }
+
+    .backHome {
+        margin: 1% 0% 0% 15%;
+        width: 70%;
+
+    }
+}
+
+@media(min-width: 270px) and (max-width: 590px) {
+    .imgBurger {
+        display: none;
+    }
+
+    .burgerLogo {
+        width: 55vw;
         margin-left: 20%;
         margin-top: 12%;
     }
 
     .formFieldsetLogin,
     .formFieldsetRegister {
-        width: 80vw;
-        margin: 0vh 0rem 0rem 0rem;
+        width: 65vw;
+        margin: 30% 0rem 0rem 0rem;
 
     }
 
     .backHome {
-        width: 70vw;
-        margin: 1% 0% 75% 0%;
-        font-size: 1.6rem;
-    }
-}
-
-@media(min-width: 320px) and (max-width: 411px) {
-    .imgBurger {
-        display: none;
+        margin: 1% 0% 0% 15%;
+        width: 70%;
+        font-size: 1rem;
     }
 
-    .burgerLogo {
-        width: 40vw;
-        margin-left: 28%;
-        margin-top: 5%;
-    }
-
-    .formFieldsetRegister {
-        width: 80vw;
-        margin: 10vh 0rem 0rem 0rem;
-
-    }
-
-    .backHome {
-        width: 70vw;
-        margin: 1% 0% 70% 0%;
-    }
-}
-
-@media(min-width: 270px) and (max-width: 320px) {
-    .imgBurger {
-        display: none;
-    }
-
-    .burgerLogo {
-        width: 50vw;
-        margin-left: 25%;
-        margin-top: 2%;
-    }
-
-    .formFieldsetLogin,
-    .formFieldsetRegister {
-        width: 80vw;
-        margin: 7vh 0rem 0rem 0rem;
-
-    }
-
-    .backHome {
-        width: 70vw;
-        margin: 1% 0% 90% 0%;
+    .pFooter {
+        font-size: 0.8rem;
     }
 }
