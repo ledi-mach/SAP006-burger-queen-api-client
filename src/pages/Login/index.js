@@ -19,7 +19,7 @@ export function Login() {
         history.push('/register');
     }
 
-    function navigateToMenu(){
+    function navigateToMenu() {
         history.push('/menu')
     }
     function navigateToKitchen() {
@@ -74,31 +74,34 @@ export function Login() {
                     <h1 className="h1Login">LOGIN</h1>
                     <form className="form-wrapper">
                         <div className="divEmail">
-                            <p className="labelInputs">E-mail</p>
+                            <p for="email" className="labelInputs">E-mail</p>
                             <Input
+                                data="input-email"
                                 type="email"
                                 name="email"
                                 inputClass="inputEmail"
                                 value={values.email}
                                 onChange={handleChange}
                             />
-                            {errors.email && <p className="msgErro">{errors.email}</p>}
+                            {errors.email && <p className='msgErro' data-test-id='errorEmail'>{errors.email}</p>}
                         </div>
 
                         <div className="divPassword">
-                            <p className="labelInputs">Senha</p>
+                            <p for="password" className="labelInputs">Senha</p>
                             <Input
+                                data="input-password"
                                 type="password"
                                 name="password"
                                 inputClass="inputPassword"
                                 value={values.password}
                                 onChange={handleChange}
                             />
-                            {errors.password && <p className="msgErro">{errors.password}</p>}
+                            {errors.password && <p className="msgErro" data-test-id='errorPassword'>{errors.password}</p>}
                         </div>
 
                         <Button
                             type="submit"
+                            data='submit-btn'
                             className="yellowBtn"
                             id="signInBtn"
                             onClick={handleFormSubmit}
@@ -107,6 +110,7 @@ export function Login() {
 
                         <Button
                             type="button"
+                            data='signUp-btn'
                             className="redBtn"
                             id="signUpBtn"
                             onClick={navigateToRegister}

@@ -12,12 +12,15 @@ export function Input({
     divForm,
     onChange,
     max,
+    data,
     min,
+    
 }) {
     return (
-        <div className={divForm}>
-            <input
-            name={name}
+        <div className={divForm} data-test-id='input-div'>
+            <input //data-testid='data-input'
+            data-testid={data}
+                name={name}
                 value={value}
                 type={type}
                 placeholder={inputPlaceholder}
