@@ -94,7 +94,7 @@
     .formFieldsetLogin,
     .formFieldsetRegister {
         width: 60vw;
-        margin: 8rem 0rem 0rem 0rem;
+        margin: 0rem 0rem 0rem 0rem;
 
     }
 
@@ -135,7 +135,7 @@
     .formFieldsetLogin,
     .formFieldsetRegister {
         width: 60vw;
-        margin: 15vh 0rem 0rem 0rem;
+        margin: 0vh 0rem 0rem 0rem;
     }
 
     .backHome {
