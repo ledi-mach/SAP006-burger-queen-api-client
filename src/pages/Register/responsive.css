@@ -91,14 +91,10 @@
         display: none;
     }
 
-    .burgerLogo {
-        display: none;
-    }
-
     .formFieldsetLogin,
     .formFieldsetRegister {
-        width: 70vw;
-        margin: 0% 0rem 0rem 0rem;
+        width: 60vw;
+        margin: 8rem 0rem 0rem 0rem;
 
     }
 
@@ -106,6 +102,25 @@
         margin: 1% 0% 0% 15%;
         width: 50%;
     }
+
+    .logo {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 4.5rem 0rem 0rem 0vw;
+        width: 78vw;
+        font-size: 2.2rem;
+        line-height: 3.8rem;
+    }
+
+    .wood {
+        margin: 0rem 0rem 0rem 0.2rem;
+    }
+
+    .burger {
+        margin: 0.1rem 0rem 0rem 15.5rem;
+    }
+
 }
 
 @media(min-width: 280px) and (max-width: 590px) {
@@ -119,9 +134,8 @@
 
     .formFieldsetLogin,
     .formFieldsetRegister {
-        width: 65vw;
-        margin: 10% 0rem 0rem 0rem;
-
+        width: 60vw;
+        margin: 15vh 0rem 0rem 0rem;
     }
 
     .backHome {
@@ -132,5 +146,32 @@
 
     .pFooter {
         font-size: 0.8rem;
+    }
+
+    .imgLogo {
+        width: 5rem;
+        margin: 0rem 0rem 0rem 58vw;
+        position: absolute;
+        width: 3rem;
+        z-index: -2;
+        display: flex;
+    }
+
+    .logo {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 3rem 0rem 0rem 0vw;
+        width: 80vw;
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+    }
+
+    .wood {
+        margin: 0rem 0rem 0rem 0.2rem;
+    }
+
+    .burger {
+        margin: 0.1rem 0rem 0rem 6.5rem;
     }
 }

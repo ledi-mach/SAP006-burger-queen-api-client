@@ -1,6 +1,5 @@
 import { useHistory } from 'react-router-dom';
 import imgBurger from '../../assets/images/burger-background.png';
-import logo from '../../assets/images/logo.png';
 import { Button } from '../../components/Button/index.js';
 import { Input } from '../../components/Input/index.js'
 import { useState } from 'react';
@@ -70,7 +69,11 @@ export function Register() {
             <Button type="button" className="backHome"
                 onClick={navigateToLogin}>← Voltar para a Home</Button>
             <img src={imgBurger} className="imgBurger" alt="imgburger" />
-            <img src={logo} className="burgerLogo" alt="logo" />
+            <div className="logo">
+                <img src={imgBurger} className="imgLogo" alt="imgburger" />
+                <h1 className="wood">WOOD</h1>
+                <h1 className="burger">BURGER</h1>
+            </div>
             <div className="divRegister">
                 <fieldset className="formFieldsetLogin">
                     <h1 className="h1Register"> CADASTRO</h1>
@@ -126,6 +129,11 @@ export function Register() {
                     </form>
                 </fieldset>
             </div>
+            <footer>
+                <p className="pFooter">copyright@2021 |
+                    feito por <a href="https://github.com/LarissaSiq" target="blank">Larissa Siqueira</a> e <a
+                        href="https://github.com/ledi-mach" target="new">Lediane Machado</a></p>
+            </footer>
         </main>
     )
 }

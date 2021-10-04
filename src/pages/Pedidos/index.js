@@ -79,8 +79,7 @@ export function Pedidos() {
     Background()
     return (
         <main className="mainAttendance">
-
-             {/*<LogoutButton /> */}
+            {/*<LogoutButton /> */}
             <Button type="button" className="backMenu"
                 onClick={navigateToMenu}>
                 {/* <MdArrowBack /> */}
@@ -103,7 +102,6 @@ export function Pedidos() {
                             id="burgers"
                             onClick={() => {
                                 setOrder(preparingOrders)
-
                             }}>
                             Em andamento
                         </Button>
@@ -114,8 +112,8 @@ export function Pedidos() {
                             id="accompaniments"
                             onClick={() => {
                                 setOrder(readyOrders)
-
-                            }}>
+                            }}
+                            >
                             Prontos
                         </Button>
                         <Button

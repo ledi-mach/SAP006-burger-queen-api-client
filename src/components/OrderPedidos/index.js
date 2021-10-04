@@ -77,8 +77,7 @@ export function OrderPedidos({
                     }
                 </ul>
 
-            ) : null
-            }
+            ) : null}
         </div >
     )
 }
