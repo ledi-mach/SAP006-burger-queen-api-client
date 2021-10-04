@@ -94,7 +94,7 @@
     .formFieldsetLogin,
     .formFieldsetRegister {
         width: 60vw;
-        margin: 15rem 0rem 0rem 0rem;
+        margin: 15rem 0rem 7rem 0rem;
 
     }
 
@@ -119,10 +119,6 @@
 
     .burger {
         margin: 0.1rem 0rem 0rem 15.5rem;
-    }
-
-    body {
-        padding: 0rem 0rem 5rem;
     }
 
     .divRegister {
@@ -172,7 +168,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin: 3rem 0rem 0rem 0vw;
+        margin: 5rem 0rem 0rem 0vw;
         width: 80vw;
         font-size: 1.3rem;
         line-height: 2.2rem;
