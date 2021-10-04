@@ -92,46 +92,41 @@
     }
 
     .burgerLogo {
-        width: 35vw;
-        margin-left: 30%;
-        margin-top: 8%;
+        display: none;
     }
 
     .formFieldsetLogin,
     .formFieldsetRegister {
         width: 70vw;
-        margin: 15% 0rem 0rem 0rem;
+        margin: 0% 0rem 0rem 0rem;
 
     }
 
     .backHome {
         margin: 1% 0% 0% 15%;
-        width: 70%;
-
+        width: 50%;
     }
 }
 
-@media(min-width: 270px) and (max-width: 590px) {
+@media(min-width: 280px) and (max-width: 590px) {
     .imgBurger {
         display: none;
     }
 
     .burgerLogo {
-        width: 55vw;
-        margin-left: 20%;
-        margin-top: 12%;
+        display: none;
     }
 
     .formFieldsetLogin,
     .formFieldsetRegister {
         width: 65vw;
-        margin: 30% 0rem 0rem 0rem;
+        margin: 10% 0rem 0rem 0rem;
 
     }
 
     .backHome {
         margin: 1% 0% 0% 15%;
-        width: 70%;
+        width: 100%;
         font-size: 1rem;
     }
 
