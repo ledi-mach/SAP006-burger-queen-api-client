@@ -80,7 +80,7 @@ export function Pedidos() {
     return (
         <main className="mainAttendance">
 
-            {/* <LogoutButton /> */}
+             {/*<LogoutButton /> */}
             <Button type="button" className="backMenu"
                 onClick={navigateToMenu}>
                 {/* <MdArrowBack /> */}

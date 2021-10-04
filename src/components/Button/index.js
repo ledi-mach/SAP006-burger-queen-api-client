@@ -8,19 +8,21 @@ export function Button({
     id,
     value,
     label,
+    data,
 }) {
     return (
-        <div data-testid="button">
-        <button
-            type={type}
-            className={className}
-            onClick={onClick}
-            value = {value}
-            id={id} 
-            label={label}
+        <div data-testid='button'>
+            <button
+                data-testid={data}
+                type={type}
+                className={className}
+                onClick={onClick}
+                value={value}
+                id={id}
+                label={label}
             >
-            {children}
-        </button>
+                {children}
+            </button>
         </div>
     )
 }
