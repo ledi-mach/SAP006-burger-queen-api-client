@@ -1,3 +1,9 @@
+@media (min-width: 1400px) {
+    .orders {
+        padding: 2rem 0rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .orders {
         background-color: #FF9900;
@@ -23,7 +29,9 @@
 
     .alignCloseOrders {
         display: flex;
+        margin: 0rem 1rem 0rem;
     }
+
 
 }
 

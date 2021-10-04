@@ -67,13 +67,11 @@ export function Register() {
 
     return (
         <main>
+            <Button type="button" className="backHome"
+                onClick={navigateToLogin}>← Voltar para a Home</Button>
             <img src={imgBurger} className="imgBurger" alt="imgburger" />
             <img src={logo} className="burgerLogo" alt="logo" />
-
             <div className="divRegister">
-                <Button type="button" className="backHome"
-                    onClick={navigateToLogin}>← Voltar para a Home</Button>
-
                 <fieldset className="formFieldsetLogin">
                     <h1 className="h1Register"> CADASTRO</h1>
                     <form className="formRegister">

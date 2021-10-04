@@ -7,7 +7,7 @@ import { Input } from '../../components/Input/index.js';
 import imgBurger from '../../assets/images/burger-background.png';
 import logo from '../../assets/images/logo.png';
 import './index.css';
-import './responsive.css';
+import '../Register/responsive.css';
 import validation from '../../services/React/validateInfo.js';
 import { OrderKitchen } from '../../components/OrderKitchen/index.js';
 
