@@ -259,7 +259,6 @@ export function Menu() {
                                                 : null}
                                         </div>
                                     </div>
-
                                     <div className="orderPrice">
                                         <div className="amountOrder">
                                             <Button className="lessItem" onClick={() => setDeleteOrder(true)}
@@ -274,12 +273,10 @@ export function Menu() {
                                                                     if (item.qtd > 1 && (data.id === item.id)) {
                                                                         order[i].qtd--
                                                                         setOrder([...order])
-
                                                                     } else if (item.qtd === 1 && (data.id === item.id)) {
                                                                         order.splice(index, 1);
                                                                         setOrder([...order])
                                                                     }
-
                                                                     return item;
                                                                 })
                                                                 setDeleteOrder(false)
@@ -306,14 +303,10 @@ export function Menu() {
                                                 })
                                             }}
                                             > + </Button>
-
                                         </div>
-
                                         <h1 className="price">R${data.price * data.qtd},00</h1>
-
                                     </div>
                                 </ul>
-
                             </Item>
                         ))}
                     </Orders>
