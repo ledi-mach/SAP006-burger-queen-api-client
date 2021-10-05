@@ -19,6 +19,7 @@ export function Header({
             <div className="divHeader">
                 <Button type="button" className="backMenu"
                     onClick={navigateToPedidos}>
+                    <MdArrowBack />
                     <p className="p">PEDIDOS</p></Button>
                 <div className="divHeaderH1">
                     <h1 className="headerH1">MENU</h1>
