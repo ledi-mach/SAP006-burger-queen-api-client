@@ -94,7 +94,7 @@
     margin-top: 0.9%;
     position: absolute;
     z-index: 3;
-
+    cursor: pointer;
 }
 
 .quantityItem {
