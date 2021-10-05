@@ -4,11 +4,10 @@
   background-color: transparent;
   position: absolute;
   z-index: 3;
-  min-width: 82px;
   font-size: 2rem;
   color: #763D09;
   text-align: start;
-  margin-left: 3%;
+  display: flex;
 }
 
 .items,
@@ -20,4 +19,8 @@
   color: #FF8A00;
   text-decoration: underline;
   transition: 1s;
+}
+
+.p {
+  font-size: 1.4rem;
 }

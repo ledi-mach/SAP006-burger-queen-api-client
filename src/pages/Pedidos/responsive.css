@@ -1,9 +1,7 @@
 @media (max-width: 768px) {
     .backMenu {
-        margin-top: 2.8%;
-        margin-left: 5%;
+        margin-top: 1%;
         min-width: 100px;
-        font-size: 1.9rem;
         cursor: pointer;
     }
 }
@@ -11,8 +9,11 @@
 @media (min-width: 270px) and (max-width: 600px) {
     .backMenu {
         min-width: 100px;
-        font-size: 1.5rem;
-        margin-top: 4%;
+        margin-top: 3%;
+    }
+
+    .p {
+        display: none;
     }
 
 }
