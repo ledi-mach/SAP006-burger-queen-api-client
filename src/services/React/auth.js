@@ -8,6 +8,9 @@ export const isAuthenticated = () => {
         return false;
     }
 }
+
+export const role = () => localStorage.getItem('role');
+
 export const convertTime = (apiTime) => {
     const getDate = new Date(apiTime);
     let getHours = getDate.getHours();

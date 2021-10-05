@@ -55,6 +55,7 @@ export function Login() {
                 const id = json.id
                 const role = json.role
                 localStorage.setItem("usersToken", token);
+                localStorage.setItem("role", role)
                 if (token !== null && id !== null && role === 'hall') {
                     navigateToMenu()
                 } else if (token !== null && id !== null && role === 'kitchen') {

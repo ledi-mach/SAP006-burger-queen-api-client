@@ -7,7 +7,7 @@ import { Button } from '../../components/Button/index.js';
 import { Item } from "../../components/Item/index.js";
 import { Modal } from "../../components/Modal/index.js";
 import { Background } from "../../services/React/auth";
-// import { MdArrowForward } from "react-icons/md";
+import { MdArrowForward } from "react-icons/md";
 import "./index.css";
 import "./responsive.css";
 
@@ -65,7 +65,7 @@ export function Menu() {
         <main className="menu" >
             <Button type="button" className="backMenu"
                 onClick={navigateToPedidos}>
-                {/* <MdArrowForward /> */}
+                <MdArrowForward />
                 PEDIDOS</Button>
             <Header showModal={setIsOrdersVisible}></Header>
 

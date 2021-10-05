@@ -5,10 +5,10 @@ import { Button } from "../../components/Button";
 import { HeaderPedidos } from "../../components/Header";
 import { convertTime, convertDate, prepareTime } from "../../services/React/auth";
 import { Background } from "../../services/React/auth";
-//import { LogoutButton } from "../../components/LogoutButton/index";
+import { LogoutButton } from "../../components/LogoutButton/index";
 import './index.css';
 import './responsive.css';
-//import { MdArrowBack } from "react-icons/md";
+import { MdArrowBack } from "react-icons/md";
 
 export function Pedidos() {
 
@@ -51,7 +51,7 @@ export function Pedidos() {
                 })
                 setReadyOrders(readyOrders)
                 const servedOrders = data.filter((item) => {
-                    return item.status.includes('served')
+                    return item.status.includes('ready')
                 })
                 setServedOrders(servedOrders)
             });
@@ -80,10 +80,10 @@ export function Pedidos() {
     return (
         <main className="mainAttendance">
 
-             {/*<LogoutButton /> */}
+            <LogoutButton />
             <Button type="button" className="backMenu"
                 onClick={navigateToMenu}>
-                {/* <MdArrowBack /> */}
+                <MdArrowBack />
                 MENU</Button>
 
             <HeaderPedidos />

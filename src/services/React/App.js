@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Login}>
-          {isAuthenticated
+          {isAuthenticated 
             ? <Redirect to="/menu" />
             || <Redirect to="/pedidos" />
             || <Redirect to="/cozinha" />

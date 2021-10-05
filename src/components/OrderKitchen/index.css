@@ -18,7 +18,16 @@
     width: auto;
     padding: 0.6rem;
 }
-
+.orderRestrict {
+    color: #763D09;
+    background-color: #ffd00049;
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 0.6rem;
+}
 .ordered {
     display: flex;
     justify-content: center;

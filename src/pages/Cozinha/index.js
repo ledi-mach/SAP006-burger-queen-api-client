@@ -3,9 +3,9 @@ import { HeaderKitchen } from '../../components/Header'
 import "./index.css";
 import "./responsive.css";
 import { OrderKitchen } from "../../components/OrderKitchen";
-import { convertDate, convertTime, prepareTime } from "../../services/React/auth";
-import { Background } from "../../services/React/auth";
-//import { LogoutButton } from '../../components/LogoutButton/index'
+import { convertDate, convertTime, prepareTime } from "../../services/React/auth.js";
+import { Background } from "../../services/React/auth.js";
+import { LogoutButton } from '../../components/LogoutButton/index'
 
 
 export function Cozinha() {
@@ -77,7 +77,7 @@ export function Cozinha() {
     return (
         < main className="kitchen" >
 
-            {/* <LogoutButton />*/}
+             <LogoutButton />
             < HeaderKitchen />
             <OrderKitchen
                 prepareTime={prepareTime}
