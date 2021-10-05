@@ -1,28 +1,20 @@
 
 import { useHistory } from 'react-router-dom';
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '../../components/Button/index.js';
 import { Input } from '../../components/Input/index.js';
 import imgBurger from '../../assets/images/burger-background.png';
+import { OrderKitchen } from '../../components/OrderKitchen/index.js';
+import validation from '../../services/React/validateInfo.js';
 import './index.css';
 import '../Register/responsive.css';
-import validation from '../../services/React/validateInfo.js';
-import { OrderKitchen } from '../../components/OrderKitchen/index.js';
 
 export function Login() {
 
     const history = useHistory()
 
-    function navigateToRegister() {
+    const navigateToRegister = () => {
         history.push('/cadastro');
-    }
-
-    function navigateToMenu() {
-        history.push('/menu')
-    }
-    function navigateToKitchen() {
-        history.push('/cozinha')
     }
 
     const [errors, setErrors] = useState({});
@@ -54,10 +46,11 @@ export function Login() {
                 const id = json.id
                 const role = json.role
                 localStorage.setItem("usersToken", token);
+                localStorage.setItem("role", role)
                 if (token !== null && id !== null && role === 'hall') {
-                    navigateToMenu()
+                    history.push('/menu')
                 } else if (token !== null && id !== null && role === 'kitchen') {
-                    navigateToKitchen()
+                    history.push('/cozinha')
                 }
                 <OrderKitchen role={role} />
             })

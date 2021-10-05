@@ -58,11 +58,16 @@ export function OrderPedidos({
                                                     < p className="orderPreparing" >
                                                         PREPARANDO
                                                     </p>
-                                                    : data.status === 'ready' ?
-                                                        <Button className="yellowBtn" id="statusOrderToServe"
+                                                    : data.status === 'ready' && localStorage.getItem('role')==='hall' ?
+                                                        <Button className="yellowBtn" id="statusOrderToServe" 
                                                             onClick={(e) => handleServing(data, e)}
                                                         > Servir</Button>
-                                                        : < p className="orderReady" >
+                                                        : data.status ==='ready' && localStorage.getItem('role')==='kitchen' ?
+                                                        < p className="orderReady" >
+                                                            {data.status.replace('ready', 'PRONTO')}
+                                                        </p>:
+                                                        
+                                                        < p className="orderServed" >
                                                             Pedido entregue em {prepareTime(data.createdAt, data.updatedAt)} min.
                                                         </p>
                                             }
