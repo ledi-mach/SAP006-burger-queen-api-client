@@ -65,7 +65,7 @@ export function Register() {
             <div className="logo">
                 <img src={imgBurger} className="imgLogo" alt="imgburger" />
                 <h1 className="wood">WOOD</h1>
-                <h1 className="burger">BURGER</h1>
+                <h1 className="burger">BURGERS</h1>
             </div>
             <div className="divRegister">
                 <fieldset className="formFieldsetLogin">
