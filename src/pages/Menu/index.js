@@ -1,20 +1,17 @@
 /* eslint-disable array-callback-return */
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom"
 import { Header } from '../../components/Header/index.js';
 import { Orders } from '../../components/Orders/index.js';
 import { Button } from '../../components/Button/index.js';
 import { Item } from "../../components/Item/index.js";
 import { Modal } from "../../components/Modal/index.js";
 import { Background } from "../../services/React/auth";
-import { MdArrowForward } from "react-icons/md";
 import "./index.css";
 import "./responsive.css";
 
 export function Menu() {
     const api = 'https://lab-api-bq.herokuapp.com';
     const apiProducts = `${api}/products`
-    const history = useHistory()
     const userToken = localStorage.getItem('usersToken');
     const [menu, setMenu] = useState([]);
     const [order, setOrder] = useState([]);
@@ -30,10 +27,6 @@ export function Menu() {
 
     function priceTotal(valor) {
         return valor.reduce((priceItem, item) => priceItem + (item.qtd * item.price), 0)
-    }
-
-    function navigateToPedidos() {
-        history.push('/pedidos');
     }
 
     useEffect(() => {
@@ -62,10 +55,6 @@ export function Menu() {
     Background()
     return (
         <main className="menu" >
-            <Button type="button" className="backMenu"
-                onClick={navigateToPedidos}>
-                <MdArrowForward />
-                PEDIDOS</Button>
             <Header showModal={setIsOrdersVisible}></Header>
 
             <div className="types">

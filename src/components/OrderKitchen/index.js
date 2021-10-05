@@ -51,17 +51,17 @@ export function OrderKitchen({
                                             </ul>
                                         </div>
                                         <div className="statusBtn">
-                                            {data.status === 'pending' && localStorage.getItem('role')==='kitchen'?
+                                            {data.status === 'pending' && localStorage.getItem('role') === 'kitchen' ?
                                                 <Button className="redBtn" id="statusOrderBtn"
                                                     onClick={(e) => handlePreparing(data, e)}
                                                 > Preparar</Button>
-                                                : data.status === 'preparing' && localStorage.getItem('role')==='kitchen'?
+                                                : data.status === 'preparing' && localStorage.getItem('role') === 'kitchen' ?
                                                     <Button className="yellowBtn" id="statusOrderFinish"
                                                         onClick={(e) => handleFinished(data, e)}
                                                     > Finalizar</Button>
                                                     : < p className="orderRestrict" >
-                                                   {data.status.replace('preparing', 'Preparando').replace('pending', 'Aguardando')}
-                                                </p>
+                                                        {data.status.replace('preparing', 'Preparando').replace('pending', 'Aguardando')}
+                                                    </p>
                                             }
                                         </div>
                                     </div>
@@ -78,5 +78,3 @@ export function OrderKitchen({
         </div >
     )
 }
-
-//  <p className="timeOrder">Tempo de preparo: {prepareTime(data.createdAt, data.updatedAt)} min.</p>

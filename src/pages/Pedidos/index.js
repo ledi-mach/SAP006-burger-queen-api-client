@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom"
 import { OrderPedidos } from "../../components/OrderPedidos";
 import { Button } from "../../components/Button";
 import { HeaderPedidos } from "../../components/Header";
@@ -8,7 +7,6 @@ import { Background } from "../../services/React/auth";
 import { LogoutButton } from "../../components/LogoutButton/index";
 import './index.css';
 import './responsive.css';
-import { MdArrowBack } from "react-icons/md";
 
 export function Pedidos() {
 
@@ -21,10 +19,6 @@ export function Pedidos() {
     const userToken = localStorage.getItem('usersToken');
     const api = 'https://lab-api-bq.herokuapp.com/orders/'
     const apiOrders = 'https://lab-api-bq.herokuapp.com/orders';
-
-    function navigateToMenu() {
-        history.push('/menu');
-    }
 
     const listAllOrders = () => {
 
@@ -81,11 +75,6 @@ export function Pedidos() {
         <main className="mainAttendance">
 
             <LogoutButton />
-            <Button type="button" className="backMenu"
-                onClick={navigateToMenu}>
-                <MdArrowBack />
-                MENU</Button>
-
             <HeaderPedidos />
             <div className="btn-menu">
                 <div className="types">
@@ -114,7 +103,7 @@ export function Pedidos() {
                             onClick={() => {
                                 setOrder(readyOrders)
                             }}
-                            >
+                        >
                             Prontos
                         </Button>
                         <Button

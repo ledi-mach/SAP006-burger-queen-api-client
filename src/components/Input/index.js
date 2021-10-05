@@ -14,12 +14,12 @@ export function Input({
     max,
     data,
     min,
-    
+
 }) {
     return (
         <div className={divForm} data-test-id='input-div'>
-            <input //data-testid='data-input'
-            data-testid={data}
+            <input
+                data-testid={data}
                 name={name}
                 value={value}
                 type={type}
