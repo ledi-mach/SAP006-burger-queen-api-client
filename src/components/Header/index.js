@@ -3,6 +3,7 @@ import React from "react";
 import { useHistory } from "react-router-dom"
 import orderImg from '../../assets/images/orders.png';
 import { MdArrowBack } from "react-icons/md";
+import { Button } from "../Button/index";
 import "./index.css";
 import "./responsive.css";
 
@@ -24,9 +25,9 @@ export function Header({
                     <h1 className="headerH1">MENU</h1>
                 </div>
                 <div className="divBtnOrder">
-                    <button className="btnOrders" onClick={() => showModal(true)}>
+                    <Button className="btnOrders" onClick={() => showModal(true)}>
                         <img className="orderImg" src={orderImg} alt="orders" />
-                    </button>
+                    </Button>
                 </div>
             </div>
         </header>

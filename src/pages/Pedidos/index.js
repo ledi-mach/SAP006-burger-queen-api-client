@@ -10,7 +10,6 @@ import './responsive.css';
 
 export function Pedidos() {
 
-    const history = useHistory()
     const [order, setOrder] = useState([]);
     const [pendingOrders, setPendingOrders] = useState([]);
     const [preparingOrders, setPreparingOrders] = useState([]);
