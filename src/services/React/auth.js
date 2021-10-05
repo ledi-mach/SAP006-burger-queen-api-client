@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useHistory } from "react-router";
 
 export const isAuthenticated = () => {
     const token = localStorage.getItem("usersToken");

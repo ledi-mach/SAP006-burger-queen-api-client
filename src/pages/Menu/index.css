@@ -159,7 +159,7 @@
     object-fit: cover;
     align-self: center;
     height: 8vh;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-end;
     text-align: end;
     border-radius: 5px;
