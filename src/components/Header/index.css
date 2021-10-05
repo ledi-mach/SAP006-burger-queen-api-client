@@ -44,4 +44,6 @@
     justify-content: end;
     align-items: flex-end;
     text-align: end;
+    position: absolute;
+    margin-left: 78%;
 }

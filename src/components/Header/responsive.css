@@ -3,4 +3,14 @@
         display: block;
     }
 
+    .divBtnOrder {
+        width: 0%;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        text-align: end;
+        position: absolute;
+        margin-left: 88%;
+    }
+
 }
