@@ -12,5 +12,20 @@
         position: absolute;
         margin-left: 88%;
     }
+}
 
+@media (min-width: 270px) and (max-width: 600px) {
+    .btnOrders {
+        display: block;
+    }
+
+    .divBtnOrder {
+        width: 0%;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        text-align: end;
+        position: absolute;
+        margin-left: 40%;
+    }
 }
