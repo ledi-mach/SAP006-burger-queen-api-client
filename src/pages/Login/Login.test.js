@@ -1,6 +1,6 @@
 import { Login } from './index'
 import '@testing-library/jest-dom/extend-expect';
-import { render, screen, cleanup, fireEvent } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 describe('tests to Login Page', () => {
@@ -14,7 +14,7 @@ describe('tests to Login Page', () => {
         expect(screen.getByTestId("input-email")).toHaveValue('test@gmail.com');
         expect(screen.queryByTestId('errorEmail')).not.toBeInTheDocument();
     })
-    
+
 })
 
 

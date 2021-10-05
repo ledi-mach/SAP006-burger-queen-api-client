@@ -167,7 +167,7 @@
 
 .imgOrder {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: flex-end;
 }
 
@@ -215,7 +215,7 @@
 .complementsColum {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     text-align: start;
     align-items: flex-start;
     margin: 0rem 0.5rem;

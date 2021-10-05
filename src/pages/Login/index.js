@@ -1,4 +1,3 @@
-
 import { useHistory } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Button } from '../../components/Button/index.js';
@@ -10,9 +9,7 @@ import './index.css';
 import '../Register/responsive.css';
 
 export function Login() {
-
     const history = useHistory()
-
     const navigateToRegister = () => {
         history.push('/cadastro');
     }
@@ -70,7 +67,7 @@ export function Login() {
                     <h1 className="h1Login">LOGIN</h1>
                     <form className="form-wrapper">
                         <div className="divEmail">
-                            <p for="email" className="labelInputs">E-mail</p>
+                            <p htmlFor="email" className="labelInputs">E-mail</p>
                             <Input
                                 data="input-email"
                                 type="email"
@@ -83,7 +80,7 @@ export function Login() {
                         </div>
 
                         <div className="divPassword">
-                            <p for="password" className="labelInputs">Senha</p>
+                            <p htmlFor="password" className="labelInputs">Senha</p>
                             <Input
                                 data="input-password"
                                 type="password"
