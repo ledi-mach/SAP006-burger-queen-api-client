@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useHistory } from "react-router";
 
 export const isAuthenticated = () => {
     const token = localStorage.getItem("usersToken");
@@ -8,8 +9,6 @@ export const isAuthenticated = () => {
         return false;
     }
 }
-
-export const role = () => localStorage.getItem('role');
 
 export const convertTime = (apiTime) => {
     const getDate = new Date(apiTime);
@@ -22,7 +21,6 @@ export const convertTime = (apiTime) => {
 
     return correctTime;
 }
-
 
 export const prepareTime = (createdAt, updatedAt) => {
     const d1 = new Date(createdAt)//.getTime()
@@ -37,7 +35,6 @@ export const convertDate = (apiDate) => {
     const getDate = new Date(apiDate);
     let getDay = getDate.getDate();
     let getMonth = getDate.getMonth() + 1;
-
 
     if (getDay <= 9) { getDay = `0${getDay}` };
     if (getMonth <= 9) { getMonth = `0${getMonth}` };

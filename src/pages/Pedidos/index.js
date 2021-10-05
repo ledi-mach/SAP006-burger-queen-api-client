@@ -51,7 +51,7 @@ export function Pedidos() {
                 })
                 setReadyOrders(readyOrders)
                 const servedOrders = data.filter((item) => {
-                    return item.status.includes('ready')
+                    return item.status.includes('served')
                 })
                 setServedOrders(servedOrders)
             });
@@ -103,7 +103,6 @@ export function Pedidos() {
                             id="burgers"
                             onClick={() => {
                                 setOrder(preparingOrders)
-
                             }}>
                             Em andamento
                         </Button>
@@ -114,8 +113,8 @@ export function Pedidos() {
                             id="accompaniments"
                             onClick={() => {
                                 setOrder(readyOrders)
-
-                            }}>
+                            }}
+                            >
                             Prontos
                         </Button>
                         <Button

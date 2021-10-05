@@ -21,13 +21,29 @@ body {
     opacity: 0.1;
 }
 
-.burgerLogo {
-    width: 15%;
-    position: absolute;
-    z-index: -3;
-    margin-top: 3%;
-    margin-left: 3%;
+.imgLogo {
+    display: none;
+    width: 10rem;
 }
+
+.logo {
+    position: absolute;
+    font-family: Oswald;
+    color: #FF9900;
+    margin: 1.5rem;
+    line-height: 2.2rem;
+    font-size: 1.3rem;
+    z-index: 10;
+    letter-spacing: 3px;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+
+.burger {
+    margin: 0rem 0rem 0rem 4.3rem;
+}
+
 
 .divInfo {
     display: flex;

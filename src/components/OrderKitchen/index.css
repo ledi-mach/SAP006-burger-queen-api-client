@@ -8,25 +8,21 @@
     text-align: center;
 }
 
-.orderReady {
-    color: green;
+.orderReady, .orderRestrict{
     font-size: 1.2rem;
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 255, 21, 0.075);
     width: auto;
     padding: 0.6rem;
+}
+.orderReady {
+    color: green;
+    background-color: rgba(0, 255, 21, 0.075);
 }
 .orderRestrict {
     color: #763D09;
     background-color: #ffd00049;
-    font-size: 1.2rem;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    padding: 0.6rem;
 }
 .ordered {
     display: flex;
