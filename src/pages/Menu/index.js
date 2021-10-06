@@ -22,7 +22,6 @@ export function Menu() {
     const [drinks, setDrinks] = useState([]);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [isOrdersVisible, setIsOrdersVisible] = useState(false);
-    const [deleteOrder, setDeleteOrder] = useState(false);
     const [select, setSelect] = useState({})
 
     function priceTotal(valor) {
@@ -261,32 +260,19 @@ export function Menu() {
                                     </div>
                                     <div className="orderPrice">
                                         <div className="amountOrder">
-                                            <Button className="lessItem" onClick={() => setDeleteOrder(true)}
+                                            <Button className="lessItem" onClick={() => {
+                                                order.map((item, i) => {
+                                                    if (item.qtd > 1 && (data.id === item.id)) {
+                                                        order[i].qtd--
+                                                        setOrder([...order])
+                                                    } else if (item.qtd === 1 && (data.id === item.id)) {
+                                                        order.splice(index, 1);
+                                                        setOrder([...order])
+                                                    }
+                                                    return item;
+                                                })
+                                            }}
                                             > - </Button>
-                                            {deleteOrder ? <Modal>
-                                                <div className="modalCancel">
-                                                    <h1 className="h1OrderDelete">Tem certeza que deseja deletar esse item dos pedidos?</h1>
-                                                    <div className="cancelItemModal">
-                                                        <Button className="cancelModal" type="button"
-                                                            onClick={() => {
-                                                                order.map((item, i) => {
-                                                                    if (item.qtd > 1 && (data.id === item.id)) {
-                                                                        order[i].qtd--
-                                                                        setOrder([...order])
-                                                                    } else if (item.qtd === 1 && (data.id === item.id)) {
-                                                                        order.splice(index, 1);
-                                                                        setOrder([...order])
-                                                                    }
-                                                                    return item;
-                                                                })
-                                                                setDeleteOrder(false)
-                                                            }}>DELETAR</Button>
-                                                        <Button className="cancelModal"
-                                                            onClick={() => setDeleteOrder(false)}>CANCELAR</Button>
-                                                    </div>
-                                                </div>
-                                            </Modal> : null}
-
                                             <div className="inputQtd">
                                                 {data.qtd}
                                             </div>
