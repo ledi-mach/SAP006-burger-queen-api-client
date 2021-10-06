@@ -25,10 +25,12 @@ Critérios de aceitação: Os atendente deverão ter acesso ao status do pedido 
 
 ### Planejamento e organização
 Para o planejamento focamos na experiência do usuário ao navegar entre as páginas e suas necessidades. Para o desenvolvimento do projeto usamos o método Kanban no GitHub Issues, colocando no backlog as tarefas principais para atender aos critérios de aceitação e incrementando-as conforme o projeto avançava.
+
 ![readme1](https://user-images.githubusercontent.com/80779104/136120480-b698f9f3-31d1-4f93-a742-d5b74226cd62.jpg)
 
 ### Protótipo de alta fidelidade 
 O protótipo inicial foi desenvolvido no Figma e sofreu algumas alterações, onde incorporamos algumas sugestões de colegas e usuários que testaram o aplicativo.
+
 ![bqprot](https://user-images.githubusercontent.com/80779104/136121311-27cc5601-6a5e-4d05-9164-42fde0d10cb9.jpg)
 
 ### Ferramentas utilizadas
