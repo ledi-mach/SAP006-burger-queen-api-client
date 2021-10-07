@@ -1,6 +1,6 @@
- # :hamburger: WoodBurger
+ # :hamburger: WoodBurgers
 ---
-![image](https://user-images.githubusercontent.com/64505863/136060311-249a3f18-ea2e-47f8-8551-875ff629534d.png)
+![image](https://user-images.githubusercontent.com/64505863/136089973-814a9714-36d2-4476-9f24-a2a55c404c60.png)
 ### Projeto
 A WoodBurger é um projeto desenvolvido atráves do consumo da API [Burger Queen](https://lab-api-bq.herokuapp.com/api-docs/) e com o framework React, que possibilita um funcionário de restaurante a fazer pedidos e acompanhar o preparo deles ordenadamente atráves de uma interface intuitiva que foi feita pensada na agilidade e na praticidade do usuário. <br/>O projeto foi proposto pela Laboratoria e teve como algumas premissas ser um SPA (*Single Page App*) responsivo em tablets, ter estrutura definida de pastas e arquivos, manter a interface e o estado sincronizados com o React, além do uso de Javascript (E6+). 
 Você pode conferir o produto final [clicando aqui](https://stark-citadel-37160.herokuapp.com/login).
