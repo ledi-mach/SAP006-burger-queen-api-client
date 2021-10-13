@@ -8,7 +8,8 @@
     text-align: center;
 }
 
-.orderReady, .orderRestrict{
+.orderReady,
+.orderRestrict {
     font-size: 1.2rem;
     text-align: center;
     align-items: center;
@@ -16,14 +17,17 @@
     width: auto;
     padding: 0.6rem;
 }
+
 .orderReady {
     color: green;
     background-color: rgba(0, 255, 21, 0.075);
 }
+
 .orderRestrict {
-    color: #763D09;
-    background-color: #ffd00049;
+    color: #ffd000;
+    background-color: #ffd00013;
 }
+
 .ordered {
     display: flex;
     justify-content: center;

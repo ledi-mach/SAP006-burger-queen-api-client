@@ -6,8 +6,10 @@
     color: red;
 }
 
-.orderPending, .orderPreparing,
-.orderReady, .orderServed{
+.orderPending,
+.orderPreparing,
+.orderReady,
+.orderServed {
     font-size: 1.2rem;
     text-align: center;
     align-items: center;
@@ -27,8 +29,8 @@
 }
 
 .orderReady {
-    color: rgba(83, 83, 216, 0.877);
-    background-color: rgba(0, 153, 255, 0.041);
+    color: rgb(85, 255, 85);
+    background-color: rgba(121, 255, 132, 0.075);
 }
 
 .orderServed {
