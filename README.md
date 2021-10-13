@@ -33,6 +33,14 @@ O protótipo inicial foi desenvolvido no Figma e sofreu algumas alterações, on
 
 ![bqprot](https://user-images.githubusercontent.com/80779104/136121311-27cc5601-6a5e-4d05-9164-42fde0d10cb9.jpg)
 
+### Testes de usabilidade
+No decorrer do projeto realizamos alguns testes com diferentes pessoas buscando analisar a sua experiência enquanto navegavam na aplicação e com base nas observações feitas por eles realizamos algumas atualizações buscando atender às suas necessidades. Foram elas:
+
+- Clique para aumentar e diminuir a quantidade de produtos na ordem estava sendo propagada à todos os produtos da ordem.
+- Responsividade para o tablet e celular estava com os itens do cabeçalho desalinhados.
+- Aviso de sucesso quando é feito um pedido.
+- Confirmação para deletar um pedido.
+
 ### Ferramentas utilizadas
 - React 
 - HTML5
