@@ -124,7 +124,7 @@ export function Menu() {
                                 }
                                 >ADICIONAR</Button>
                             }
-                            {isModalVisible ? <Modal>
+                            {isModalVisible && <Modal>
                                 {burgers.map((item, index) => (
                                     <div className="confirmModal" key={index}>
                                         <img src={item.image} alt="items" className="imageItemModal" />
@@ -221,7 +221,7 @@ export function Menu() {
                                         </div>
                                     </div>
                                 ))}
-                            </Modal> : null}
+                            </Modal>}
                         </Item>
                     ))}
                 </ul>

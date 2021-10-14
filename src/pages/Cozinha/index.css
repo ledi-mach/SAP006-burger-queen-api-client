@@ -84,19 +84,6 @@
     word-break: break-word;
 }
 
-.LogoutBtn {
-    color: #763D09;
-    border: none;
-    width: 5vw;
-    height: 8vh;
-    border-radius: 5px;
-    margin-left: 93%;
-    margin-top: 0.9%;
-    position: absolute;
-    z-index: 3;
-    cursor: pointer;
-}
-
 .quantityItem {
     border-left: 1px solid black;
     padding: 0rem 0rem 0rem 0.6rem;

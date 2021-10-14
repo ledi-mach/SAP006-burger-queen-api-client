@@ -1,8 +1,4 @@
-@media (min-width:2560px) {
-
-    .imgBurger {
-        display: none;
-    }
+@media (max-width:2560px) {
 
     .backHome {
         margin: 15% 0% 0% 15%;
@@ -10,23 +6,17 @@
     }
 }
 
-
-@media (min-width: 1200px) and (min-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
     .imgBurger {
         margin-top: 6%;
         margin-left: 25%;
         height: 70vh;
         width: 50vw;
     }
-
     .burgerLogo {
         width: 18vw;
     }
-
-    .labelInputs {
-        font-size: 1rem;
-    }
-
+  
     .inputEmail,
     .inputPassword {
         font-size: 0.9rem;
@@ -66,7 +56,7 @@
         height: 70vh;
         width: 60vw;
     }
-
+ 
     .burgerLogo {
         width: 20vw;
     }
@@ -81,9 +71,7 @@
         margin: 2% 0% 0% 15%;
         width: 70%;
         font-size: 1.2rem;
-
     }
-
 }
 
 @media (max-width: 768px) {
@@ -95,7 +83,6 @@
     .formFieldsetRegister {
         width: 60vw;
         margin: 12rem 0rem 7rem 0rem;
-
     }
 
     .backHome {
@@ -128,6 +115,7 @@
     .divInfo {
         padding: 2rem 0rem;
     }
+
 }
 
 @media(min-width: 280px) and (max-width: 590px) {

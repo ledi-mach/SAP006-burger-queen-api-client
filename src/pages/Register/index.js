@@ -1,6 +1,8 @@
 import { useHistory } from 'react-router-dom';
 import imgBurger from '../../assets/images/burger-background.png';
 import { Button } from '../../components/Button/index.js';
+import '../../components/Button/index.css';
+import '../../components/Input/index.css';
 import { Input } from '../../components/Input/index.js'
 import validation from '../../services/React/validateInfo';
 import React, { useState } from 'react';
@@ -71,17 +73,17 @@ export function Register() {
                 <fieldset className="formFieldsetLogin">
                     <h1 className="h1Register"> CADASTRO</h1>
                     <form className="formRegister">
-                        <p className="labelInputs">Email</p>
+                        <label for='email' className="labelInputs">Email </label>
                         <Input
                             type="email"
                             name="email"
                             inputClass="inputEmail"
                             value={values.email}
                             onChange={handleChange}
-                        />
+                        /> 
                         {errors.email && <p className="msgErro">{errors.email}</p>}
 
-                        <p className="labelInputs">Senha</p>
+                        <label for='password' className="labelInputs"> Senha </label>
                         <Input
                             type="password"
                             name="password"

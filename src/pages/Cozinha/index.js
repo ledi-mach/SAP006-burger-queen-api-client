@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { HeaderKitchen } from '../../components/Header'
-import "./index.css";
-import "./responsive.css";
 import { OrderKitchen } from "../../components/OrderKitchen";
 import { convertDate, convertTime, prepareTime } from "../../services/React/auth.js";
 import { Background } from "../../services/React/auth.js";
 import { LogoutButton } from '../../components/LogoutButton/index'
+import '../../components/LogoutButton/index.css';
+import "./index.css";
 
 
 export function Cozinha() {
