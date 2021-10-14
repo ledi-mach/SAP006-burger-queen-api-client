@@ -5,6 +5,7 @@ import { Input } from '../../components/Input/index.js';
 import imgBurger from '../../assets/images/burger-background.png';
 import { OrderKitchen } from '../../components/OrderKitchen/index.js';
 import validation from '../../services/React/validateInfo.js';
+import '../../components/Input/index.css';
 import './index.css';
 import '../Register/responsive.css';
 
@@ -67,7 +68,7 @@ export function Login() {
                     <h1 className="h1Login">LOGIN</h1>
                     <form className="form-wrapper">
                         <div className="divEmail">
-                            <p htmlFor="email" className="labelInputs">E-mail</p>
+                            <label for='email' className="labelInputs">Email </label>
                             <Input
                                 data="input-email"
                                 type="email"
@@ -80,7 +81,7 @@ export function Login() {
                         </div>
 
                         <div className="divPassword">
-                            <p htmlFor="password" className="labelInputs">Senha</p>
+                            <label for='password' className="labelInputs">Senha</label>
                             <Input
                                 data="input-password"
                                 type="password"
