@@ -1,13 +1,13 @@
  # :hamburger: WoodBurgers
 ---
 ![image](https://user-images.githubusercontent.com/64505863/136089973-814a9714-36d2-4476-9f24-a2a55c404c60.png)
-### Projeto
+## Projeto
 A WoodBurger é um projeto desenvolvido atráves do consumo da API [Burger Queen](https://lab-api-bq.herokuapp.com/api-docs/) e com o framework React, que possibilita um funcionário de restaurante a fazer pedidos e acompanhar o preparo deles ordenadamente atráves de uma interface intuitiva que foi feita pensada na agilidade e na praticidade do usuário. <br/>O projeto foi proposto pela Laboratoria e teve como algumas premissas ser um SPA (*Single Page App*) responsivo em tablets, ter estrutura definida de pastas e arquivos, manter a interface e o estado sincronizados com o React, além do uso de Javascript (E6+). 
-Você pode conferir o produto final [clicando aqui](https://stark-citadel-37160.herokuapp.com/login).
+
 ### Sobre o cliente
 Uma pequena hamburgueria chamada Wood Burger possui atendimento 24 horas e está crescendo. Assim, precisa de uma interface na qual possa realizar pedidos usando um tablet e enviá-los para a cozinha para que sejam preparados de forma ordenada e otimizada. O restaurante em questão possui um menu mais simples para o café da manhã e outro mais complexo para o restante do dia e ambos devem ser exibidos na aplicação.
 
-### Histórias de usuário
+## Histórias de usuário
 As histórias de usuário a serem desenvolvidas foram fornecidas pela Wood Burger, sendo elas:
 
 
@@ -23,17 +23,23 @@ Critérios de aceitação: Os pedidos deverão ser exibidos na cozinha na ordem 
  :memo: **História 4**: Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá-los rapidamente aos clientes. <br/>
 Critérios de aceitação: Os atendente deverão ter acesso ao status do pedido que foi atualizado pelo chef. Também deverá ser capaz de marcar os pedidos que foram entregues.
 
-### Planejamento e organização
+## Planejamento e organização
 Para o planejamento focamos na experiência do usuário ao navegar entre as páginas e suas necessidades. Para o desenvolvimento do projeto usamos o método Kanban no GitHub Issues, colocando no backlog as tarefas principais para atender aos critérios de aceitação e incrementando-as conforme o projeto avançava.
 
 ![readme1](https://user-images.githubusercontent.com/80779104/136120480-b698f9f3-31d1-4f93-a742-d5b74226cd62.jpg)
 
-### Protótipo de alta fidelidade 
+## Protótipo de alta fidelidade 
 O protótipo inicial foi desenvolvido no Figma e sofreu algumas alterações, onde incorporamos algumas sugestões de colegas e usuários que testaram o aplicativo.
 
 ![bqprot](https://user-images.githubusercontent.com/80779104/136121311-27cc5601-6a5e-4d05-9164-42fde0d10cb9.jpg)
 
-### Testes de usabilidade
+## Resultado final:
+Você pode conferir o produto final rodando o vídeo com a demonstração abaixo ou diretamente na página [clicando aqui](https://stark-citadel-37160.herokuapp.com/login).
+
+https://user-images.githubusercontent.com/80779104/139990998-ecd48913-cf05-40e1-b3b8-7840c136b80f.mp4
+
+## Testes de usabilidade
+
 No decorrer do projeto realizamos alguns testes com diferentes pessoas buscando analisar a sua experiência enquanto navegavam na aplicação e com base nas observações feitas por eles realizamos algumas atualizações buscando atender às suas necessidades. Foram elas:
 
 - Clique para aumentar e diminuir a quantidade de produtos na ordem estava sendo propagada à todos os produtos da ordem.
@@ -41,15 +47,31 @@ No decorrer do projeto realizamos alguns testes com diferentes pessoas buscando 
 - Aviso de sucesso quando é feito um pedido.
 - Confirmação para deletar um pedido.
 
-### Ferramentas utilizadas
-- React 
-- HTML5
-- CSS3
-- JavaScript
-- Node.JS
-- Heroku
-- Figma
-- Git e GitHub
+## Ferramentas utilizadas
+ <a href="#">
+		<img src="https://img.shields.io/static/v1?label=&message=React.JS&color=blue&style=for-the-badge&logo=Ghost"  alt="React">
+	</a>
+ <a href="#">
+		<img src="https://img.shields.io/static/v1?label=&message=HTML 5&color=red&style=for-the-badge&logo=Ghost"  alt="HTML5">
+	</a>
+  <a href="#">
+		<img src="https://img.shields.io/static/v1?label=&message=CSS 3&color=blue&style=for-the-badge&logo=Ghost"  alt="CSS3">
+	</a>
+  <a href="#">
+		<img src="https://img.shields.io/static/v1?label=&message=JAVASCRIPT&color=yellow&style=for-the-badge&logo=Ghost"  alt="js">
+	</a>
+ <a href="#">
+		<img src="https://img.shields.io/static/v1?label=&message=Node.js&color=green&style=for-the-badge&logo=Ghost"  alt="node">
+	</a>
+ <a href="#">
+		<img src="https://img.shields.io/static/v1?label=&message=HEROKU&color=purple&style=for-the-badge&logo=Ghost"  alt="heroku">
+	</a>
+ <a href="#">
+		<img src="https://img.shields.io/static/v1?label=&message=FIGMA&color=red&style=for-the-badge&logo=Ghost"  alt="heroku">
+	</a>
+ <a href="#">
+		<img src="https://img.shields.io/static/v1?label=&message=GIT e GitHub&color=black&style=for-the-badge&logo=Ghost"  alt="heroku">
+	</a>
 
 ### :technologist: Desenvolvedoras: 
 **Larissa Siqueira** <br/>
