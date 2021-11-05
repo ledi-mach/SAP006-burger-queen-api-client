@@ -66,6 +66,14 @@
     margin: 0.2rem 0rem;
 }
 
+.categoriesBtnModal.active {
+    background-color: #6dec4665;
+}
+
+.categoriesBtnModal:hover {
+    background-color: #28ad00;
+}
+
 
 .h1Modal {
     font-size: 1.3rem;
@@ -94,6 +102,14 @@
     border-radius: 3px;
     padding: 0.2rem;
     margin: 0.2rem 0.2rem;
+}
+
+.categoriesBtnModalC.active {
+    background-color: #ff000059;
+}
+
+.categoriesBtnModalC:hover {
+    background-color: #bb0000;
 }
 
 .btnModal {

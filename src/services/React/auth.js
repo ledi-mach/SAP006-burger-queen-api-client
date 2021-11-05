@@ -25,7 +25,6 @@ export const prepareTime = (createdAt, updatedAt) => {
     const d1 = new Date(createdAt)//.getTime()
     const d2 = new Date(updatedAt)//.getTime()
     const timeTotal = parseInt(Math.abs(d2.getTime() - d1.getTime()) / (1000 * 60) % 60);
-    console.log(timeTotal)
     return timeTotal;
 }
 
@@ -38,7 +37,6 @@ export const convertDate = (apiDate) => {
     if (getDay <= 9) { getDay = `0${getDay}` };
     if (getMonth <= 9) { getMonth = `0${getMonth}` };
     const correctDate = `${getDay}/${getMonth}`;
-
     return correctDate;
 }
 

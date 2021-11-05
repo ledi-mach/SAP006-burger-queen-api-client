@@ -41,7 +41,7 @@
 .divBtnOrder {
     width: 0%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-end;
     text-align: end;
     position: absolute;

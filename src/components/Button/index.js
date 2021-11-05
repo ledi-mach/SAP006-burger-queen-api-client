@@ -6,8 +6,6 @@ export function Button({
     className,
     onClick,
     id,
-    //value,
-    //label,
     data,
 }) {
     return (
@@ -17,9 +15,7 @@ export function Button({
                 type={type}
                 className={className}
                 onClick={onClick}
-               // value={value}
                 id={id}
-                //label={label}
             >
                 {children}
             </button>

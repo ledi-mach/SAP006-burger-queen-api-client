@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import React, { useEffect, useState } from "react";
 import { Header } from '../../components/Header/index.js';
 import { Orders } from '../../components/Orders/index.js';
@@ -23,6 +22,13 @@ export function Menu() {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [isOrdersVisible, setIsOrdersVisible] = useState(false);
     const [select, setSelect] = useState({})
+    const [noItems, setNoItems] = useState(true);
+    const [carneComplementSelect, setCarneComplementSelect] = useState(false);
+    const [frangoComplementSelect, setFrangoComplementSelect] = useState(false);
+    const [vegetarianoComplementSelect, setVegetarianoComplementSelect] = useState(false);
+    const [ovoComplementSelect, setOvoComplementSelect] = useState(false);
+    const [queijoComplementSelect, setQueijoComplementSelect] = useState(false);
+    const [nenhumComplementSelect, setNenhumComplementSelect] = useState(false);
 
     function priceTotal(valor) {
         return valor.reduce((priceItem, item) => priceItem + (item.qtd * item.price), 0)
@@ -47,10 +53,8 @@ export function Menu() {
                 setSide(side);
                 const drinks = data.filter(item => item.sub_type === 'drinks')
                 setDrinks(drinks);
-
             })
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [apiProducts, userToken]);
     Background()
     return (
         <main className="menu" >
@@ -61,15 +65,13 @@ export function Menu() {
                     <Button
                         className="categoriesBtn"
                         id="breakfast"
-                        onClick={() => setMenu(breakfast
-                        )}>
+                        onClick={() => setMenu(breakfast, setNoItems(false))}>
                         Café da Manhã
                     </Button>
                     <Button
                         className="categoriesBtn"
                         id="burgers"
-                        onClick={() => setMenu(burger
-                        )}>
+                        onClick={() => setMenu(burger, setNoItems(false))}>
                         Almoço/Jantar
                     </Button>
                 </div>
@@ -77,15 +79,13 @@ export function Menu() {
                     <Button
                         className="categoriesBtn"
                         id="accompaniments"
-                        onClick={() => setMenu(side
-                        )}>
+                        onClick={() => setMenu(side, setNoItems(false))}>
                         Acompanhamentos
                     </Button>
                     <Button
                         className="categoriesBtn"
                         id="drinks"
-                        onClick={() => setMenu(drinks
-                        )}>
+                        onClick={() => setMenu(drinks, setNoItems(false))}>
                         Bebidas
                     </Button>
                 </div>
@@ -132,34 +132,40 @@ export function Menu() {
                                             <div className="flavorsModal">
                                                 <h1 className="h1Modal">SABOR: </h1>
                                                 <Button
-                                                    className="categoriesBtnModal"
+                                                    className={`categoriesBtnModal ${carneComplementSelect ? 'active' : ''}`}
                                                     onClick={() => setSelect(
                                                         {
                                                             ...select,
                                                             "flavor": "carne",
-                                                        }
+                                                        }, setCarneComplementSelect(true),
+                                                        setFrangoComplementSelect(false),
+                                                        setVegetarianoComplementSelect(false),
                                                     )}>
                                                     Carne
                                                 </Button>
                                                 <Button
-                                                    className="categoriesBtnModal"
+                                                    className={`categoriesBtnModal ${frangoComplementSelect ? 'active' : ''}`}
                                                     onClick={() => {
                                                         setSelect(
                                                             {
                                                                 ...select,
                                                                 "flavor": "frango",
-                                                            }
+                                                            }, setFrangoComplementSelect(true),
+                                                            setCarneComplementSelect(false),
+                                                            setVegetarianoComplementSelect(false),
                                                         )
                                                     }}>
                                                     Frango
                                                 </Button>
                                                 <Button
-                                                    className="categoriesBtnModal"
+                                                    className={`categoriesBtnModal ${vegetarianoComplementSelect ? 'active' : ''}`}
                                                     onClick={() => setSelect(
                                                         {
                                                             ...select,
                                                             "flavor": "vegetariano",
-                                                        }
+                                                        }, setVegetarianoComplementSelect(true),
+                                                        setCarneComplementSelect(false),
+                                                        setFrangoComplementSelect(false),
                                                     )}>
                                                     Vegetariano
                                                 </Button>
@@ -167,32 +173,38 @@ export function Menu() {
                                             <div className="complementsModal">
                                                 <h1 className="h1Modal">ADICIONAIS: </h1>
                                                 <Button
-                                                    className="categoriesBtnModalC"
+                                                    className={`categoriesBtnModalC ${ovoComplementSelect ? 'active' : ''}`}
                                                     onClick={() => setSelect(
                                                         {
                                                             ...select,
                                                             "complement": "ovo",
-                                                        }
+                                                        }, setOvoComplementSelect(true),
+                                                        setQueijoComplementSelect(false),
+                                                        setNenhumComplementSelect(false),
                                                     )}>
                                                     Ovo
                                                 </Button>
                                                 <Button
-                                                    className="categoriesBtnModalC"
+                                                    className={`categoriesBtnModalC ${queijoComplementSelect ? 'active' : ''}`}
                                                     onClick={() => setSelect(
                                                         {
                                                             ...select,
                                                             "complement": "queijo",
-                                                        }
+                                                        }, setQueijoComplementSelect(true),
+                                                        setOvoComplementSelect(false),
+                                                        setNenhumComplementSelect(false),
                                                     )}>
                                                     Queijo
                                                 </Button>
                                                 <Button
-                                                    className="categoriesBtnModalC"
+                                                    className={`categoriesBtnModalC ${nenhumComplementSelect ? 'active' : ''}`}
                                                     onClick={() => setSelect(
                                                         {
                                                             ...select,
                                                             "complement": null,
-                                                        }
+                                                        }, setNenhumComplementSelect(true),
+                                                        setOvoComplementSelect(false),
+                                                        setQueijoComplementSelect(false),
                                                     )}>
                                                     Nenhum
                                                 </Button>
@@ -224,6 +236,7 @@ export function Menu() {
                             </Modal>}
                         </Item>
                     ))}
+                    {noItems && <p className="withoutOrders">Clique em uma das categorias para selecionar qualquer item do menu.</p>}
                 </ul>
             </section>
             {
