@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+button {
+    cursor: pointer;
+}
+
 .orangeBtn {
     background-color: #FF8A00;
     border-top: 2.5px solid #DC7700;
@@ -13,8 +17,7 @@
     border-radius: 3px;
     padding: 0.2rem;
     margin: 0rem 0rem 2rem;
-    cursor:pointer;
-    /*margin: 1rem 0rem 2rem 0rem;*/
+    cursor: pointer;
 }
 
 .orangeBtn:hover {
@@ -73,7 +76,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .backHome:hover {

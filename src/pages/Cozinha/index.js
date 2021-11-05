@@ -77,7 +77,7 @@ export function Cozinha() {
     return (
         < main className="kitchen" >
 
-             <LogoutButton />
+            <LogoutButton />
             < HeaderKitchen />
             <OrderKitchen
                 prepareTime={prepareTime}

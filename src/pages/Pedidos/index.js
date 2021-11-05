@@ -4,7 +4,7 @@ import { Button } from "../../components/Button";
 import { HeaderPedidos } from "../../components/Header";
 import { convertTime, convertDate, prepareTime } from "../../services/React/auth";
 import { Background } from "../../services/React/auth";
-import { LogoutButton } from "../../components/LogoutButton/index";
+import { LogoutButton } from "../../components/LogoutButton";
 import '../../components/LogoutButton/index.css';
 import './index.css';
 import './responsive.css';
